@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app {
+  font-family: inter, "sans-serif";
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 18%,
+    rgba(71, 9, 121, 1) 88%
+  );
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0)
+  );
+  animation: animate 2s linear infinite;
+  width: inherit;
+}
+
+.portfolio-section {
+  opacity: 0; /* Hide the section by default */
+  transform: translateY(50px); /* Move the section up by 50px */
+  transition: all 1.9s ease-in-out; /* Add a transition for the animation */
+}
+/* Show the section when it's in view */
+.portfolio-section.in-view {
+  opacity: 1; /* Make the section visible */
+  transform: translateY(0); /* Move the section back to its original position */
+}
+
+/* fade from left animation */
+.fade-left {
+  animation: fadeLeft 1.4s ease forwards 400ms;
+}
+
+/* fadein for web dev */
+
+.fade-animation {
+  animation: fadeInOut 2.5s ease-in;
+}
+
+.fade-animation-2 {
+  animation: fadeInOut 3.4s ease-in-out;
+}
+
+.fade-animation-3 {
+  animation: fadeInOut 0.9s ease-in-out;
+}
+
+/* nav hover effects */
+.link-nav {
+  position: inline-block;
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
+}
+
+.link-nav:hover {
+  padding-bottom: 6px;
+  border-bottom: 1px solid #9a32a2;
+  transition: border-bottom 0.3s ease-in-out, padding-bottom 0.2s ease-in-out;
+}
+
+/* contact section hover */
+
+.contact-section:hover button {
+  background: white;
+  color: black;
+  border: 2px solid black;
+}
+
+/* projects hover effects */
+.projects {
+  background: rgb(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.projects:hover {
+  background: rgb(255, 255, 255, 1);
+  transform: scale(1.02);
+}
+
+.projects:hover .title {
+  color: #9a32a2;
+  transform: scale(1.02);
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+
+.projects:hover .link {
+  color: rgb(68, 8, 68);
+  font-weight: 600;
+}
+
+.projects:hover .stack {
+  background: rgba(255, 255, 255, 0.048);
+  color: black;
+  border: 2px dashed black;
+}
+
+.stack {
+  width: fit-content;
+}
+
+/* contact */
+
+.contact {
+  background-color: rgb(0, 0, 0);
+  padding: 25px;
+  color: rgb(255, 255, 255);
+}
+
+input {
+  outline: none;
+}
+
+.contact-animation {
+  animation: rotatePlusOpacity 1.4s ease-in-out;
+}
+
+.hamburger-animation {
+  animation: rotate 0.25s ease-in;
+}
+/* footer hover effects */
+.footer-item a:hover {
+  @apply hover:text-darkViolet;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  72% {
+    opacity: 0;
+  }
+
+  82% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+/* contact animation */
+
+@keyframes rotatePlusOpacity {
+  0% {
+    transform: translateX(-50%);
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* nav burger */
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.navbar {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  opacity: 1;
+  /* background-color: #fff; */
+  transform: translateX(-100%);
+  animation: slideIn 0.3s ease-in-out forwards;
+  transition: opacity 4.5s ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(180deg);
+  }
+}
