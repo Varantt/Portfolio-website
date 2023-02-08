@@ -4,7 +4,7 @@ export default [
     stack: ["HTML", "Bootstrap", "js/jQuery"],
     description:
       "My first “big” project was composed of: HTML, CSS, and JS. The latter was a university project meant to develop my JS and jQuery skills.  ",
-    imgUrl: "./src/assets/resto.png",
+    imgUrl: "./Src/assets/resto.png",
     link: "https://Varantt.github.io",
   },
   {
