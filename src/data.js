@@ -3,7 +3,7 @@ export default [
     title: "Pizza Restaurant Website",
     stack: ["HTML", "Bootstrap", "js/jQuery"],
     description:
-      "My first ever “big”project was composed of: HTML, CSS, and JS. The latter was a university project meant to develop my JS and jQuery skills.  ",
+      "My first “big” project was composed of: HTML, CSS, and JS. The latter was a university project meant to develop my JS and jQuery skills.  ",
     imgUrl: "./src/assets/resto.png",
     link: "https://Varantt.github.io",
   },
@@ -11,7 +11,7 @@ export default [
     title: "Wordpress Newspaper Website",
     stack: ["Wordpress", "CSS"],
     description:
-      "This website was my first Wordpress project, where I learned the major concepts in Wordpress. It was challenging at first, but my dedication to it made the learning process enjoyable. Currently, I’ve mastered most of the skills to prepare a Wordpress site.",
+      "This website was my first Wordpress project, where I learned the major concepts in Wordpress. It was challenging at first, but my dedication to it made the learning process enjoyable. Currently, I’ve mastered most of the skills needed to prepare a Wordpress site.",
     imgUrl: "./src/assets/hairenik.png",
     link: "https://hairenikweekly.com",
   },
@@ -28,7 +28,7 @@ export default [
     title: "Cocktails List Project",
     stack: ["React", "CSS"],
     description:
-      "Despite having a lot of React projects, this one significantly reflects my skills, as I put into practice many of the skills I’ve mastered.  ",
+      "This React project stands out among my many others as it showcases a significant display of my skills, having provided ample opportunity for me to put into practice the mastery I have attained.  ",
     imgUrl: "./src/assets/cocktail.png",
     link: "https://test-react-project-2.netlify.app/",
   },

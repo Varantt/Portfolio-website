@@ -30,17 +30,16 @@ export default function About() {
 
           <div className="text-sm md:text-lg  text-white p-5 md:p-0">
             <p>
-              Hi there! This is Varant. I’m a Self-motivated and an enthusiastic
+              Hi there! This is Varant. <br /> <br /> I’m a Self-motivated and an enthusiastic
               developer, dedicated to broadening my horizon on a daily. I am a
               fresh Lebanese University graduate, who’s passionate and eager to
-              add on my professional coding knowledge! Currently, i am a
+              add on my professional coding knowledge! <br /> Currently, i am a
               Front-end Web developer, specialized in React, and a Wordpress
-              Developer/Freelancer.Nevertheless, I’m interested in anything Web
-              related. I have a decent background in creating Wordpress
+              Developer/Freelancer. Nevertheless, I’m interested in anything Web
+              related. <br />  I have a decent background in creating Wordpress
               Websites, updating outdated ones, and maintaining the excellence
               of websites.
             </p>
-            <br />
             <p>
               {" "}
               I like to be challenged. Tough situations are opportunities for me
