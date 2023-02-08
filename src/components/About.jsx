@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import laptop from "../assets/laptop.jpg";
 // import code from '../assets/code.png'
 import useScroll from "../hooks/useScroll";
@@ -30,15 +31,15 @@ export default function About() {
 
           <div className="text-sm md:text-lg  text-white p-5 md:p-0">
             <p>
-              Hi there! This is Varant. <br /> <br /> I’m a Self-motivated and an enthusiastic
-              developer, dedicated to broadening my horizon on a daily. I am a
-              fresh Lebanese University graduate, who’s passionate and eager to
-              add on my professional coding knowledge! <br /> Currently, i am a
-              Front-end Web developer, specialized in React, and a Wordpress
-              Developer/Freelancer. Nevertheless, I’m interested in anything Web
-              related. <br />  I have a decent background in creating Wordpress
-              Websites, updating outdated ones, and maintaining the excellence
-              of websites.
+              Hi there! This is Varant. <br /> <br /> I’m a Self-motivated and
+              an enthusiastic developer, dedicated to broadening my horizon on a
+              daily. I am a fresh Lebanese University graduate, who’s passionate
+              and eager to add on my professional coding knowledge! <br />{" "}
+              Currently, i am a Front-end Web developer, specialized in React,
+              and a Wordpress Developer/Freelancer. Nevertheless, I’m interested
+              in anything Web related. <br /> I have a decent background in
+              creating Wordpress Websites, updating outdated ones, and
+              maintaining the excellence of websites.
             </p>
             <p>
               {" "}
@@ -46,6 +47,9 @@ export default function About() {
               to put all of my skills into practice and learn new ones to
               resolve the problem. I take the latter as a fun learning journey!
             </p>
+            <button className="p-2 bg-white hover:bg-transparent text-darkViolet hover:text-white font-semibold transition-all duration-150 rounded shadow-2xl border-white mt-5 border-2">
+              <Link to = "/about">Learn more</Link>
+            </button>
           </div>
 
           <div className="text-base box-border text-offWhite "></div>

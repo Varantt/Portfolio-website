@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import laptop from "../assets/laptop.jpg";
-// import code from '../assets/code.png'
+import Skills from './Skills'
 import useScroll from "../hooks/useScroll";
 
 export default function About() {
@@ -41,6 +41,8 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      <Skills/>
     </section>
   );
 }

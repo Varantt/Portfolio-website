@@ -1,11 +1,10 @@
-import { useState, React } from "react";
+import { React } from "react";
 import blob from "../assets/blob.svg";
 import { AiOutlineGithub, AiOutlineTwitter } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import cv from '../assets/CV-2.pdf'
+import cv from "../assets/CV-2.pdf";
 
 export default function Hero() {
-
   return (
     <section id="hero">
       {/* flex container */}
@@ -22,7 +21,9 @@ export default function Hero() {
 
           <div className="flex flex-row justify-center md:block">
             <div className="text-center md:text-base m-2 md:m-0 px-0 bg-white cursor-pointer fade-animation-3 hover:bg-transparent font-semibold  hover:text-white transition-all duration-150 text-darkViolet py-2 md:px-4 border border-gray-400 rounded shadow-black shadow w-32 md:w-max ">
-              <a href = {cv} download = "CV-Varant">Download CV</a>
+              <a href={cv} download="CV-Varant">
+                Download CV
+              </a>
             </div>
           </div>
 

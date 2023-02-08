@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .app {
-  font-family: inter, "sans-serif";
+  font-family: "Poppins", sans-serif;
   background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,
@@ -135,6 +135,24 @@ input {
   @apply hover:text-darkViolet;
 }
 
+/* about hover effects */
+
+.skill:hover .skill-title {
+   @apply text-blackRaisin;
+}
+.skill{
+  border-bottom:1px solid white;
+  border-top:1px solid white;
+  /* border-top: none; */
+  /* border-bottom:none; */
+}
+.skill:hover{
+  background:white !important;
+  color: #9a32a2;
+}
+.box-shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
 @keyframes fadeLeft {
   from {
     opacity: 0;
