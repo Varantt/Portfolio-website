@@ -2,6 +2,7 @@ import { useState, React } from "react";
 import blob from "../assets/blob.svg";
 import { AiOutlineGithub, AiOutlineTwitter } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import cv from '../assets/CV-2.pdf'
 
 export default function Hero() {
 
@@ -20,8 +21,8 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-row justify-center md:block">
-            <div className="text-center md:text-base m-2 md:m-0 px-0 bg-transparent cursor-pointer fade-animation-3 hover:bg-gray-100 font-semibold hover:bg-transparent hover:text-white transition-all duration-150 text-darkViolet py-2 md:px-4 border border-gray-400 rounded shadow-black shadow w-32 md:w-max ">
-              <Link to="/contact">Contact</Link>
+            <div className="text-center md:text-base m-2 md:m-0 px-0 bg-white cursor-pointer fade-animation-3 hover:bg-transparent font-semibold  hover:text-white transition-all duration-150 text-darkViolet py-2 md:px-4 border border-gray-400 rounded shadow-black shadow w-32 md:w-max ">
+              <a href = {cv} download = "CV-Varant">Download CV</a>
             </div>
           </div>
 
