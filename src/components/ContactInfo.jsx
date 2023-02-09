@@ -31,7 +31,7 @@ export default function ContactInfo() {
   };
 
   return (
-    <section id="contact" className="fade-animation-3">
+    <section id="contact" className="fade-animation-3 overflow-x-hidden">
       <div className="flex flex-col contact md:flex-row justify-center items-center text-white w-full mt-12 md:mt-32  rounded-tl-full  ">
         {/* item 1 */}
 
