@@ -138,16 +138,18 @@ input {
 /* about hover effects */
 
 .skill:hover .skill-title {
-   @apply text-blackRaisin;
+  @apply text-white;
 }
-.skill{
-  border-bottom:1px solid white;
-  border-top:1px solid white;
-  /* border-top: none; */
-  /* border-bottom:none; */
+.skill {
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 60px;
+  margin-left:0;
 }
-.skill:hover{
-  background:white !important;
+
+.skill:hover {
+  background: transparent !important;
   color: #9a32a2;
 }
 .box-shadow {

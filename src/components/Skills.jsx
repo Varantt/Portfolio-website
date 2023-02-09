@@ -6,56 +6,162 @@ export default function Skills() {
       <div className="text-3xl md:text-4xl text-darkViolet text-center shadow-inner mb-3 md:mb-8 ">
         Skills
       </div>
-      <div className="flex flex-col md:flex-row mb-4  justify-center items-center md:space-x-6 md:space-y-0 space-y-4 ">
+
+      {/* front-end */}
+      <div className="flex flex-col md:flex-row flex-wrap  mb-4  justify-center items-center md:space-x-6 md:space-y-0 space-y-4 ">
         {/* item 1 */}
-        <div className=" skill box-shadow md:w-1/3 p-10  text-darkViolet hover:bg-transparent  transition-colors duration-150  rounded-md font-bold  border-white  ">
-          <div className="mb-2  skill-title text-white ">Languages: </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
-            <div className="flex">
+        <div className="  skill box-shadow md:w-1/3  p-16 md:p-10  text-darkViolet   transition-colors duration-150  rounded-md font-bold  border-white  ">
+          <div className="mb-6  skill-title text-white text-center text-xl ">
+            Front-End{" "}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-center  ">
+            <div className="flex justify-center ">
               <BsCheck2All size={19} className="mr-2" />
-              HTML
+              <div className="flex-col ">
+                <div className="">HTML</div>
+                <div className="text-white text-sm font-light">Experienced</div>
+              </div>
             </div>
-            <div className="flex">
+            <div className="flex justify-center">
               <BsCheck2All size={19} className="mr-2" />
-              CSS
+              <div className="flex-col ">
+                <div className="">CSS</div>
+                <div className="text-white text-sm font-light">Experienced</div>
+              </div>
             </div>
-            <div className="flex">
+            <div className="flex justify-center ">
               <BsCheck2All size={19} className="mr-2" />
-              JavaScript
+              <div className="flex-col ">
+                <div className="">Javascript</div>
+                <div className="text-white text-sm font-light">Experienced</div>
+              </div>
             </div>
-            <div className="flex">
+            <div className="flex justify-center">
               <BsCheck2All size={19} className="mr-2" />
-              Java
+              <div className="flex-col ">
+                <div className="">Bootstrap</div>
+                <div className="text-white text-sm font-light">Experienced</div>
+              </div>
             </div>
-            <div className="flex">
+            <div className="flex justify-center">
               <BsCheck2All size={19} className="mr-2" />
-              C++
+              <div className="flex-col ">
+                <div className="">TailwindCSS</div>
+                <div className="text-white text-sm font-light">Experienced</div>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <BsCheck2All size={19} className="mr-2" />
+              <div className="flex-col ">
+                <div className="">ReactJs</div>
+                <div className="text-white text-sm font-light">Experienced</div>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <BsCheck2All size={19} className="mr-2" />
+              <div className="flex-col ">
+                <div className="">jQuery</div>
+                <div className="text-white text-sm font-light">
+                  Intermediate
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className=" skill box-shadow md:w-1/3 p-10  text-darkViolet hover:bg-transparent     rounded-md font-bold  border-white  transition-colors duration-150">
-          <div className="mb-2  skill-title text-white ">Frameworks: </div>
+
+        {/* backend */}
+
+        <div className=" skill box-shadow md:w-1/3 p-16 md:p-10  text-darkViolet hover:bg-transparent     rounded-md font-bold  border-white  transition-colors duration-150">
+          <div className="mb-6  skill-title text-white text-center text-xl ">
+            Back-end{" "}
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
-            <div className="flex ">
-              {" "}
+            <div className="flex justify-center ">
               <BsCheck2All size={19} className="mr-2" />
-              ReactJs
+              <div className="flex-col ">
+                <div className="">NodeJs</div>
+                <div className="text-white text-sm font-light">
+                  Intermediate
+                </div>
+              </div>
             </div>
-            <div className="flex ">
+            <div className="flex justify-center">
               <BsCheck2All size={19} className="mr-2" />
-              Bootstrap
+              <div className="flex-col ">
+                <div className="">Java</div>
+                <div className="text-white text-sm font-light">Experienced</div>
+              </div>
             </div>
-            <div className="flex ">
-              <BsCheck2All  size = {19} className="mr-2" />
-              TailwindCSS
-            </div>
-            <div className="flex ">
+            <div className="flex justify-center ">
               <BsCheck2All size={19} className="mr-2" />
-              jQuery
+              <div className="flex-col ">
+                <div className="">ExpressJs</div>
+                <div className="text-white text-sm font-light">
+                  Intermediate
+                </div>
+              </div>
             </div>
-            <div className="flex ">
+            <div className="flex justify-center">
               <BsCheck2All size={19} className="mr-2" />
-              ExpressJs
+              <div className="flex-col ">
+                <div className="">PHP</div>
+                <div className="text-white text-sm font-light">Proficient</div>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <BsCheck2All size={19} className="mr-2" />
+              <div className="flex-col ">
+                <div className="">SQL/MySQL</div>
+                <div className="text-white text-sm font-light">Experienced</div>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <BsCheck2All size={19} className="mr-2" />
+              <div className="flex-col ">
+                <div className="">NextJS</div>
+                <div className="text-white text-sm font-light">
+                  Intermediate
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <BsCheck2All size={19} className="mr-2" />
+              <div className="flex-col ">
+                <div className="">ASP.NET</div>
+                <div className="text-white text-sm font-light">
+                  Intermediate
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+{/* item 3 */}
+        <div className=" skill box-shadow md:w-1/3 p-10  text-darkViolet hover:bg-transparent rounded-md font-bold  border-white  transition-colors duration-150">
+          <div className="mb-6  skill-title text-white text-center text-xl ">
+            Other{" "}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
+            <div className="flex justify-center ">
+              <BsCheck2All size={19} className="mr-2" />
+              <div className="flex-col ">
+                <div className="">Wordpress</div>
+                <div className="text-white text-sm font-light">Experienced</div>
+              </div>
+            </div>
+            <div className="flex justify-center ">
+              <BsCheck2All size={19} className="mr-2" />
+              <div className="flex-col ">
+                <div className="">C/C++</div>
+                <div className="text-white text-sm font-light">Proficient</div>
+              </div>
+            </div>
+            <div className="flex justify-center ">
+              <BsCheck2All size={19} className="mr-2" />
+              <div className="flex-col ">
+                <div className="">Android Dev</div>
+                <div className="text-white text-sm font-light">Proficient</div>
+              </div>
             </div>
           </div>
         </div>

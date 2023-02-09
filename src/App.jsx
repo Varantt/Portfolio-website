@@ -31,13 +31,3 @@ function App() {
 }
 
 export default App;
-
-<Router className="app">
-  <Navbar />
-  <Routes>
-    <Route exact path="/" element={<Home />} />
-    <Route path="/about" />
-    <Route path="/contact" element={<Contact />} />
-    <Route path="*" element={<Error />} />
-  </Routes>
-</Router>;
