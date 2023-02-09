@@ -65,7 +65,7 @@ export default function Contact() {
               value={values.name}
               placeholder="Name"
               name="name"
-              className="p-5 rounded shadow"
+              className="p-3 rounded box-shadow"
               ref={ref}
               required
               onChange={handleChange}
@@ -77,7 +77,7 @@ export default function Contact() {
               placeholder="Email"
               name="email"
               required
-              className="p-5 rounded shadow"
+              className="p-3 rounded "
               onChange={handleChange}
             />
 
@@ -85,10 +85,11 @@ export default function Contact() {
               Message:{" "}
             </label>
             <textarea
-              className="rounded p-6 "
+              className="rounded p-2 box-shadow outline-none "
               id="msg"
               cols="20"
-              rows="5"
+              rows="3"
+              placeholder="Leave your message here"
             ></textarea>
 
             <button
