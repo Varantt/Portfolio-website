@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
-import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 export default function ContactInfo() {
   const [values, setValues] = useState({

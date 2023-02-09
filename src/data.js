@@ -1,10 +1,12 @@
+import hairenik from '../photos/hairenik.png'
+
 export default [
   {
     title: "Pizza Restaurant Website",
     stack: ["HTML", "Bootstrap", "js/jQuery"],
     description:
       "My first “big” project was composed of: HTML, CSS, and JS. The latter was a university project meant to develop my JS and jQuery skills.  ",
-    imgUrl: "https://varantkalemkerian.netlify.app/photos/resto.png",
+    imgUrl: "./photos/resto.png",
     link: "https://Varantt.github.io",
   },
   {
@@ -12,7 +14,7 @@ export default [
     stack: ["Wordpress", "CSS"],
     description:
       "This website was my first Wordpress project, where I learned the major concepts in Wordpress. It was challenging at first, but my dedication to it made the learning process enjoyable. Currently, I’ve mastered most of the skills needed to prepare a Wordpress site.",
-    imgUrl: "/photos/hairenik.png",
+    imgUrl: "../photos/hairenik.png",
     link: "https://hairenikweekly.com",
   },
   {

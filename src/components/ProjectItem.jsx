@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import hairenik from "../assets/hairenik.png";
 
 export default function ProjectItem({ title, imgUrl, stack }) {
   return (

@@ -136,7 +136,7 @@ export default function Skills() {
           </div>
         </div>
 
-{/* item 3 */}
+        {/* item 3 */}
         <div className=" skill box-shadow md:w-1/3 p-10  text-darkViolet hover:bg-transparent rounded-md font-bold  border-white  transition-colors duration-150">
           <div className="mb-6  skill-title text-white text-center text-xl ">
             Other{" "}
