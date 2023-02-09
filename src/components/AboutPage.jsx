@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import laptop from "../../assets/laptop.jpg";
+import laptop from "../../public/assets/laptop.jpg";
 import Skills from './Skills'
 
 export default function About() {

@@ -10,7 +10,7 @@ export default function Skills() {
       {/* front-end */}
       <div className="flex flex-col md:flex-row flex-wrap  mb-4  justify-center items-center md:space-x-6 md:space-y-0 space-y-4 ">
         {/* item 1 */}
-        <div className="  skill box-shadow md:w-1/3  p-16 md:p-10  text-darkViolet   transition-colors duration-150  rounded-md font-bold  border-white  ">
+        <div className="  skill md:m-14 box-shadow md:w-1/3  p-16 md:p-10  text-darkViolet   transition-colors duration-150  rounded-md font-bold  border-white  ">
           <div className="mb-6  skill-title text-white text-center text-xl ">
             Front-End{" "}
           </div>

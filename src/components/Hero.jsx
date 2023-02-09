@@ -1,8 +1,8 @@
 import { React } from "react";
-import blob from "../../assets/blob.svg";
+import blob from "../../public/assets/blob.svg";
 import { AiOutlineGithub, AiOutlineTwitter } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import cv from "../../assets/CV-2.pdf";
+import cv from "../../public/assets/CV-2.pdf";
 
 export default function Hero() {
   return (
