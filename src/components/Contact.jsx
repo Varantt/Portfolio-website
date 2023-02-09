@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 import useScroll from "../hooks/useScroll";
 
 export default function Contact() {
@@ -16,12 +16,12 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // emailjs.sendForm(
-    //   "service_wr38wju",
-    //   "template_39rbfk9",
-    //   form.current,
-    //   "1DVEwVewoGGJxQWsw"
-    // );
+    emailjs.sendForm(
+      "service_wr38wju",
+      "template_39rbfk9",
+      form.current,
+      "1DVEwVewoGGJxQWsw"
+    );
     window.location.replace("/message");
   };
 

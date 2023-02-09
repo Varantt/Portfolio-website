@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import projects from "../data.js";
 import ProjectItem from "./ProjectItem.jsx";
 import useScroll from "../hooks/useScroll.js";

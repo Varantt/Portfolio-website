@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import laptop from "../../photos/laptop.jpg";
+import laptop from "../../assets/laptop.jpg";
 import Skills from './Skills'
-import useScroll from "../hooks/useScroll";
 
 export default function About() {
   return (
