@@ -63,9 +63,9 @@ hr {
 }
 
 .link-nav:hover {
-  padding-bottom: 6px;
+  padding-bottom: 4px;
   border-bottom: 1px solid #9a32a2;
-  transition: border-bottom 0.3s ease-in-out, padding-bottom 0.2s ease-in-out;
+  transition: border-bottom 0.3s ease-in-out, padding-bottom 0.1s ease-in-out;
 }
 
 /* contact section hover */
@@ -143,7 +143,7 @@ input {
 .skill {
   border-bottom: 1px solid white;
   border-top: 1px solid white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.45);
   margin: 60px;
   margin-left:0;
 }
@@ -151,6 +151,8 @@ input {
 .skill:hover {
   background: transparent !important;
   color: #9a32a2;
+  border-left:1px solid white;
+  border-right:1px solid white;
 }
 .box-shadow {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);

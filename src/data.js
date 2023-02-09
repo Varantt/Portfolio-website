@@ -12,14 +12,14 @@ export default [
     stack: ["Wordpress", "CSS"],
     description:
       "This website was my first Wordpress project, where I learned the major concepts in Wordpress. It was challenging at first, but my dedication to it made the learning process enjoyable. Currently, I’ve mastered most of the skills needed to prepare a Wordpress site.",
-    imgUrl: "../src/assets/hairenik.png",
+    imgUrl: "https://images.pexels.com/photos/325193/pexels-photo-325193.jpeg",
     link: "https://hairenikweekly.com",
   },
   {
-    title: "Tic Tac Toe",
-    stack: ["HTML", "CSS", "JS"],
+    title: "Wordpress Tiles and kitchen website",
+    stack: ["Wordpress, Elementor"],
     description:
-      "Throughout this Tic Tac Toe project, I trained my VanillaJs skills before jumping to React.",
+      "Through this project, i learned concepts about Elementor, where i used attractive widgets to create a basic website for a relative. This site might be a little outdated, but is one of my few live sites that i have. ",
     imgUrl: "../src/assets/tictac.png",
     link: "https://github.com/Varantt/Tic-Tac-Toe-X-O-",
   },

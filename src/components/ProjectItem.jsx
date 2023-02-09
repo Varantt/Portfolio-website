@@ -1,14 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import hairenik from '../assets/hairenik.png';
+import hairenik from "../assets/hairenik.png";
 
-export default function ProjectItem({
-  title,
-  imgUrl,
-  stack,
-  description,
-  link,
-}) {
+export default function ProjectItem({ title, imgUrl, stack }) {
   return (
     <div className="projects rounded-md hover:text-black transition-colors ">
       <img
