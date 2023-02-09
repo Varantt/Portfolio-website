@@ -15,7 +15,7 @@ export default function Hero() {
           <h1 className=" text-offWhite text-3xl  mt-32   fade-left md:text-6xl md:mb-0 md:mt-0 ">
             Varant Kalemkerian
           </h1>
-          <div className="  text-xl text-darkViolet fade-animation md:text-3xl md:mt-0 ">
+          <div className=" text-center md:text-justify  text-xl text-darkViolet fade-animation md:text-3xl md:mt-0 ">
             Front End Web Developer
           </div>
 
