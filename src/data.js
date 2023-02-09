@@ -12,15 +12,15 @@ export default [
     stack: ["Wordpress", "CSS"],
     description:
       "This website was my first Wordpress project, where I learned the major concepts in Wordpress. It was challenging at first, but my dedication to it made the learning process enjoyable. Currently, I’ve mastered most of the skills needed to prepare a Wordpress site.",
-    imgUrl: "https://varantkalemkerian.netlify.app/assets/hairenik.png",
+    imgUrl: "/photos/kitchen.png",
     link: "https://hairenikweekly.com",
   },
   {
     title: "Wordpress Tiles and kitchen website",
-    stack: ["Wordpress, Elementor"],
+    stack: ["Wordpress", "Elementor"],
     description:
       "Through this project, i learned concepts about Elementor, where i used attractive widgets to create a basic website for a relative. This site might be a little outdated, but is one of my few live sites that i have. ",
-    imgUrl: "../src/assets/tictac.png",
+    imgUrl: "../src/assets/kitchen.png",
     link: "https://github.com/Varantt/Tic-Tac-Toe-X-O-",
   },
 
