@@ -12,7 +12,7 @@ export default [
     stack: ["Wordpress", "CSS"],
     description:
       "This website was my first Wordpress project, where I learned the major concepts in Wordpress. It was challenging at first, but my dedication to it made the learning process enjoyable. Currently, I’ve mastered most of the skills needed to prepare a Wordpress site.",
-    imgUrl: "https://varantkalemkerian.netlify.app/photos/kitchen.png",
+    imgUrl: "photos/kitchen.png",
     link: "https://hairenikweekly.com",
   },
   {
