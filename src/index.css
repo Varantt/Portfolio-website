@@ -144,17 +144,37 @@ input {
   border-bottom: 1px solid white;
   border-top: 1px solid white;
   background-color: rgba(0, 0, 0, 0.45);
-  margin-left:0;
+  margin-left: 0;
 }
 
 .skill:hover {
   background: transparent !important;
   color: #9a32a2;
-  border-left:1px solid white;
-  border-right:1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
 }
+
 .box-shadow {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.container-exp{
+  border-left: 1px solid #9a32a2;
+}
+
+#experience {
+  position: relative;
+}
+
+#experience::before{
+  content: '';
+  position:absolute;
+  width:7px;
+  height:7px;
+  border-radius: 50%;
+  background :rgb(255, 255, 255);
+  left:-4px;
+  top:14px
 }
 @keyframes fadeLeft {
   from {

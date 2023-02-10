@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import laptop from "../../public/assets/laptop.jpg";
 import Skills from './Skills'
+import WorkExperience from "./WorkExperience";
 
 export default function About() {
   return (
@@ -42,6 +43,7 @@ export default function About() {
       </div>
 
       <Skills/>
+      <WorkExperience/>
     </section>
   );
 }
