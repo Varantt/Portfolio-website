@@ -68,6 +68,26 @@ hr {
   transition: border-bottom 0.3s ease-in-out, padding-bottom 0.1s ease-in-out;
 }
 
+/* Hamburger */
+.navbar {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width: 100%;
+  transform: translateX(-100%);
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+
+
+.menu-open {
+  height : 100vh;
+  overflow: hidden;
+}
+
+
 /* contact section hover */
 
 .contact-section:hover button {
@@ -127,9 +147,6 @@ input {
   animation: rotatePlusOpacity 1.4s ease-in-out;
 }
 
-.hamburger-animation {
-  animation: rotate 0.25s ease-in;
-}
 /* footer hover effects */
 .footer-item a:hover {
   @apply hover:text-darkViolet;
@@ -239,16 +256,6 @@ input {
   }
 }
 
-.navbar {
-  position:absolute;
-  z-index: 100;
-  height: 100vh;
-  width: 100%;
-  z-index: 0;
-  opacity: 1;
-  transform: translateX(-100%);
-  animation: slideIn 0.3s ease-in-out forwards;
-}
 
 @keyframes rotate {
   0% {

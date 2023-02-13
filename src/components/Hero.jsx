@@ -16,7 +16,7 @@ export default function Hero() {
             Varant Kalemkerian
           </h1>
           <div className=" text-center md:text-justify  text-xl text-darkViolet fade-animation md:text-3xl md:mt-0 ">
-            Front End Web Developer
+            Junior Web Developer
           </div>
 
           <div className="flex flex-row justify-center md:block">
