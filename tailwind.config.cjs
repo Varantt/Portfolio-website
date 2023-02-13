@@ -21,7 +21,7 @@ module.exports = {
         lightWhite: "#E0DDCF",
         liver: "#534B52",
         offWhite: "#F1F0EA",
-        lightBlack: "hsla(0, 0%, 0%, 0.66)",
+        lightBlack: "hsla(0, 0%, 0%, 0.94)",
       },
     },
   },

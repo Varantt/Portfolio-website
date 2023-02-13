@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <React.Fragment>
-      <nav id="nav" className="flex  h-12 items-center justify-around w-full  ">
+      <nav id="nav" className="flex  h-12 items-center justify-between mx-4 md:mx-0 md:justify-around   ">
         <div className=" text-3xl  font-bold text-white cursor-pointer ">
           <Link to="/"> VK</Link>
         </div>
