@@ -84,7 +84,6 @@ hr {
 
 .menu-open {
   height : 100vh;
-  overflow: hidden;
 }
 
 
@@ -193,6 +192,7 @@ input {
   left:-4px;
   top:14px
 }
+
 @keyframes fadeLeft {
   from {
     opacity: 0;
