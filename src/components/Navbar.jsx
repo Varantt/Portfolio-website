@@ -1,13 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 export default function Navbar() {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
+  const nav = useRef(null);
   const location = useLocation();
 
   const handleBurger = () => {
     setIsBurgerOpen(!isBurgerOpen);
+  };
+
+  const handleScroll = () => {
+    // console.log(nav);
+    const navHeight = nav.current.getBoundingClientRect().height;
+    console.log(navHeight);
+    if (window.pageYOffset > navHeight) {
+      setShowNavbar(true);
+    } else {
+      setShowNavbar(false);
+    }
   };
 
   useEffect(() => {
@@ -39,11 +52,19 @@ export default function Navbar() {
     };
   }, [isBurgerOpen]);
 
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [window]);
+
   return (
     <React.Fragment>
       <nav
         id="nav"
-        className={`flex  h-12 items-center justify-between mx-4 md:mx-0 md:justify-around    `}
+        ref={nav}
+        className={`flex  h-12 items-center justify-between mx-4 md:mx-0 md:justify-around ${showNavbar ? 'show-navbar' : ''}    `}
       >
         <div className=" text-3xl  font-bold text-white cursor-pointer ">
           <Link to="/"> VK</Link>
@@ -81,7 +102,9 @@ export default function Navbar() {
         }  `}
       >
         <nav
-          className={`navbar menu-open  flex  flex-col justify-center space-y-4 items-center p-20 bg-lightBlack rounded-sm   md:hidden   `}
+          className={`navbar menu-open  flex  flex-col justify-center space-y-4 items-center p-20 bg-lightBlack rounded-sm   md:hidden ${
+            showNavbar ? "show-navbar" : ""
+          }   `}
         >
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
