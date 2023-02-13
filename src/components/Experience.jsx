@@ -9,8 +9,16 @@ function Experience({ name, description, type, startDate, endDate }) {
           {startDate} - {endDate}
         </div>
 
-        <div className="text-xs md:text-sm text-gray-300 pl-6 leading-loose">
-          {description}
+        <div className="">
+          {
+            description.map((captions, index) => {
+              return (
+                <div className="text-xs md:text-sm text-gray-300 pl-6 leading-loose" key = {index}>
+                  {captions}
+                </div>
+              );
+            })
+          }
         </div>
         <div className="text-xs md:text-sm text-red-300 pl-6 ">
           <span></span>
