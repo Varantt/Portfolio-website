@@ -29,6 +29,17 @@ export default function Skills() {
                 <div className="text-white text-sm font-light">Experienced</div>
               </div>
             </div>
+
+            <div className="flex justify-center">
+              <BsCheck2All size={19} className="mr-2" />
+              <div className="flex-col ">
+                <div className="">SCSS</div>
+                <div className="text-white text-sm font-light">
+                  Experienced
+                </div>
+              </div>
+            </div>
+
             <div className="flex justify-center ">
               <BsCheck2All size={19} className="mr-2" />
               <div className="flex-col ">
