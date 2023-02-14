@@ -6,7 +6,7 @@ import Contact from "./Contact";
 
 export default function Home() {
   return (
-    <div className=" app overflow-x-hidden">
+    <div id = "home" className=" app overflow-x-hidden">
       <Hero />
       <About />
       <Portfolio />

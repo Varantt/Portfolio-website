@@ -29,27 +29,25 @@ export default function Navbar() {
 
   useEffect(() => {
     const body = document.body;
-    const hero = document.querySelector("#hero");
+    const home = document.querySelector("#home");
 
     if (isBurgerOpen) {
       body.style.overflow = "hidden";
       body.style.overflowX = "hidden";
-      if (hero) {
-        hero.style.visibility = "hidden";
-      }
+      // if(home){
+      //   home.style.opacity = "0.3"
+      // }
     } else {
       body.style.overflow = "scroll";
       body.style.overflowX = "hidden";
-      if (hero) {
-        hero.style.visibility = "visible";
-      }
+      // if(home){
+      //   home.style.opacity = "1"
+      // }
     }
 
     return () => {
       body.style.overflow = "scroll";
-      if (hero) {
-        hero.style.visibility = "visible";
-      }
+      // home.style.opacity  =  "1";
     };
   }, [isBurgerOpen]);
 
@@ -100,13 +98,13 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`  text-center w-full text-white   md:hidden ${
-          isBurgerOpen || "hidden"
+        className={`navbar   text-center w-full text-white   md:hidden ${
+          isBurgerOpen ? "burger-animation" : "burger-animation-back"
         }  `}
       >
         <nav
-          className={`navbar menu-open  flex  flex-col justify-center space-y-4 items-center p-20 bg-lightBlack rounded-sm   md:hidden ${
-            showNavbar ? "show-navbar" : ""
+          className={` menu-open  flex  flex-col justify-center space-y-4 items-center p-20 bg-lightBlack rounded-sm   md:hidden ${
+            showNavbar ? "show-navbar " : ""
           }   `}
         >
           <Link to="/">Home</Link>
