@@ -1,5 +1,5 @@
 import { React } from "react";
-import blob from "../../public/assets/blob.svg";
+import varant from "../../public/assets/varant.png";
 import { AiOutlineGithub, AiOutlineTwitter } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import cv from "../../public/assets/CV-2.pdf";
@@ -8,11 +8,11 @@ export default function Hero() {
   return (
     <section id="hero">
       {/* flex container */}
-      <div className=" container mx-auto md:pl-16 md:pt-5 flex flex-col-reverse items-center mt-16 md:mt-28 space-y-6 md:space-y-4 md:flex-row      ">
+      <div className=" container mx-auto md:pl-16 md:pt-5 flex flex-col-reverse items-center mt-4 md:mt-28  md:space-y-4 md:flex-row      ">
         {/* item 1 */}
 
         <div className="flex flex-col md:w-1/2    md:space-y-4  md:items-start">
-          <h1 className=" text-offWhite text-3xl  mt-32   fade-left md:text-6xl md:mb-0 md:mt-0 ">
+          <h1 className=" text-offWhite text-3xl  mt-9   fade-left md:text-6xl md:mb-0 md:mt-0 ">
             Varant Kalemkerian
           </h1>
           <div className=" text-center md:text-justify  text-xl text-darkViolet fade-animation md:text-3xl md:mt-0 ">
@@ -45,8 +45,8 @@ export default function Hero() {
           </div>
         </div>
         {/* item 2 */}
-        <div className="flex  md:w-1/2  items-center justify-center ">
-          <img src={blob} alt="yelow" width="100" height="200" />
+        <div className="flex  md:w-1/3  items-center justify-center rounded-3xl box-shadow md:ml-16 border-t-2  fade-animation ">
+          <img src={varant} alt="yelow" width="250" height="100" />
         </div>
       </div>
     </section>
