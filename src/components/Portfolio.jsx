@@ -16,7 +16,7 @@ export default function Portfolio() {
           II
         </span>
       </div>
-      <div className="text-center  text-xl md:text-3xl text-white ">
+      <div className="text-center  text-xl md:text-3xl text-darkViolet ">
         My Projects
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center p-10  ">
