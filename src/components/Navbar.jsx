@@ -65,7 +65,9 @@ export default function Navbar() {
       <nav
         id="nav"
         ref={nav}
-        className={`flex  h-12 items-center justify-between px-4 md:mx-0 md:justify-around ${showNavbar ? 'show-navbar' : ''}    `}
+        className={`flex  h-12 items-center justify-between px-4 md:px-0 md:justify-around ${
+          showNavbar ? "show-navbar" : ""
+        }    `}
       >
         <div className=" text-3xl  font-bold text-white cursor-pointer ">
           <Link to="/"> VK</Link>

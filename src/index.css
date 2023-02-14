@@ -71,17 +71,17 @@ hr {
 .show-navbar{
   background-color: black;
   transition: 0.4s ease-in;
-  position:sticky;
+  position:fixed;
   top:0;
   left:0;
   right:0; 
   width:100%;
-  z-index:7;
+  z-index:7000;
 
 }
 /* Hamburger */
 .navbar {
-  position:absolute;
+  position:fixed;
   top:0;
   left:0;
   right:0;
@@ -94,7 +94,7 @@ hr {
 
 
 .menu-open {
-  height : 110vh;
+  height : 100vh;
 }
 
 
