@@ -13,9 +13,7 @@ export default function Navbar() {
   };
 
   const handleScroll = () => {
-    // console.log(nav);
     const navHeight = nav.current.getBoundingClientRect().height;
-    console.log(navHeight);
     if (window.pageYOffset > navHeight) {
       setShowNavbar(true);
     } else {
@@ -29,25 +27,17 @@ export default function Navbar() {
 
   useEffect(() => {
     const body = document.body;
-    const home = document.querySelector("#home");
 
     if (isBurgerOpen) {
       body.style.overflow = "hidden";
       body.style.overflowX = "hidden";
-      // if(home){
-      //   home.style.opacity = "0.3"
-      // }
     } else {
       body.style.overflow = "scroll";
       body.style.overflowX = "hidden";
-      // if(home){
-      //   home.style.opacity = "1"
-      // }
     }
 
     return () => {
       body.style.overflow = "scroll";
-      // home.style.opacity  =  "1";
     };
   }, [isBurgerOpen]);
 
@@ -87,10 +77,10 @@ export default function Navbar() {
 
         {/* hamburger */}
 
-        <div className="     md:hidden ">
+        <div className="md:hidden ">
           <div
             onClick={handleBurger}
-            className={`text-white text-xl transition-all cursor-pointer relative z-10 `}
+            className={`text-white text-xl transition-all cursor-pointer relative z-50 `}
           >
             {isBurgerOpen ? "X " : <RxHamburgerMenu size={25} />}
           </div>
