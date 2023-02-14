@@ -2,8 +2,8 @@ export const eData = [
   {
     name: "Freelancer",
     description: [
-      "- Passion for creating visually stunning and user-friendly websites that exceed client expectations",
-      "- Strong background in design and expertise in coding and development for unique and creative solutions in each project",
+      "- Passionate about creating visually stunning and user-friendly websites that exceed client expectations.",
+      "- Strong background in design and expertise in coding and development for unique and creative solutions in each project.",
     ],
     type: "Freelance",
     startDate: "08/2021 ",
@@ -20,7 +20,7 @@ export const eData = [
     endDate: "Present",
   },
   {
-    name: "Wordpress site maintenance",
+    name: "Wordpress site maintenance.",
     description: [
       "- Experienced in maintaining 20+ Wordpress sites with responsibilities such as site migrations, error fixing, updates, and database management",
       "- Knowledge of Wordpress, PHP, and other related technologies for efficient site maintenance and troubleshooting.",

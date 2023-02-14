@@ -30,6 +30,7 @@ export default function Navbar() {
   useEffect(() => {
     const body = document.body;
     const hero = document.querySelector("#hero");
+
     if (isBurgerOpen) {
       body.style.overflow = "hidden";
       body.style.overflowX = "hidden";
@@ -64,7 +65,7 @@ export default function Navbar() {
       <nav
         id="nav"
         ref={nav}
-        className={`flex  h-12 items-center justify-between mx-4 md:mx-0 md:justify-around ${showNavbar ? 'show-navbar' : ''}    `}
+        className={`flex  h-12 items-center justify-between px-4 md:mx-0 md:justify-around ${showNavbar ? 'show-navbar' : ''}    `}
       >
         <div className=" text-3xl  font-bold text-white cursor-pointer ">
           <Link to="/"> VK</Link>
@@ -86,10 +87,10 @@ export default function Navbar() {
 
         {/* hamburger */}
 
-        <div className="   top-16  md:hidden ">
+        <div className="     md:hidden ">
           <div
             onClick={handleBurger}
-            className={`text-white text-xl transition-all cursor-pointer relative z-10  `}
+            className={`text-white text-xl transition-all cursor-pointer relative z-10 `}
           >
             {isBurgerOpen ? "X " : <RxHamburgerMenu size={25} />}
           </div>

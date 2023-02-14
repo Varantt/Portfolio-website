@@ -12,7 +12,7 @@ export default function Contact() {
 
   const ref = useRef(null);
 
-  const form = useRef();
+  const form = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ export default function Contact() {
       "service_wr38wju",
       "template_39rbfk9",
       form.current,
-      "1DVEwVewoGGJxQWsw"
+      "bXQK0o-7V-kRbDiXx"
     );
     window.location.replace("/message");
   };

@@ -8,7 +8,7 @@ export default function ContactInfo() {
   });
 
   const ref = useRef(null);
-  const form = useRef();
+  const form = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ export default function ContactInfo() {
       "service_wr38wju",
       "template_39rbfk9",
       form.current,
-      "1DVEwVewoGGJxQWsw"
+      "bXQK0o-7V-kRbDiXx"
     );
 
     window.location.replace("/message");
