@@ -46,7 +46,7 @@ export default function Hero() {
         </div>
         {/* item 2 */}
         <div className="flex  md:w-1/2  items-start justify-center w-2/3     fade-animation ">
-          <img src={varant} alt="yelow" className = "" width ="380" height = "285"/>
+          <img src={varant} alt="yelow" className = "img" width ="380" height = "285"/>
         </div>
       </div>
     </section>

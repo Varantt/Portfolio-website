@@ -36,6 +36,11 @@ hr {
   transform: translateY(0); /* Move the section back to its original position */
 }
 
+.img {
+  /* background-color: transparent; */
+  box-shadow: 2px 4px 10px rgba(255, 255, 255, 0.4);
+  border-radius:  50% 0 50% 0 / 20% 50% 50% 20% ;
+}
 /* fade from left animation */
 .fade-left {
   animation: fadeLeft 1.4s ease forwards 400ms;
