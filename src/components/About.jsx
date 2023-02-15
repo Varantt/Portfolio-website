@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className={`${isVisible ? "in-view" : "" } portfolio-section mt-32`}
+      className={` mt-32`}
     >
       <div className="container  flex flex-col  lg:flex-row  items-center mb-16 md:mb-32  overflow-x-hidden">
         {/* item-1 */}

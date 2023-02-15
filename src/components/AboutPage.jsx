@@ -8,19 +8,23 @@ export default function About() {
 
   return (
     <section id="about" className="fade-animation-3">
-      <div className="container  flex flex-col  lg:flex-row  items-center mb-16 md:mb-32 pt-32  overflow-x-hidden">
+      <div className="container  flex flex-col  lg:flex-row justify-evenly  items-center mb-16 md:mb-32 pt-32  overflow-x-hidden">
+        <div className=" md:w-1/4 text-3xl md:text-5xl mb-4 md:mb-0  p-4 text-darkViolet drop-shadow-2xl   ">
+          About me
+        </div>
         {/* item-1 */}
-        <div className="md:w-1/2 flex justify-center  " >
-          <img src={laptop} alt="" className="box-shadow h-[450px] rounded-2xl" />
+
+        <div className="md:w-1/3 flex justify-center  ">
+          <img
+            src={laptop}
+            alt=""
+            className="box-shadow h-[450px] rounded-2xl"
+          />
         </div>
 
         {/* item 2 */}
 
-        <div className="flex  flex-col space-y-3  md:w-1/2 p-4  items-center md:items-start">
-          <div className="text-3xl md:text-5xl text-darkViolet drop-shadow-2xl   ">
-            About me
-          </div>
-
+        <div className="flex  flex-col space-y-3  md:w-1/3 p-4  items-center md:items-start">
           <div className="text-sm md:text-lg  text-white p-5 md:p-0">
             <p>
               Hi there! This is Varant. I’m a Self-motivated and an enthusiastic
@@ -44,8 +48,8 @@ export default function About() {
         </div>
       </div>
 
-      <Skills/>
-      <WorkExperience/>
+      <Skills />
+      <WorkExperience />
     </section>
   );
 }
