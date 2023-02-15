@@ -12,7 +12,7 @@ export default function Portfolio() {
       className={`portfolio-section ${isVisible ? "in-view" : ""}`}
     >
       <div className="flex flex-row justify-center mt-16 md:mt-44 mb-7">
-        <span className="flex flex-row  text-xl border-b-2 border-white justify-center text-darkViolet w-16 rounded-xl p-1">
+        <span className="flex flex-row  text-xl border-b-2 border-white justify-center text-white w-16 rounded-xl p-1">
           II
         </span>
       </div>

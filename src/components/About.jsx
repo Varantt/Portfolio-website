@@ -21,7 +21,7 @@ export default function About() {
         {/* item 2 */}
 
         <div className="flex  flex-col space-y-3  md:w-1/2 p-4 md:mt-52 items-center md:items-start">
-          <span className="text-xl border-b-2 border-white text-center text-darkViolet w-16 rounded-xl p-1">
+          <span className="text-2xl border-b-2 border-white text-center text-white w-16 rounded-xl p-1">
             I
           </span>
 

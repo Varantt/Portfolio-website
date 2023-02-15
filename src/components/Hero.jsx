@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section id="hero">
       {/* flex container */}
-      <div className=" container mx-auto md:pl-16 md:pt-5 flex flex-col-reverse items-center mt-4 md:mt-28  md:space-y-4 md:flex-row      ">
+      <div className=" container mx-auto md:pl-16  flex flex-col-reverse items-center  space-y-3 md:space-y-0 md:flex-row      ">
         {/* item 1 */}
 
         <div className="flex flex-col md:w-1/2    md:space-y-4  md:items-start">
@@ -45,8 +45,8 @@ export default function Hero() {
           </div>
         </div>
         {/* item 2 */}
-        <div className="flex  md:w-1/3  items-center justify-center rounded-3xl box-shadow md:ml-16 border-t-2  fade-animation ">
-          <img src={varant} alt="yelow" width="250" height="100" />
+        <div className="flex  md:w-1/2  items-start justify-center w-2/3     fade-animation ">
+          <img src={varant} alt="yelow" className = "" width ="380" height = "285"/>
         </div>
       </div>
     </section>
