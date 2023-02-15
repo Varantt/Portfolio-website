@@ -19,7 +19,7 @@ export default [
     title: "Wordpress Tiles and kitchen website",
     stack: ["Wordpress", "Elementor"],
     description:
-      "Through this project, i learned concepts about Elementor, where i used attractive widgets to create a basic website for a relative. This site might be a little outdated, but is one of my few live sites that i have. ",
+      "Throughout this project, i learned concepts about Elementor, where i yded attractive widgets to create a basic website for a relative. This site might be a little outdated, but it is one of my few live ones. ",
     imgUrl: "/assets/kitchen.png",
     link: "https://latilesandkitchen.com",
   },
@@ -28,7 +28,7 @@ export default [
     title: "Cocktails List Project",
     stack: ["React", "CSS"],
     description:
-      "This React project stands out among my many others as it showcases a significant display of my skills, having provided ample opportunity for me to put into practice the mastery I have attained.  ",
+      "This React project stands out among my many others, as it showcases a significant display of my skills, having provided ample opportunity for me to put into practice the mastery I have attained.  ",
     imgUrl: "/assets/cocktail.png",
     link: "https://test-react-project-2.netlify.app/",
   },

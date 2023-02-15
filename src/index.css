@@ -28,6 +28,7 @@
   /* background-color: transparent; */
   box-shadow: 2px 4px 10px rgba(255, 255, 255, 0.45);
   border-radius:  50% 0 50% 0 / 20% 50% 50% 20% ;
+  margin-top:20px;
 }
 /* fade from left animation */
 .fade-left {
