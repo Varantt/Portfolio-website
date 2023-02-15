@@ -12,18 +12,7 @@
   );
 }
 
-hr {
-  border: none;
-  height: 2px;
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.75),
-    rgba(255, 255, 255, 0)
-  );
-  animation: animate 2s linear infinite;
-  width: inherit;
-}
+
 
 .portfolio-section {
   opacity: 0; /* Hide the section by default */
@@ -33,12 +22,11 @@ hr {
 /* Show the section when it's in view */
 .portfolio-section.in-view {
   opacity: 1; /* Make the section visible */
-  transform: translateY(0); /* Move the section back to its original position */
 }
 
 .img {
   /* background-color: transparent; */
-  box-shadow: 2px 4px 10px rgba(255, 255, 255, 0.4);
+  box-shadow: 2px 4px 10px rgba(255, 255, 255, 0.45);
   border-radius:  50% 0 50% 0 / 20% 50% 50% 20% ;
 }
 /* fade from left animation */
@@ -58,6 +46,28 @@ hr {
 
 .fade-animation-3 {
   animation: fadeInOut 0.9s ease-in-out;
+}
+
+.slide-up-1{
+  animation: slideUp 1.2s ease-in-out ;
+}
+
+.slide-up-2{
+  animation: slideUp  ease-in-out;
+  animation-duration: 1.9s;
+}
+
+.slide-in {
+  animation : slideIn 1.75s ease-in-out;
+
+}
+
+.slide-down {
+  animation: slideDown 1.75s ease-in-out;
+}
+
+.slide-right{
+  animation: slideRight 1.75s  ease-in-out;
 }
 
 /* nav hover effects */
@@ -244,14 +254,6 @@ input {
   }
 }
 
-@keyframes animate {
-  0% {
-    background-position: left;
-  }
-  100% {
-    background-position: right;
-  }
-}
 
 /* contact animation */
 
@@ -281,5 +283,40 @@ input {
 @keyframes rotate {
   0% {
     transform: rotateY(180deg);
+  }
+}
+
+@keyframes slideUp{
+  from {
+    transform: translateY(-50%);
+
+  }
+
+  to{
+    transfrom: transltateY(0);
+  }
+}
+
+
+@keyframes slideRight{
+  from {
+    transform: translateX(100%);
+
+  }
+
+  to{
+    transfrom: transltateX(0);
+  }
+}
+
+
+@keyframes slideDown{
+  from {
+    transform: translateY(27%);
+
+  }
+
+  to{
+    transfrom: translateY(0);
   }
 }

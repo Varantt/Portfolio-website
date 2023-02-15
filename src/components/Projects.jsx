@@ -5,7 +5,7 @@ import ProjectItem from "./ProjectItem.jsx";
 export default function Projects() {
   return (
     <section>
-      <div className="text-center  text-xl md:text-4xl mt-2 md:mt-24 text-darkViolet ">
+      <div className="text-center  text-xl md:text-4xl pt-2 md:pt-24 text-darkViolet ">
         My Projects
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center p-10  fade-animation-3">

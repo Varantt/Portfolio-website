@@ -2,7 +2,7 @@ import { React } from "react";
 import varant from "../../public/assets/varant.png";
 import { AiOutlineGithub, AiOutlineTwitter } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import cv from "../../public/assets/CV-2.pdf";
+import cv from "../../public/assets/Varant.K-CV.pdf";
 
 export default function Hero() {
   return (
@@ -45,7 +45,7 @@ export default function Hero() {
           </div>
         </div>
         {/* item 2 */}
-        <div className="flex  md:w-1/2  items-start justify-center w-2/3     fade-animation ">
+        <div className="flex  md:w-1/2  items-start justify-center w-2/3    fade-animation ">
           <img src={varant} alt="yelow" className = "img" width ="380" height = "285"/>
         </div>
       </div>

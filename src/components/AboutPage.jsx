@@ -3,13 +3,15 @@ import laptop from "../../public/assets/laptop.jpg";
 import Skills from './Skills'
 import WorkExperience from "./WorkExperience";
 
+
 export default function About() {
+
   return (
     <section id="about" className="fade-animation-3">
-      <div className="container  flex flex-col  lg:flex-row  items-center mb-16 md:mb-32 mt-32  overflow-x-hidden">
+      <div className="container  flex flex-col  lg:flex-row  items-center mb-16 md:mb-32 pt-32  overflow-x-hidden">
         {/* item-1 */}
-        <div className="md:w-1/2 flex justify-center  ">
-          <img src={laptop} alt="" className="p-5 h-[450px] rounded-3xl" />
+        <div className="md:w-1/2 flex justify-center  " >
+          <img src={laptop} alt="" className="box-shadow h-[450px] rounded-2xl" />
         </div>
 
         {/* item 2 */}
