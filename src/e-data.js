@@ -12,7 +12,7 @@ export const eData = [
   {
     name: "Wordpress Developer",
     description: [
-      "- Updated the company’s website, using Wordpress. ",
+      "- Updated the company’s website using Wordpress. ",
       "- Website maintenance.",
     ],
     type: "Part time",
