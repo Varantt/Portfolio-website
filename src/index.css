@@ -32,7 +32,7 @@
 }
 /* fade from left animation */
 .fade-left {
-  animation: fadeLeft 1.4s ease forwards 400ms;
+  animation: slideIn 1.4s ease forwards 400ms;
 }
 
 /* fadein for web dev */
