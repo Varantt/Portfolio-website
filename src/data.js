@@ -47,7 +47,7 @@ export default [
     stack: ["React, SCSS"],
     description:
       "This project is a todo-list responsive react application, where i used my scss and React skills to create a useful application",
-    imgUrl: "/assets/colorgame.png",
-    link: "https://github.com/Varantt/Color-game-project",
+    imgUrl: "/assets/todo.png",
+    link: "https://vktodolist.netlify.app",
   },
 ];
