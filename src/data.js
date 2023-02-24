@@ -43,10 +43,10 @@ export default [
   },
 
   {
-    title: "Color game project",
-    stack: ["HTML, CSS, JS"],
+    title: "Todo-list application",
+    stack: ["React, SCSS"],
     description:
-      "This project was a game to guess the correct color given some RGB values. I also learned some crucial JS skills, like DOM manipulation, functions, callbacks, etc.",
+      "This project is a todo-list responsive react application, where i used my scss and React skills to create a useful application",
     imgUrl: "/assets/colorgame.png",
     link: "https://github.com/Varantt/Color-game-project",
   },
