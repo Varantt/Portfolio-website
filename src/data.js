@@ -8,20 +8,21 @@ export default [
     link: "https://Varantt.github.io",
   },
   {
+    title: "Spotify Artist Albums",
+    stack: ["ReactJs, TailwindCSS, Vite"],
+    description:
+      "The Spotify Album Explorer is a web app that allows users to search for artists and browse through their available albums on Spotify. The app utilizes the Spotify Web API to retrieve data about artists and their albums, including album names, release dates, tracklists, and album artwork. Upon launching the app, the user can enter the name of an artist in the search bar to look up that artist's discography. The app displays a list of the artist's available albums, sorted by release date in descending order. Each album is represented by its cover art, album title, and release year. Clicking on an album opens a modal window that displays the album's tracklist, with each track listed in order and labeled with its duration.",
+    imgUrl: "/assets/spotify.png",
+    link: "https://github.com/Varantt/Spotify-artist-albums",
+  },
+
+  {
     title: "Wordpress Newspaper Website",
     stack: ["Wordpress", "CSS"],
     description:
       "This website was my first Wordpress project, where I learned the major concepts in Wordpress. It was challenging at first, but my dedication to it made the learning process enjoyable. Currently, I’ve mastered most of the skills needed to prepare a Wordpress site.",
     imgUrl: "/assets/hairenik.png",
     link: "https://hairenikweekly.com",
-  },
-  {
-    title: "Wordpress Tiles and kitchen website",
-    stack: ["Wordpress", "Elementor"],
-    description:
-      "Throughout this project, i learned concepts about Elementor, where i yded attractive widgets to create a basic website for a relative. This site might be a little outdated, but it is one of my few live ones. ",
-    imgUrl: "/assets/kitchen.png",
-    link: "https://latilesandkitchen.com",
   },
 
   {
@@ -51,11 +52,11 @@ export default [
     link: "https://vktodolist.netlify.app",
   },
   {
-    title: "Spotify Artist Albums",
-    stack: ["ReactJs, TailwindCSS, Vite"],
+    title: "Wordpress Tiles and kitchen website",
+    stack: ["Wordpress", "Elementor"],
     description:
-      "The Spotify Album Explorer is a web app that allows users to search for artists and browse through their available albums on Spotify. The app utilizes the Spotify Web API to retrieve data about artists and their albums, including album names, release dates, tracklists, and album artwork. Upon launching the app, the user can enter the name of an artist in the search bar to look up that artist's discography. The app displays a list of the artist's available albums, sorted by release date in descending order. Each album is represented by its cover art, album title, and release year. Clicking on an album opens a modal window that displays the album's tracklist, with each track listed in order and labeled with its duration.",
-    imgUrl: "/assets/spotify.png",
-    link: "https://github.com/Varantt/Spotify-artist-albums",
+      "Throughout this project, i learned concepts about Elementor, where i yded attractive widgets to create a basic website for a relative. This site might be a little outdated, but it is one of my few live ones. ",
+    imgUrl: "/assets/kitchen.png",
+    link: "https://latilesandkitchen.com",
   },
 ];
