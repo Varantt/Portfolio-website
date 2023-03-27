@@ -26,7 +26,7 @@ export default [
 
   {
     title: "Cocktails List Project",
-    stack: ["React", "CSS"],
+    stack: ["ReactJs", "CSS"],
     description:
       "This React project stands out among my many others, as it showcases a significant display of my skills, having provided ample opportunity for me to put into practice the mastery I have attained.  ",
     imgUrl: "/assets/cocktail.png",
@@ -44,10 +44,18 @@ export default [
 
   {
     title: "Todo-list application",
-    stack: ["React, SCSS"],
+    stack: ["ReactJs, SCSS"],
     description:
       "This project is a todo-list responsive react application, where i used my scss and React skills to create a useful application",
     imgUrl: "/assets/todo.png",
     link: "https://vktodolist.netlify.app",
+  },
+  {
+    title: "Spotify Artist Albums",
+    stack: ["ReactJs, TailwindCSS, Vite"],
+    description:
+      "The Spotify Album Explorer is a web app that allows users to search for artists and browse through their available albums on Spotify. The app utilizes the Spotify Web API to retrieve data about artists and their albums, including album names, release dates, tracklists, and album artwork. Upon launching the app, the user can enter the name of an artist in the search bar to look up that artist's discography. The app displays a list of the artist's available albums, sorted by release date in descending order. Each album is represented by its cover art, album title, and release year. Clicking on an album opens a modal window that displays the album's tracklist, with each track listed in order and labeled with its duration.",
+    imgUrl: "/assets/spotify.png",
+    link: "https://github.com/Varantt/Spotify-artist-albums",
   },
 ];
