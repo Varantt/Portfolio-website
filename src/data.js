@@ -55,8 +55,16 @@ export default [
     title: "Wordpress Tiles and kitchen website",
     stack: ["Wordpress", "Elementor"],
     description:
-      "Throughout this project, i learned concepts about Elementor, where i yded attractive widgets to create a basic website for a relative. This site might be a little outdated, but it is one of my few live ones. ",
+      "Throughout this project, i learned concepts about Elementor, where i created attractive widgets to create a basic website for a relative. This site might be a little outdated, but it is one of my few live ones. ",
     imgUrl: "/assets/kitchen.png",
     link: "https://latilesandkitchen.com",
+  },
+  {
+    title: "Wordpress: Information about a Public figure",
+    stack: ["Wordpress", "Elementor"],
+    description:
+      "In this project, I have presented the Talaat Pasha's report on the Armenian Genocide. This significant document sheds light on the planned and methodical elimination of the Armenian community in the Ottoman Empire during World War I. To make the content easy to navigate, I have categorized the information using posts and categories. To create an organized and visually appealing website, I utilized Elementor. ",
+    imgUrl: "/assets/talaat.png",
+    link: "https://talaatpasha.net/",
   },
 ];
