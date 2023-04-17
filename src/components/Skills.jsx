@@ -174,7 +174,7 @@ export default function Skills() {
             <div className="flex justify-center ">
               <BsCheck2All size={19} className="mr-2" />
               <div className="flex-col ">
-                <div className="">Android Dev</div>
+                <div className="">React Native</div>
                 <div className="text-white text-sm font-light">Proficient</div>
               </div>
             </div>

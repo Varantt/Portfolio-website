@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import laptop from "../../public/assets/laptop.jpg";
+import laptop from "../assets/laptop.jpg";
 // import code from '../assets/code.png'
 import useScroll from "../hooks/useScroll";
 
