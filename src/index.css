@@ -13,64 +13,62 @@
 }
 
 
-
-.portfolio-section {
-  opacity: 0; /* Hide the section by default */
-  transform: translateY(50px); /* Move the section up by 50px */
-  transition: all 1.9s ease-in-out; /* Add a transition for the animation */
-}
-/* Show the section when it's in view */
-.portfolio-section.in-view {
-  opacity: 1; /* Make the section visible */
-}
-
 .img {
   /* background-color: transparent; */
-  box-shadow: 2px 4px 10px rgba(255, 255, 255, 0.45);
-  border-radius:  50% 0 50% 0 / 20% 50% 50% 20% ;
-  margin-top:20px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9)) brightness(1.2);
+  border-radius: 50% 0 50% 0 / 20% 50% 50% 20%;
+  margin-top: 20px;
 }
 /* fade from left animation */
 .fade-left {
-  animation: slideIn 1.4s ease forwards 400ms;
+  animation: slideIn 0.9s ease forwards;
+  animation-delay: 0.8s;
 }
 
 /* fadein for web dev */
 
 .fade-animation {
-  animation: fadeInOut 2.5s ease-in;
+  animation: fadeInOut 0.7s ease-in forwards;
+  animation-delay: 0.8s;
+
 }
 
-.fade-animation-2 {
-  animation: fadeInOut 3.4s ease-in-out;
-}
-
-.fade-animation-3 {
-  animation: fadeInOut 0.9s ease-in-out;
-}
-
-.slide-up-1{
-  animation: slideUp 1.2s ease-in-out ;
+.slide-up {
+  animation: slideUp 0.6s ease-in forwards;
 }
 
 .slide-up-2{
-  animation: slideUp  ease-in-out;
-  animation-duration: 1.9s;
+    animation: slideUp 1.2s ease-in-out forwards;
+
+
 }
 
 .slide-in {
-  animation : slideIn 1.75s ease-in-out;
-
+  animation: slideIn 0.9s ease-in-out forwards;
 }
 
 .slide-down {
-  animation: slideDown 1.75s ease-in-out;
+  animation: slideDown 1s ease-out forwards;
 }
 
-.slide-right{
-  animation: slideRight 1.75s  ease-in-out;
+.slide-right {
+  animation: slideRight 1s ease-in-out forwards;
 }
 
+.skew-animation {
+  animation: skewAnimation 0.7s ease-in-out forwards;
+}
+
+
+.rotate-opacity{
+  animation: rotatePlusOpacity 1.6s forwards;
+  animation-delay: 0.4s;
+}
+
+.rotate-opacity-2{
+  animation: rotatePlusOpacity 1.2s forwards;
+  animation-delay: 0.2s;
+}
 /* nav hover effects */
 .link-nav {
   position: inline-block;
@@ -134,17 +132,23 @@
   box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  opacity:0;
 }
+
+.in-view {
+  opacity: 1 !important;
+}
+
+
 
 .projects:hover {
   background: rgb(255, 255, 255, 1);
-  transform: scale(1.02);
+  transition: all 0.4s;
 }
 
 .projects:hover .title {
   color: #9a32a2;
-  transform: scale(1.02);
-  transition: all 0.4s;
+  transition: color 0.4s;
   box-sizing: border-box;
 }
 
@@ -156,7 +160,7 @@
 .projects:hover .stack {
   background: rgba(255, 255, 255, 0.048);
   color: black;
-  border: 2px dashed black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 
 .stack {
@@ -255,7 +259,6 @@ input {
   }
 }
 
-
 /* contact animation */
 
 @keyframes rotatePlusOpacity {
@@ -267,6 +270,7 @@ input {
 
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -275,9 +279,11 @@ input {
 @keyframes slideIn {
   from {
     transform: translateX(-100%);
+    opacity: 0;
   }
   to {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -287,37 +293,48 @@ input {
   }
 }
 
-@keyframes slideUp{
+@keyframes slideUp {
   from {
     transform: translateY(-50%);
-
+    opacity: 0;
   }
 
-  to{
-    transfrom: transltateY(0);
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-
-@keyframes slideRight{
+@keyframes slideRight {
   from {
     transform: translateX(100%);
-
   }
 
-  to{
+  to {
     transfrom: transltateX(0);
   }
 }
 
-
-@keyframes slideDown{
+@keyframes slideDown {
   from {
     transform: translateY(27%);
-
+    opacity: 0;
   }
 
-  to{
-    transfrom: translateY(0);
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes skewAnimation {
+  from {
+    opacity: 0;
+    transform: skew(-60deg) translateX(-40%);
+  }
+
+  to {
+    opacity: 1;
+    transform: skew(0) translateX(0);
   }
 }
