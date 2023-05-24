@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useScroll from "../hooks/useScroll";
 
-export default function ProjectItem({ title, imgUrl, stack }) {
+export default function ProjectItem({ title, imgUrl, stack, index, isVisible }) {
+  const animationDelay = index * 150;
+
   return (
-    <div className="projects rounded-md hover:text-black transition-colors ">
+    <div id = "project" className={`projects rounded-md hover:text-black transition-colors ${isVisible ? 'fade-left' : '' }`} style = {{animationDelay: `${animationDelay}ms`}} >
       <img
         src={imgUrl}
         alt="portfolio"

@@ -23,7 +23,7 @@ const useScroll = (id) => {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  });
+  }, [id]);
 
   return isVisible;
 };

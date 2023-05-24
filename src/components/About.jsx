@@ -16,8 +16,8 @@ export default function About() {
         {/* item-1 */}
         <div
           className={` md:w-1/2 flex justify-center ${
-            isVisible ? "slide-up-1 " : ""
-          }   `}
+            isVisible ? "rotate-opacity-2 opacity-0" : ""
+          }   `} 
         >
           <img
             src={laptop}
