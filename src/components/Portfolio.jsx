@@ -9,9 +9,9 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className={`portfolio-section ${isVisible ? "" : ""}`}
+      className={`portfolio-section ${isVisible ? "" : ""} md:mt-32`}
     >
-      <div className="flex flex-row justify-center mt-16 md:mt-24 mb-7">
+      <div className="flex flex-row justify-center mb-7">
         <span className="flex flex-row  text-xl border-b-2 border-white justify-center text-white w-16 rounded-xl p-1">
           II
         </span>
@@ -20,7 +20,7 @@ export default function Portfolio() {
         My Projects
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center p-10  ">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5  text-white  ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8  text-white  ">
           {projects.map((project, index) => {
             return <ProjectItem key={index} isVisible = {isVisible} {...project} index = {index} />;
           })}

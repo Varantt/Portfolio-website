@@ -202,8 +202,7 @@ input {
 .skill:hover {
   background: transparent !important;
   color: #9a32a2;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 
 .box-shadow {

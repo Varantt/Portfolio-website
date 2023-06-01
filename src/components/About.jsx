@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className={` mt-16`}
+      className={` md:mt-32`}
     >
       <div className="container  flex flex-col  lg:flex-row  items-center mb-16 md:mb-32  overflow-x-hidden">
         {/* item-1 */}
@@ -57,9 +57,7 @@ export default function About() {
               to put all of my skills into practice and learn new ones to
               resolve the problem. I take the latter as a fun learning journey!
             </p>
-            <button className="p-2 bg-white hover:bg-transparent text-darkViolet hover:text-white font-semibold transition-all duration-150 rounded shadow-2xl border-white mt-5 border-2">
-              <Link to="/about">Learn more</Link>
-            </button>
+            
           </div>
 
           <div className="text-base box-border text-offWhite "></div>

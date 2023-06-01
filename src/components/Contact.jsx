@@ -35,9 +35,9 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className={`${isVisible ? "contact-animation " : ""}`}
+      className={`${isVisible ? "contact-animation " : ""} md:mt-32`}
     >
-      <div className="flex flex-col contact md:flex-row justify-center items-center text-white w-full mt-12 md:mt-32  rounded-tl-full  ">
+      <div className="flex flex-col contact md:flex-row justify-center items-center text-white w-full    rounded-tl-full  ">
         {/* item 1 */}
 
         <div className="flex-col space-y-4 md:w-1/3 md:-ml-4">

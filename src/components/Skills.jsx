@@ -6,7 +6,7 @@ export default function Skills() {
   let isVisible = useScroll("#skills");
 
   return (
-    <section id="skills" className = {` ${isVisible ? "in-view" : "" }  `}>
+    <section id="skills" className = {` ${isVisible ? "in-view" : "" } mt-32 `}>
       <div className="text-3xl md:text-4xl text-darkViolet text-center shadow-inner mb-3 md:mb-8 ">
         Skills
       </div>
