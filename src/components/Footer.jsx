@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 import {
   AiOutlineGithub,
   AiOutlineTwitter,
@@ -14,26 +15,26 @@ export default function () {
       <div className="flex flex-col  items-center md:items-start  md:pl-10 space-y-2 w-full md:w-1/3  ">
         <div className="flex flex-row space-x-2 ">
           <AiOutlineHome size={20} />
-          <Link to="/" className="hover:pl-2  transition-all duration-300">
+          <HashLink to="/#home" className="hover:pl-2  transition-all duration-300">
             Home
-          </Link>
+          </HashLink>
         </div>
 
         <div className="flex flex-row space-x-2">
           <AiOutlineProject size={20} />
-          <Link
-            to="/projects"
+          <HashLink
+            to="/#portfolio"
             className="hover:pl-2 transition-all duration-300"
           >
             Projects
-          </Link>
+          </HashLink>
         </div>
 
         <div className="flex flex-row space-x-2">
           <AiOutlineBook size={20} />
-          <Link to="/about" className="hover:pl-2 transition-all duration-300">
+          <HashLink to="/#about" className="hover:pl-2 transition-all duration-300">
             About
-          </Link>
+          </HashLink>
         </div>
       </div>
 

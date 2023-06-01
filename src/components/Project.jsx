@@ -31,10 +31,10 @@ export default function Project() {
 
   return (
     <React.Fragment>
-      <div className="text-2xl md:text-4xl text-white text-center mt-10 md:mt-20 ">
+      <div className="text-2xl md:text-4xl text-white text-center mt-10  ">
         {value.name}
       </div>
-      <div className="flex flex-col md:flex-row text-white mt-10 md:mt-20 p-10">
+      <div className="flex flex-col md:flex-row text-white mt-10  p-10">
         <div className="md:w-1/3 ">
           Stack used :
           {value.stack.map((each) => {

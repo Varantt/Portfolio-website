@@ -10,7 +10,7 @@ export default function ProjectItem({ title, imgUrl, stack, index, isVisible }) 
       <img
         src={imgUrl}
         alt="portfolio"
-        className=" h-36 md:h-48 object-cover w-full cursor-pointer  rounded-md "
+        className=" h-36 md:h-48 object-cover w-full cursor-pointer  rounded-t-md "
       />
       <div className="p-8 w-auto">
         <h3 className="text-lg md:text-xl title">{title}</h3>

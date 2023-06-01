@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
 export default function Navbar() {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
@@ -61,18 +62,18 @@ export default function Navbar() {
           <Link to="/"> VK</Link>
         </div>
         <div className="hidden link-items flex-row space-x-12 items-center text-white md:flex">
-          <Link to="/" className=" link-nav transition-all">
+          <HashLink to="/#home" className=" link-nav transition-all">
             Home{"  "}
-          </Link>
-          <Link to="/about" className=" link-nav transition-all">
+          </HashLink>
+          <HashLink to="/#about" className=" link-nav transition-all">
             About
-          </Link>
-          <Link to="/projects" className=" link-nav transition-all">
+          </HashLink>
+          <HashLink to="/#portfolio" className=" link-nav transition-all">
             Projects
-          </Link>
-          <Link to="/contact" className=" link-nav transition-all">
+          </HashLink>
+          <HashLink to="/#contact" className=" link-nav transition-all">
             Contact
-          </Link>
+          </HashLink>
         </div>
 
         {/* hamburger */}
