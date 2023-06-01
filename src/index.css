@@ -10,8 +10,19 @@
     rgba(2, 0, 36, 1) 18%,
     rgba(71, 9, 121, 1) 88%
   );
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
 
+#footer{
+  width: 100%;
+}
+
+#project-info{
+  flex-grow: 1;
+  display: flex;
+}
 
 .img {
   /* background-color: transparent; */

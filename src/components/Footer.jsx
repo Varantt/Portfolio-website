@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 export default function () {
   return (
-    <div className="flex flex-col space-y-4 p-6 md:flex-row  text-white justify-between border-t-2 border-black bg-black  ">
+    <div id = "footer" className="flex flex-col space-y-4 p-6 md:flex-row  text-white justify-between border-t-2 border-black bg-black   ">
       <div className="flex flex-col  items-center md:items-start  md:pl-10 space-y-2 w-full md:w-1/3  ">
         <div className="flex flex-row space-x-2 ">
           <AiOutlineHome size={20} />

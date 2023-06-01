@@ -34,14 +34,14 @@ export default function Project() {
       <div className="text-2xl md:text-4xl text-white text-center mt-10  ">
         {value.name}
       </div>
-      <div className="flex flex-col md:flex-row text-white mt-10  p-10">
-        <div className="md:w-1/3 ">
+      <div id = "project-info" className="flex flex-col md:flex-row text-white mt-10  p-10 px-0 ">
+        <div className="md:w-1/3 text-center">
           Stack used :
           {value.stack.map((each) => {
             return ` ${each}`;
           })}
         </div>
-        <div className="md:w-2/3 border-l-2 p-3 border-darkViolet flex flex-col  ">
+        <div className="md:w-2/3 border-l-2 p-8 pt-0 border-darkViolet flex flex-col  ">
           {value.desc}
           <Link to={value.link} target="_blank">
             <button className="p-2 rounded mt-3 border-2 border-darkViolet hover:bg-darkViolet hover:text-white transition-colors duration-300">

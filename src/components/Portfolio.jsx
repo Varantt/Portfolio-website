@@ -19,7 +19,7 @@ export default function Portfolio() {
       <div className="text-center  text-xl md:text-3xl text-darkViolet ">
         My Projects
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center p-10  ">
+      <div className="flex flex-col md:flex-row items-center justify-center p-6 md:p-10  ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8  text-white  ">
           {projects.map((project, index) => {
             return <ProjectItem key={index} isVisible = {isVisible} {...project} index = {index} />;

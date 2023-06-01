@@ -6,7 +6,7 @@ export default function Skills() {
   let isVisible = useScroll("#skills");
 
   return (
-    <section id="skills" className = {` ${isVisible ? "in-view" : "" } mt-32 `}>
+    <section id="skills" className={` ${isVisible ? "in-view" : ""} mt-32 `}>
       <div className="text-3xl md:text-4xl text-darkViolet text-center shadow-inner mb-3 md:mb-8 ">
         Skills
       </div>
@@ -14,7 +14,11 @@ export default function Skills() {
       {/* front-end */}
       <div className="flex flex-col md:flex-row flex-wrap  mb-4  justify-center items-center md:space-x-6 md:space-y-0 space-y-4 ">
         {/* item 1 */}
-        <div className={` skill md:m-14 box-shadow md:w-1/3  p-16 md:p-10  text-darkViolet   transition-colors duration-150  rounded-md font-bold  border-white   ${isVisible ? "slide-in" : "" }  `} >
+        <div
+          className={` skill w-5/6 md:m-14 box-shadow md:w-1/3  p-16 md:p-10  text-darkViolet   transition-colors duration-150  rounded-md font-bold  border-white   ${
+            isVisible ? "slide-in" : ""
+          }  `}
+        >
           <div className="mb-6  skill-title text-white text-center text-xl ">
             Front-End{" "}
           </div>
@@ -38,9 +42,7 @@ export default function Skills() {
               <BsCheck2All size={19} className="mr-2" />
               <div className="flex-col ">
                 <div className="">SCSS</div>
-                <div className="text-white text-sm font-light">
-                  Experienced
-                </div>
+                <div className="text-white text-sm font-light">Experienced</div>
               </div>
             </div>
 
@@ -86,7 +88,11 @@ export default function Skills() {
 
         {/* backend */}
 
-        <div className={` skill box-shadow md:w-1/3 p-16 md:p-10  text-darkViolet hover:bg-transparent     rounded-md font-bold  border-white  transition-colors duration-150 ${isVisible ? "slide-right" : "" }  `}>
+        <div
+          className={` skill box-shadow w-5/6 md:w-1/3 p-16 md:p-10  text-darkViolet hover:bg-transparent     rounded-md font-bold  border-white  transition-colors duration-150 ${
+            isVisible ? "slide-right" : ""
+          }  `}
+        >
           <div className="mb-6  skill-title text-white text-center text-xl ">
             Back-end{" "}
           </div>
@@ -139,20 +145,15 @@ export default function Skills() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center">
-              <BsCheck2All size={19} className="mr-2" />
-              <div className="flex-col ">
-                <div className="">ASP.NET</div>
-                <div className="text-white text-sm font-light">
-                  Intermediate
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
         {/* other */}
-        <div className={` skill box-shadow md:w-1/3 p-10  text-darkViolet hover:bg-transparent rounded-md font-bold  border-white  transition-colors duration-150 ${isVisible ? "slide-down" : "" }  `}>
+        <div
+          className={` skill box-shadow w-5/6 md:w-1/3 p-10  text-darkViolet hover:bg-transparent rounded-md font-bold  border-white  transition-colors duration-150 ${
+            isVisible ? "slide-down" : ""
+          }  `}
+        >
           <div className="mb-6  skill-title text-white text-center text-xl ">
             Other{" "}
           </div>
