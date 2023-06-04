@@ -9,7 +9,7 @@ export default function WorkExperience() {
   return (
     <section
       id="workExperience"
-      className={`${isVisible ? "contact-animation" : ""}   md:mt-32 mb-8 `}
+      className={`${isVisible ? "contact-animation" : ""}  mt-16 md:mt-32 mb-8 `}
     >
       <div className="  flex-col md:flex  justify-center items-center">
         <div className="text-3xl md:text-4xl mb-6 text-darkViolet pr-10 text-center md:text-justify">

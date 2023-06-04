@@ -10,9 +10,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className={` md:mt-32`}
+      className={`mt-16 md:mt-32`}
     >
-      <div className="container  flex flex-col  lg:flex-row  items-center mb-16 md:mb-32  overflow-x-hidden">
+      <div className="container  flex flex-col  lg:flex-row  items-center mb-8 md:mb-16  overflow-x-hidden">
         {/* item-1 */}
         <div
           className={` md:w-1/2 flex justify-center ${

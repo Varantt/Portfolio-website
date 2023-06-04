@@ -35,15 +35,15 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className={`${isVisible ? "contact-animation " : ""} md:mt-32`}
+      className={`${isVisible ? "contact-animation " : ""} mt-8 mb-8 md:mb-0 md:mt-32`}
     >
-      <div className="flex flex-col contact md:flex-row justify-center items-center text-white w-full    rounded-tl-full  ">
+      <div className="flex flex-col px-16 md:p-[25px] md:w-full  contact md:flex-row justify-center items-center text-white rounded-tl-full  ">
         {/* item 1 */}
 
         <div className="flex-col space-y-4 md:w-1/3 md:-ml-4">
-          <div className="text-2xl md:text-4xl ">Get in touch</div>
+          <div className="text-2xl md:text-4xl text-center md:text-justify">Get in touch</div>
 
-          <div className="text-md contact-section  font-bold bg-transparent w-auto p-6 rounded-xl border-2 shadow-2xl hover:bg-white hover:text-black transition-colors duration-200 cursor-pointer justify-center ">
+          <div className="text-md contact-section  font-bold bg-transparent md:w-auto p-8 md: p-6 rounded-xl border-2 shadow-2xl hover:bg-white hover:text-black transition-colors duration-200 cursor-pointer justify-center ">
             <MdOutlineEmail />
             <p className="md:text-md">
               Email : <br />
@@ -58,8 +58,8 @@ export default function Contact() {
         </div>
 
         {/* item-2 */}
-        <form action="" className="" ref={form} onSubmit={handleSubmit}>
-          <div className="flex  flex-col w-auto space-y-3 p-12 rounded bg-opacity-75 text-black  ">
+        <form action="" className="w-full md:w-auto " ref={form} onSubmit={handleSubmit}>
+          <div className="flex  flex-col w-full md:w-auto space-y-3 md:p-12 mt-8 md:mt-0 rounded bg-opacity-75 text-black  ">
             <input
               type="text"
               value={values.name}
