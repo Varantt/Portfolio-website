@@ -43,7 +43,7 @@ export default function Contact() {
         <div className="flex-col space-y-4 md:w-1/3 md:-ml-4">
           <div className="text-2xl md:text-4xl text-center md:text-justify">Get in touch</div>
 
-          <div className="text-md contact-section  font-bold bg-transparent md:w-auto p-8 md: p-6 rounded-xl border-2 shadow-2xl hover:bg-white hover:text-black transition-colors duration-200 cursor-pointer justify-center ">
+          <div className="text-md contact-section  font-bold bg-transparent md:w-auto p-8 md:p-6 rounded-xl border-2 shadow-2xl hover:bg-white hover:text-black transition-colors duration-200 cursor-pointer justify-center ">
             <MdOutlineEmail />
             <p className="md:text-md">
               Email : <br />
