@@ -15,11 +15,11 @@
   flex-direction: column;
 }
 
-#footer{
+#footer {
   width: 100%;
 }
 
-#project-info{
+#project-info {
   flex-grow: 1;
   display: flex;
 }
@@ -41,17 +41,14 @@
 .fade-animation {
   animation: fadeInOut 0.7s ease-in forwards;
   animation-delay: 0.8s;
-
 }
 
 .slide-up {
   animation: slideUp 0.6s ease-in forwards;
 }
 
-.slide-up-2{
-    animation: slideUp 1.2s ease-in-out forwards;
-
-
+.slide-up-2 {
+  animation: slideUp 1.2s ease-in-out forwards;
 }
 
 .slide-in {
@@ -70,27 +67,26 @@
   animation: skewAnimation 0.7s ease-in-out forwards;
 }
 
-
-.rotate-opacity{
+.rotate-opacity {
   animation: rotatePlusOpacity 1.6s forwards;
   animation-delay: 0.4s;
 }
 
-.rotate-opacity-2{
+.rotate-opacity-2 {
   animation: rotatePlusOpacity 1.2s forwards;
   animation-delay: 0.2s;
 }
 /* nav hover effects */
 .link-nav {
-  position: inline-block;
-  padding-bottom: 1px;
-  border-bottom: 1px solid transparent;
+  /* position: inline-block; */
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+  box-sizing: border-box;
 }
 
 .link-nav:hover {
-  padding-bottom: 4px;
-  border-bottom: 1px solid #9a32a2;
-  transition: border-bottom 0.3s ease-in-out, padding-bottom 0.1s ease-in-out;
+  border-bottom-color: #ee00ff;
+  transition: border-bottom 0.25s ease-in-out;
 }
 /* nav scroll rule */
 .show-navbar {
@@ -143,14 +139,12 @@
   box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
   cursor: pointer;
   transition: all 0.4s ease-in-out;
-  opacity:0;
+  opacity: 0;
 }
 
 .in-view {
   opacity: 1 !important;
 }
-
-
 
 .projects:hover {
   background: rgb(255, 255, 255, 1);

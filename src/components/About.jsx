@@ -12,7 +12,7 @@ export default function About() {
       id="about"
       className={`mt-16 md:mt-32`}
     >
-      <div className="container  flex flex-col  lg:flex-row  items-center mb-8 md:mb-16  overflow-x-hidden">
+      <div className="container  flex flex-col  lg:flex-row md:justify-center md:min-w-full lg:min-w-min m-0 items-center mb-8 md:mb-16  overflow-x-hidden">
         {/* item-1 */}
         <div
           className={` md:w-1/2 flex justify-center ${
@@ -28,7 +28,7 @@ export default function About() {
 
         {/* item 2 */}
 
-        <div className={`flex  flex-col space-y-3  md:w-1/2 p-4 md:mt-72 items-center md:items-start  ${
+        <div className={`flex  flex-col space-y-3  md:w-1/2 p-4 md:mt-16 lg:mt-72  items-center md:items-start  ${
             isVisible ? "slide-up-2 " : ""
           }   `}>
           <span className="text-2xl border-b-2 border-white text-center text-white w-16 rounded-xl p-1">
