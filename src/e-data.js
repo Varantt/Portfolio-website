@@ -26,7 +26,7 @@ export const eData = [
       "- Knowledge of Wordpress, PHP, and other related technologies for efficient site maintenance and troubleshooting.",
     ],
     type: "Part-time",
-    startDate: "06/2022 ",
+    startDate: "04/2023 ",
     endDate: "Present",
   },
   {
