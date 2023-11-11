@@ -8,6 +8,7 @@ export const eData = [
     type: "Freelance",
     startDate: "08/2021 ",
     endDate: "Present",
+    logo: '#'
   },
   {
     name: "Wordpress Developer",
@@ -18,6 +19,7 @@ export const eData = [
     type: "Part-time",
     startDate: "08/2021 ",
     endDate: "Present",
+    logo: '#'
   },
   {
     name: "Wordpress site maintenance.",
@@ -28,6 +30,7 @@ export const eData = [
     type: "Part-time",
     startDate: "06/2022",
     endDate: "Present",
+    logo: '#'
   },
   {
     name: "Junior Web Developer",
@@ -45,5 +48,6 @@ export const eData = [
     type: "Full-time",
     startDate: "04/2023",
     endDate: "Present",
+    logo: '../public/assets/itxi-logo-blue.svg'
   },
 ];
