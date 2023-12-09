@@ -79,7 +79,7 @@ export default function Skills() {
               <div className="flex-col ">
                 <div className="">jQuery</div>
                 <div className="text-white text-sm font-light">
-                  Intermediate
+                  Experienced
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function Skills() {
               <BsCheck2All size={19} className="mr-2" />
               <div className="flex-col ">
                 <div className="">PHP</div>
-                <div className="text-white text-sm font-light">Proficient</div>
+                <div className="text-white text-sm font-light">Experienced</div>
               </div>
             </div>
             <div className="flex justify-center">
@@ -177,6 +177,13 @@ export default function Skills() {
               <div className="flex-col ">
                 <div className="">React Native</div>
                 <div className="text-white text-sm font-light">Proficient</div>
+              </div>
+            </div>
+            <div className="flex justify-center ">
+              <BsCheck2All size={19} className="mr-2" />
+              <div className="flex-col ">
+                <div className="">Magento</div>
+                <div className="text-white text-sm font-light">Intermediate</div>
               </div>
             </div>
           </div>
