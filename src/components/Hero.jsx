@@ -2,7 +2,7 @@ import { React } from "react";
 import varant from "/assets/varant.png";
 import { AiOutlineGithub, AiOutlineTwitter } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import cv from "/assets/Varant.K-CV.pdf";
+import cv from "/assets/CV-VarantKalemkerian.pdf";
 
 export default function Hero() {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Experience from "./Experience";
+import Experience from "./Experience/Experience";
 import { eData } from "../e-data";
 import useScroll from "../hooks/useScroll";
 

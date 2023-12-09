@@ -8,7 +8,7 @@ export const eData = [
     type: "Freelance",
     startDate: "08/2021 ",
     endDate: "Present",
-    logo: '#'
+    logo: "../public/assets/v.jpg",
   },
   {
     name: "Wordpress Developer",
@@ -19,7 +19,7 @@ export const eData = [
     type: "Part-time",
     startDate: "08/2021 ",
     endDate: "Present",
-    logo: '#'
+    logo: "../public/assets/HairenikLogo.png",
   },
   {
     name: "Wordpress site maintenance.",
@@ -30,7 +30,7 @@ export const eData = [
     type: "Part-time",
     startDate: "06/2022",
     endDate: "Present",
-    logo: '#'
+    logo: "../public/assets/arf.png",
   },
   {
     name: "Junior Web Developer",
@@ -44,10 +44,11 @@ export const eData = [
       "- Developed custom JavaScript solutions to meet specific project needs, ensuring a tailored and effective approach",
       "- Implemented SEO best practices, including the use of schemas, to optimize websites for search engines",
       "- Played a key role in optimizing online stores, particularly with WooCommerce, refining and extending features through custom JavaScript enhancements. ",
+      "- Significantly boosted the speed of a Magento website through front-end optimizations. Leveraged techniques like conditional rendering to achieve a notable improvement in website performance. Additionally, implemented front-end fixes to enhance user experience and overall site functionality. ",
     ],
     type: "Full-time",
     startDate: "04/2023",
     endDate: "Present",
-    logo: '../public/assets/itxi-logo-blue.svg'
+    logo: "../public/assets/itxi-logo-blue.svg",
   },
 ];
