@@ -1,0 +1,13 @@
+
+
+.job-description{
+  @apply text-lightBlue;
+}
+
+.img{
+  border-radius: 100%;
+}
+
+.btn {
+  transition:all  var(--transition-duration) var(--easing);
+}

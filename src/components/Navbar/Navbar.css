@@ -1,0 +1,75 @@
+/* nav hover effects */
+.link-nav {
+  /* position: inline-block; */
+  /* border-bottom: 2px solid transparent; */
+  padding-bottom: 3px;
+  box-sizing: border-box;
+  position: relative;
+  @apply text-white;
+  font-weight: 300;
+}
+
+.link-nav::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  @apply bg-lightBlue;
+
+  width: 0;
+  color: black;
+  height: 3px;
+  border-radius: 8px;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.link-nav:hover::after {
+  width: 100%;
+}
+
+
+
+/* nav scroll rule */
+.show-navbar {
+  background-color: rgba(20, 20, 20, 0.95);
+
+ 
+}
+
+.show-navbar a{
+  color: white;
+}
+
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 400;
+}
+/* Hamburger */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 40;
+  transform: translateX(-100%);
+}
+
+.burger-animation {
+  transform: translateX(0);
+  transition: transform 1s;
+}
+
+.burger-animation-back {
+  transform: translateX(-100%);
+  transition: transform 1s;
+}
+
+.menu-open {
+  height: 100vh;
+}
