@@ -1,0 +1,140 @@
+@import url("../../variables.css");
+
+.project {
+  position: relative;
+  flex-shrink: 0;
+  height: 260px;
+  overflow: hidden;
+  box-shadow: none;
+  transform: none;
+  opacity: 0;
+  box-shadow: var(--card-shadow);
+  transform: translateY(30px) scale(0.95);
+  filter: blur(5px);
+  transition: opacity 0.6s var(--easing),
+              transform 0.6s var(--easing),
+              filter 0.6s var(--easing);
+}
+
+
+.project.animate {
+  animation: premium-fade-in 0.6s var(--easing) forwards;
+}
+
+.project.project-active {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1),
+    0 2px 3px -2px rgba(0, 0, 0, 0.06), 0 2px 4px 2px var(--light-blue);
+  transform: scale(1.07);
+  gap: 1rem;
+}
+
+.project {
+  transform: scale(0.8);
+  position: relative;
+}
+
+.project::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent linear-gradient(0, #141414, rgba(31, 33, 43, 0.6)) 0 0
+    no-repeat padding-box;
+}
+
+/* image  */
+.project .project-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.project-image img {
+  width: 100%;
+  background-size: cover;
+  transition: transform var(--transition-duration) ease-in;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+/* content */
+.project-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  color: white;
+}
+
+/* overlay */
+
+.project-overlay {
+  position: relative;
+}
+
+.project-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: 11;
+  width: 100%;
+    background: linear-gradient(150deg, rgba(20, 20, 20, 0.8) 10%, rgba(31, 33, 43, 0) 90%);
+  background-color: transparent;
+  transition: background-color var(--transition-duration) var(--easing);
+}
+
+.project:hover .project-image::after {
+  background-color: rgba(16, 16, 16, 0.2);
+}
+
+/* Scale the image on hover */
+.project:hover .project-image img {
+  transform: scale(1.1);
+}
+
+.project-content {
+  padding: 0.75rem 1.25rem;
+}
+
+.project-content h1 {
+  /* color: white; */
+  font-size: 1.3rem;
+}
+
+.project-sub-content {
+max-height: 0;
+   opacity: 0;
+  transform: translateY(30px) skew(0deg, -5deg);
+  transition: all var(--transition-duration) var(--easing);
+}
+
+.project:hover .project-sub-content {
+  opacity: 1;
+  transform: translateY(0) skew(0deg, 0deg);
+  max-height: 200px
+}
+.stack {
+  padding: 0.25rem 0.75rem;
+  @apply bg-lightBlue;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@keyframes premium-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
