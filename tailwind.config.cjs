@@ -10,18 +10,13 @@ module.exports = {
         xl: "1440px",
       },
       fontFamily: {
-        sans: [
-          "Inter var, sans-serif",
-          { fontFeatureSettings: '"cv11", "ss01"' },
-        ],
+        sans: ["Inter", "sans-serif"], // Removed the font feature settings
       },
       colors: {
-        blackRaisin: "#2D232E",
-        darkViolet: "#9a32a2",
-        lightWhite: "#E0DDCF",
-        liver: "#534B52",
-        offWhite: "#F1F0EA",
-        lightBlack: "hsla(0, 0%, 0%, 0.93)",
+        blackRaisin: "#171717",
+        offWhite: "#fafafc",
+        lightBlue: "#427D9D",
+        liver: "#323232",
       },
     },
   },
