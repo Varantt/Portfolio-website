@@ -1,0 +1,42 @@
+.current-company,
+.university {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.current-company {
+  background-image: url("../../../assets/itxi-logo-blue.svg");
+}
+
+.university {
+  background-image: url("../../../assets/LU.jpg");
+}
+
+.current-company span,
+.university span {
+  z-index: 6;
+}
+
+.current-company::after,
+.university::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @apply rounded-lg;
+  background-color: rgba(66, 125, 157, 0.5);
+  z-index: 5;
+}
+
+.bento-box {
+box-shadow: var(--card-shadow);
+}
+
+/* social */
+
+
