@@ -1,0 +1,4 @@
+.skill{
+    flex-basis: calc(20% - 1rem);
+    box-shadow: var(--card-shadow);
+}
