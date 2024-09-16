@@ -1,0 +1,10 @@
+:root {
+  --transition-duration: 0.4s;
+  --premium-transition-duration: 0.4s;
+  --easing: cubic-bezier(0.25, 0.1, 0.25, 1.5);
+  --border-radius: 8px;
+  --light-blue: #427D9D;
+  --black-light: #171717;
+  --card-shadow: 0 4px 8px rgba(255, 255, 255, 0.01), 
+                 0 2px 4px rgba(255, 255, 255, 0.00625);
+}
