@@ -18,6 +18,8 @@ import bitbucketLogo from "../../public/assets/svg/languages/bitbucket-logo.svg"
 import jiraLogo from "../../public/assets/svg/languages/jira-logo.svg";
 import gitLogo from "../../public/assets/svg/languages/git-logo.svg";
 import shopifyLogo from "../../public/assets/svg/languages/shopify-logo.svg";
+import strapiLogo from "../../public/assets/svg/languages/strapi-logo.svg";
+import graphqlLogo from "../../public/assets/svg/languages/graphql-logo.svg";
 
 export const skills = [
   {
@@ -92,6 +94,14 @@ export const skills = [
   {
     title: "Shopify",
     logo: shopifyLogo,
+  },
+  {
+    title: "Strapi",
+    logo: strapiLogo,
+  },
+  {
+    title: "GraphQL",
+    logo: graphqlLogo,
   },
   {
     title: "Bitbucket",

@@ -1,29 +1,37 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
-const useScroll = (id) => {
+const useScroll = (ref) => {
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const portfolioSection = document.querySelector(id);
-    const handleScroll = () => {
-      const portfolioSectionTop = portfolioSection.getBoundingClientRect().top;
-      const portfolioSectionBottom =
-        portfolioSection.getBoundingClientRect().bottom;
+  const checkVisibility = useCallback(() => {
+    if (!ref.current) return;
 
-      if (
-        portfolioSectionTop < window.innerHeight &&
-        portfolioSectionBottom > 0
-      ) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+    const rect = ref.current.getBoundingClientRect();
+    const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+
+    setIsVisible(isInViewport);
+  }, [ref]);
+
+  useEffect(() => {
+    const currentRef = ref.current; // Capture the current value
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [id]);
+  }, [ref]);
 
   return isVisible;
 };
