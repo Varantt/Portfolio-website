@@ -1,0 +1,29 @@
+.experience {
+  box-shadow: var(--card-shadow);
+
+  border-left: 2px solid var(--light-blue);
+
+  border-top: 1px solid var(--black-light);
+  border-right: 1px solid var(--black-light);
+  border-bottom: 1px solid var(--black-light);
+}
+
+
+#experience {
+  position: relative;
+}
+
+/* #experience::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+  left: -4px;
+  top: 6px;
+} */
+
+#experience .container{
+  grid-template-columns:2fr 10fr;
+}

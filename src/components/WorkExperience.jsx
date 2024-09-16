@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Experience from "./Experience/Experience";
-import { eData } from "../e-data";
+import { eData } from "../data/jobs-data";
 import useScroll from "../hooks/useScroll";
 
 export default function WorkExperience() {
@@ -9,16 +9,21 @@ export default function WorkExperience() {
   return (
     <section
       id="workExperience"
-      className={`${isVisible ? "contact-animation" : ""}  mt-16 md:mt-32 mb-8 `}
+      className={`${
+        isVisible ? "contact-animation" : ""
+      }  mt-16 md:mt-32 mb-8 `}
     >
-      <div className="  flex-col md:flex  justify-center items-center">
-        <div className="text-3xl md:text-4xl mb-6 text-darkViolet pr-10 text-center md:text-justify">
-          Work Experience
+      <div className="  flex-col md:flex  ">
+        <div className="text-3xl md:text-4xl mb-6 text-offWhite pr-10  md:text-justify">
+           Experience
         </div>
-        <div className="flex-col space-y-8 md:w-1/3 container-exp items-center justify-center mt-5 md:mt-0 ">
-          {experienceList.map((experience, index) => {
-            return <Experience {...experience} key={index} />;
-          })}
+        <div className="flex flex-col gap-4  mt-5 md:mt-0 ">
+          {experienceList
+            .slice()
+            .reverse()
+            .map((experience, index) => {
+              return <Experience {...experience} key={index} />;
+            })}
         </div>
       </div>
     </section>
