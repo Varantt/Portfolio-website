@@ -20,8 +20,8 @@ export default function About() {
 
   return (
     <section id="about" className="mt-16 md:mt-32 relative">
-      <p className="mb-2 text-offWhite text-opacity-60 text-md">Introduction</p>
-      <h1 className="mb-10 text-white text-5xl">Overview</h1>
+      <p className="mb-2 text-offWhite text-opacity-60 text-sm  mdtext-md">Introduction</p>
+      <h1 className="mb-10 text-white text-4xl md:text-5xl">Overview</h1>
       <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-2  gap-4">
         {/* Grid item spanning two rows */}
         <div className=" flex flex-col flex-1 gap-2 items-center justify-center  bento-box rounded-lg  row-span-1   p-8 text-white border border-solid border-blackRaisin ">

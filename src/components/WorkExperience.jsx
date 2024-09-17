@@ -14,7 +14,7 @@ export default function WorkExperience() {
       }  mt-16 md:mt-32 mb-8 `}
     >
       <div className="  flex-col md:flex  ">
-        <div className="text-3xl md:text-4xl mb-6 text-offWhite pr-10  md:text-justify">
+        <div className="text-4xl md:text-5xl mb-6 text-offWhite pr-10  md:text-justify">
            Experience
         </div>
         <div className="flex flex-col gap-4  mt-5 md:mt-0 ">

@@ -68,9 +68,7 @@ export default function Navbar() {
             <Link to="/"> VK</Link>
           </div>
           <div className="hidden link-items flex-row space-x-12 items-center text-white md:flex">
-            <HashLink to="/#home" className=" link-nav transition-all">
-              Home{"  "}
-            </HashLink>
+            
             <HashLink to="/#about" className=" link-nav transition-all">
               About
             </HashLink>
@@ -108,7 +106,6 @@ export default function Navbar() {
             showNavbar ? "show-navbar " : ""
           }   `}
         >
-          <HashLink to="/">Home</HashLink>
           <HashLink to="/#about">About</HashLink>
           <HashLink to="/#portfolio">Projects</HashLink>
           <HashLink to="/#experience">Experience</HashLink>

@@ -40,7 +40,7 @@ export default function ProjectItem({
                 {stack.map((stackEl, elIndex) => {
                   return (
                     <div
-                      className="stack  rounded-full text-blackRaisin bg-opacity-65"
+                      className="stack text-xs md:text-sm  rounded-full text-lightBlue bg-lightBlue bg-opacity-20"
                       key={elIndex}
                     >
                       {" "}
