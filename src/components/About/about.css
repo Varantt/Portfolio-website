@@ -6,7 +6,6 @@
   background-position: center;
 }
 
-
 .current-company {
   background-image: url("../../../assets/itxi-logo-blue.svg");
 }
@@ -34,9 +33,40 @@
 }
 
 .bento-box {
-box-shadow: var(--card-shadow);
+  box-shadow: var(--card-shadow);
 }
 
 /* social */
 
+@media (prefers-reduced-motion: no-preference) {
+  .social,
+  .about-me,
+  .company,
+  .freelance,
+  .services,
+  .university {
+    opacity: 0;
+  }
 
+  .social.active,
+  .university.active {
+    animation: fadeLeft var(--transition-duration) var(--easing) forwards;
+    animation-delay: 0.1s;
+  }
+
+  .about-me.active {
+    animation: slideUp var(--transition-duration) var(--easing) forwards;
+    animation-delay: 0.2s;
+  }
+
+  .company.active,
+  .services.active {
+    animation: fadeRight var(--transition-duration) var(--easing) forwards;
+    animation-delay: 0.3s;
+  }
+
+  .freelance.active {
+    animation: slideDown var(--transition-duration) var(--easing) forwards;
+    animation-delay: 0.4s;
+  }
+}

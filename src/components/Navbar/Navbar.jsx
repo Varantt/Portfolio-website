@@ -61,7 +61,7 @@ export default function Navbar() {
       >
         <div
           className={
-            "flex h-12 items-center justify-between 2xl:max-w-[1500px] xl:max-w-[1230px] md:max-w-none md:p-8 p-4 sm:p-4 m-auto w-full`}"
+            "flex h-12 items-center justify-between 2xl:max-w-[1500px] xl:max-w-[1230px] md:max-w-none   md:p-8 p-4 m-auto w-full`}"
           }
         >
           <div className=" text-3xl  font-thin text-white cursor-pointer ">

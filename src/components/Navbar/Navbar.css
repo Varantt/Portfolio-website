@@ -62,12 +62,12 @@
 
 .burger-animation {
   transform: translateX(0);
-  transition: transform 1s;
+  transition: transform var(--transition-duration);
 }
 
 .burger-animation-back {
   transform: translateX(-100%);
-  transition: transform 1s;
+  transition: transform var(--transition-duration);
 }
 
 .menu-open {
