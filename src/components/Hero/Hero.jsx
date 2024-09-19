@@ -12,7 +12,7 @@ export default function Hero() {
         {/* item 1 */}
         <ContentWrapper>
           <div className="flex flex-col md:w-1/2 gap-4 md:gap-0   md:space-y-4  md:items-start">
-            <h1 className=" text-white text-6xl text-center md:text-left mt-9 opacity-0 skew-animation md:text-7xl md:mb-0 md:mt-0 ">
+            <h1 className=" text-white text-5xl text-center md:text-left mt-9 opacity-0 skew-animation md:text-7xl md:mb-0 md:mt-0 ">
               Varant Kalemkerian
             </h1>
             <div className="job-description text-center font-normal md:text-justify  text-2xl fade-left animation-delay-500 opacity-0 md:text-3xl md:mt-0 ">
