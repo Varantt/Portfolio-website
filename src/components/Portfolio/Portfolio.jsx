@@ -1,13 +1,14 @@
 import React from "react";
 import projects from "../../data/projects-data.js";
 import ProjectItem from "../ProjectItem/ProjectItem.jsx";
+import { ContentWrapper } from "../contentWrapper/ContentWrapper.jsx";
 export default function Portfolio() {
   return (
     <section
       id="portfolio"
       className={`portfolio-section  w-full mt-16 md:mt-32`}
     >
-      <div className="container 2xl:max-w-[1500px] xl:max-w-[1230px] md:max-w-none md:p-8  p-4 sm:p-4 m-auto w-full">
+      <ContentWrapper>
         <div id="projects-header" className="mb-7 ">
           <p className="mb-2 text-blackRaisin dark:text-offWhite text-opacity-60 text-sm md:text-md">
             Portfolio
@@ -27,7 +28,7 @@ export default function Portfolio() {
             );
           })}
         </div>
-      </div>
+      </ContentWrapper>
     </section>
   );
 }

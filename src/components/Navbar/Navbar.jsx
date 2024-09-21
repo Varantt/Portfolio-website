@@ -84,7 +84,7 @@ export default function Navbar() {
         ref={nav}
         className={`${showNavbar ? "show-navbar" : ""} transition`}
       >
-        <div className="flex h-12 items-center justify-between 2xl:max-w-[1500px] xl:max-w-[1230px] md:max-w-none md:p-8 p-4 m-auto w-full">
+        <div className="flex h-12 items-center justify-between 2xl:max-w-[1500px] xl:max-w-[1230px] lg:max-w-[1100px] md:max-w-none md:p-8 p-4 m-auto w-full">
           <div className="text-3xl font-thin text-blackRaisin dark:text-offWhite cursor-pointer">
             <Link to="/">VK</Link>
           </div>
@@ -95,7 +95,7 @@ export default function Navbar() {
             {isDarkMode ? (
               <MdOutlineDarkMode color="white" size={20} />
             ) : (
-              <MdOutlineLightMode  size={20} />
+              <MdOutlineLightMode size={20} />
             )}
           </div>
           <div className="md:hidden">
