@@ -85,7 +85,7 @@ export default function Navbar() {
         className={`${showNavbar ? "show-navbar" : ""} transition`}
       >
         <div className="flex h-12 items-center justify-between 2xl:max-w-[1500px] xl:max-w-[1230px] lg:max-w-[1100px] md:max-w-none md:p-8 p-4 m-auto w-full">
-          <div className="text-3xl font-thin text-blackRaisin dark:text-offWhite cursor-pointer">
+          <div className="text-3xl font-normal text-blackRaisin dark:text-offWhite cursor-pointer">
             <Link to="/">VK</Link>
           </div>
           <div className="hidden link-items flex-row space-x-12 items-center text-blackRaisin dark:text-offWhite md:flex">

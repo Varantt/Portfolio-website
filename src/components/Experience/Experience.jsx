@@ -42,7 +42,7 @@ function Experience({
 
         <div className="experience-footer flex flex-col gap-3 justify-center ">
           <div className="experience-footer-header flex gap-4 items-center">
-            <div className="logo bg-cover bg-no-repeat bg-center">
+            <div className="logo bg-cover bg-no-repeat bg-center shadow-custom dark:shadow-custom-dark rounded p-1">
               <img
                 src={logo}
                 alt="logo"
@@ -63,7 +63,7 @@ function Experience({
             {description}
           </div>
 
-          <div className="text-xs md:text-sm text-lightBlue  font-light  ">
+          <div className="text-xs md:text-sm text-lightBlue  font-medium rounded bg-offWhite dark:bg-blackRaisin p-2 inline-block max-w-fit shadow-custom dark:shadow-custom-dark ">
             <span>{type}</span>
           </div>
         </div>

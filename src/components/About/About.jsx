@@ -127,7 +127,7 @@ export default function About() {
             <span className="font-bold text-2xl text-lightBlue text-left inline-block w-full">
               About Me
             </span>
-            <p className="font-light text-left description text-sm">
+            <p className="font-normal text-left description text-sm">
               I'm a 22&nbsp;year old developer with a commitment to expanding my
               horizons daily. At present, I specialize in front-end web
               development, with a particular focus on{" "}
@@ -175,7 +175,7 @@ export default function About() {
               <span className="text-lightBlue font-bold">4</span> years of
               experience
             </p>
-            <p className="text-xs font-light text-blackRaisin dark:text-offWhite text-opacity-60">
+            <p className="text-xs font-normal text-blackRaisin dark:text-offWhite text-opacity-60">
               Web / Mobile apps
             </p>
           </div>
@@ -188,7 +188,7 @@ export default function About() {
             } services flex flex-col flex-1 gap-3 items-start bg-white dark:bg-black dark:bg-opacity-20 justify-center bento-box rounded-md lg:col-span-2 sm:col-span-1 sm:row-span-3 lg:row-span-1 shadow-custom dark:shadow-custom-dark dark:border dark:border-solid dark:border-blackRaisin p-8 text-center `}
           >
             <div className="icon">
-              <FontAwesomeIcon icon={faUserMd} className="text-3xl" />
+              <FontAwesomeIcon icon={faUserMd} className="text-3xl text-blackRaisin dark:text-offWhite" />
             </div>
             <span className="font-bold text-2xl text-lightBlue text-left inline-block w-full">
               My Services
@@ -200,7 +200,7 @@ export default function About() {
               developing fast, responsive, and scalable solutions that
               streamline your operations and deliver a flawless user experience.
             </p>
-            <p className="text-xs text-left font-light text-blackRaisin text-opacity-60">
+            <p className="text-xs text-left font-normal text-blackRaisin text-opacity-60">
               Let's transform your ideas into reality and give your users an
               unforgettable digital experience!
             </p>

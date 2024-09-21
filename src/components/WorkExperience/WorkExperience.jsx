@@ -21,7 +21,7 @@ export default function WorkExperience() {
             <p className="mb-2 text-blackRaisin dark:text-offWhite text-opacity-60 text-sm md:text-md">
               Portfolio
             </p>
-            <h1 className="mb-10 text-blackRaisin dark:text-offWhite text-4xl md:text-5xl">
+            <h1 className=" text-blackRaisin dark:text-offWhite text-4xl md:text-5xl">
               Experience
             </h1>
           </div>
