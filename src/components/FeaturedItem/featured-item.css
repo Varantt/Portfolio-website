@@ -1,0 +1,91 @@
+@import url("../../variables.css");
+
+#featured-project {
+  position: relative;
+  height: 275px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+/* image  */
+#featured-project .featured-project-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.featured-project-image img {
+  width: 100%;
+  background-size: cover;
+  transition: transform var(--transition-duration) ease-in;
+  background-repeat: no-repeat;
+  height: 100%;
+  border-radius: var(--border-radius);
+}
+
+/* content */
+.featured-project-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  color: white;
+}
+
+/* overlay */
+
+.featured-project-overlay {
+  position: relative;
+}
+
+.featured-project-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: 11;
+  width: 100%;
+  background: transparent linear-gradient(0, #141414, rgba(31, 33, 43, 0)) 0 0
+    no-repeat padding-box;
+  background-color: transparent;
+  transition: background-color var(--transition-duration) var(--easing);
+}
+
+#featured-project:hover .featured-project-image::after {
+  background-color: rgba(20, 20, 20, 0.6);
+}
+
+/* Scale the image on hover */
+#featured-project:hover .featured-project-image img {
+  transform: scale(1.1);
+}
+
+.featured-project-content {
+  padding: 0.75rem 1.25rem;
+}
+
+.featured-project-content h1 {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.featured-project-sub-content {
+  max-height: 0;
+
+  transition: max-height var(--transition-duration) var(--easing),
+    opacity var(--transition-duration) var(--easing);
+  opacity: 0;
+}
+
+#featured-project:hover .featured-project-sub-content {
+  max-height: 200px;
+  opacity: 1;
+}
+.stack {
+  padding: 0.25rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}

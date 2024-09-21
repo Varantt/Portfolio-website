@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import projects from "../../data/projects-data.js";
 import ProjectItem from "../ProjectItem/ProjectItem.jsx";
-import useScroll from "../../hooks/useScroll.js";
 export default function Portfolio() {
-
   return (
     <section
       id="portfolio"
@@ -11,10 +9,12 @@ export default function Portfolio() {
     >
       <div className="container 2xl:max-w-[1500px] xl:max-w-[1230px] md:max-w-none md:p-8  p-4 sm:p-4 m-auto w-full">
         <div id="projects-header" className="mb-7 ">
-          <p className="mb-2 text-offWhite text-opacity-60 text-sm md:text-md">
+          <p className="mb-2 text-blackRaisin dark:text-offWhite text-opacity-60 text-sm md:text-md">
             Portfolio
           </p>
-          <h1 className="mb-10 text-white text-4xl md:text-5xl">Projects</h1>
+          <h1 className="mb-10 text-blackRaisin dark:text-offWhite text-4xl md:text-5xl">
+            Projects
+          </h1>
         </div>
 
         <div

@@ -3,36 +3,30 @@
 
   border-left: 2px solid var(--light-blue);
 
-  border-top: 1px solid var(--black-light);
-  border-right: 1px solid var(--black-light);
-  border-bottom: 1px solid var(--black-light);
+ 
+   border-top: 1px solid var(--off-white);
+  border-right: 1px solid var(--off-white);
+  border-bottom: 1px solid var(--off-white);
   opacity: 0;
   transform: translateY(30px) scale(0.95);
   filter: blur(5px);
 }
 
-@media(prefers-reduced-motion: no-preference){
-.experience.active{
-  animation : premium-fade-in var(--transition-duration) var(--easing) forwards;
+html.dark .experience{
+     border-top: 1px solid var(--black-light);
+  border-right: 1px solid var(--black-light);
+  border-bottom: 1px solid var(--black-light);
 }
-
+@media (prefers-reduced-motion: no-preference) {
+  .experience.active {
+    animation: premium-fade-in var(--transition-duration) var(--easing) forwards;
+  }
 }
 
 #experience {
   position: relative;
 }
 
-/* #experience::before {
-  content: "";
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: rgb(255, 255, 255);
-  left: -4px;
-  top: 6px;
-} */
-
-#experience .container{
-  grid-template-columns:2fr 10fr;
+#experience .container {
+  grid-template-columns: 2fr 10fr;
 }

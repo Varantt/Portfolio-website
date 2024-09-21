@@ -5,9 +5,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background: black;
+html .app{
+  transition: background-color var(--transition-duration) ease,
+              color var(--transition-duration) ease;
 }
+
 
 #hero {
   background: radial-gradient(
@@ -128,9 +130,7 @@ input {
   outline: none;
 }
 
-.contact-animation {
-  animation: rotatePlusOpacity 1.4s ease-in-out;
-}
+
 
 /* footer hover effects */
 .footer-item a:hover {

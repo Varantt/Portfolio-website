@@ -1,16 +1,6 @@
 .skill {
-  flex-basis: calc(20% - 1rem);
+  flex-basis: calc(20% );
   box-shadow: var(--card-shadow);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .skill {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateY(30px) scale(0.95);
-  }
 
-  .skill.active {
-    animation: premium-fade-in var(--transition-duration) var(--easing) forwards;
-  }
-}

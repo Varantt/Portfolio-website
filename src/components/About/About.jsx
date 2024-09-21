@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect} from "react";
+import React, { useRef, useState, useEffect } from "react";
 import useScroll from "../../hooks/useScroll";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -64,15 +64,15 @@ export default function About() {
   return (
     <section id="about" className="mt-16 md:mt-32 relative">
       <ContentWrapper>
-        <p className="mb-2 text-offWhite text-opacity-60 text-sm  md:text-md">
+        <p className="mb-2 text-blackRaisin dark:text-offWhite text-opacity-60 text-sm  md:text-md">
           Introduction
         </p>
-        <h1 className="mb-10 text-white text-4xl md:text-5xl">Overview</h1>
+        <h1 className="mb-10 text-blackRaisin dark:text-offWhite text-4xl md:text-5xl">Overview</h1>
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-2  gap-4">
           {/* Grid item spanning two rows */}
           <div
             ref={socialRef}
-            className={`social flex flex-col flex-1 gap-2 items-center justify-center  bento-box rounded-lg  row-span-1   p-8 text-white border border-solid border-blackRaisin ${
+            className={`social shadow-custom dark:shadow-custom-dark dark:border bg-white dark:bg-black dark:bg-opacity-20 dark:border-solid dark:border-blackRaisin flex flex-col flex-1 gap-2 items-center justify-center  bento-box rounded-md  row-span-1   p-8 text-blackRaisin dark:text-offWhite ${
               animatedSocial ? "active" : ""
             } `}
           >
@@ -81,25 +81,25 @@ export default function About() {
               Social Info{" "}
             </span>
 
-            <div className="flex flex-row flex-wrap md:w-40 lg:w-unset  md:align-center justify-center gap-2">
+            <div className="flex flex-row flex-wrap md:w-40 lg:w-unset  md:align-center justify-center gap-2 ">
               <Link
                 to="https://github.com/Varantt"
                 target="_blank"
-                className=" social-link cursor-pointer  transition-all duration-300 md:basis-16 flex justify-center flex-shrink-0 lg:basis-auto"
+                className=" social-link cursor-pointer  text-black dark:bg-opacity-20 dark:text-white  transition-all duration-300 md:basis-16 flex justify-center flex-shrink-0 lg:basis-auto"
               >
                 <AiOutlineGithub size={24} />
               </Link>
               <Link
                 to="https://twitter.com/Varant_K"
                 target="_blank"
-                className=" social-link cursor-pointer   transition-all duration-300 md:basis-16 flex justify-center align-center  flex-shrink-0 lg:basis-auto"
+                className=" social-link cursor-pointer text-black dark:bg-opacity-20 dark:text-white   transition-all duration-300 md:basis-16 flex justify-center align-center  flex-shrink-0 lg:basis-auto"
               >
                 <AiOutlineTwitter size={24} />
               </Link>
               <Link
                 to="https://www.linkedin.com/in/varant-kalemkerian-b76b40200/"
                 target="_blank"
-                className=" social-link cursor-pointer   transition-all duration-300 md:basis-16 flex justify-center flex-shrink-0 lg:basis-auto"
+                className=" social-link cursor-pointer text-black dark:bg-opacity-20 dark:text-white  transition-all duration-300 md:basis-16 flex justify-center flex-shrink-0 lg:basis-auto"
               >
                 <AiOutlineLinkedin size={24} />
               </Link>
@@ -107,7 +107,7 @@ export default function About() {
               <Link
                 to="https://wa.me/96178947084"
                 target="_blank"
-                className=" social-link cursor-pointer   transition-all duration-300 md:basis-16 flex justify-center flex-shrink-0 lg:basis-auto"
+                className=" social-link cursor-pointer  text-black dark:bg-opacity-20 dark:text-white transition-all duration-300 md:basis-16 flex justify-center flex-shrink-0 lg:basis-auto"
               >
                 <AiOutlineWhatsApp size={24} />
               </Link>
@@ -117,7 +117,7 @@ export default function About() {
           {/* Additional grid items */}
           <div
             ref={aboutMeRef}
-            className={`about-me flex flex-col flex-1 gap-3 items-start justify-center bento-box rounded-lg lg:col-span-2 sm:col-span-1 lg:row-span-1 sm:row-span-2 border border-solid border-blackRaisin p-8 text-center text-white ${
+            className={`about-me flex flex-col flex-1 gap-3 items-start justify-center bento-box rounded-md lg:col-span-2 sm:col-span-1 lg:row-span-1 sm:row-span-2 shadow-custom dark:shadow-custom-dark dark:border bg-white dark:bg-black dark:bg-opacity-20 dark:border-solid dark:border-blackRaisin p-8 text-center text-blackRaisin dark:text-offWhite ${
               animatedAboutMe ? "active" : ""
             }`}
           >
@@ -140,7 +140,7 @@ export default function About() {
           </div>
           <div
             ref={companyRef}
-            className={`company bento-box current-company min-h-[50svh] md:min-h-fit lg:h-auto sm:row-span-2 lg:row-span-1 rounded-lg p-4 text-white ${
+            className={`company bento-box current-company min-h-[50svh] md:min-h-fit lg:h-auto sm:row-span-2 lg:row-span-1 rounded-md p-4 text-offWhite  ${
               animatedCompany ? "active" : ""
             }`}
           >
@@ -153,7 +153,7 @@ export default function About() {
             ref={universityRef}
             className={`${
               animatedUniversity ? "active" : ""
-            } bento-box university rounded-lg p-8 text-white sm:row-span-3 lg:row-span-1 min-h-[50svh] md:min-h-fit `}
+            } bento-box university shadow-custom dark:shadow-custom-dark dark:border bg-white dark:bg-black dark:bg-opacity-20 dark:border-solid dark:border-blackRaisin rounded-md p-8 text-white sm:row-span-3 lg:row-span-1 min-h-[50svh] md:min-h-fit `}
           >
             <span className="absolute bottom-0 left-0 px-5 py-4">
               University
@@ -165,17 +165,17 @@ export default function About() {
             ref={freelanceRef}
             className={`${
               animatedFreelance ? "active" : ""
-            } freelance flex flex-col flex-1 gap-2 items-center justify-center bento-box  sm:order-2 lg:-order-none lg:row-span-1 rounded-lg col-span-1 border border-solid border-blackRaisin  p-4 text-white`}
+            } freelance flex  flex-col flex-1 gap-2 items-center justify-center bento-box  sm:order-2 lg:-order-none lg:row-span-1 rounded-md col-span-1   p-4 text-white shadow-custom dark:shadow-custom-dark dark:border bg-white dark:bg-black dark:bg-opacity-20 dark:border-solid dark:border-blackRaisin`}
           >
             <span className="font-bold text-3xl md:text-4xl text-lightBlue text-center inline-block w-full">
               Freelancer
             </span>
-            <p>
+            <p className="text-blackRaisin dark:text-offWhite">
               {" "}
               <span className="text-lightBlue font-bold">4</span> years of
               experience
             </p>
-            <p className="text-xs font-light text-offWhite text-opacity-60">
+            <p className="text-xs font-light text-blackRaisin dark:text-offWhite text-opacity-60">
               Web / Mobile apps
             </p>
           </div>
@@ -185,7 +185,7 @@ export default function About() {
             ref={servicesRef}
             className={`${
               animatedServices ? "active" : ""
-            } services flex flex-col flex-1 gap-3 items-start justify-center bento-box rounded-lg lg:col-span-2 sm:col-span-1 sm:row-span-3 lg:row-span-1 border border-solid border-blackRaisin p-8 text-center text-white`}
+            } services flex flex-col flex-1 gap-3 items-start bg-white dark:bg-black dark:bg-opacity-20 justify-center bento-box rounded-md lg:col-span-2 sm:col-span-1 sm:row-span-3 lg:row-span-1 shadow-custom dark:shadow-custom-dark dark:border dark:border-solid dark:border-blackRaisin p-8 text-center `}
           >
             <div className="icon">
               <FontAwesomeIcon icon={faUserMd} className="text-3xl" />
@@ -193,14 +193,14 @@ export default function About() {
             <span className="font-bold text-2xl text-lightBlue text-left inline-block w-full">
               My Services
             </span>
-            <p className="font-light text-left text-sm">
+            <p className="font-normal text-black dark:bg-opacity-20 dark:text-offWhite text-left text-sm">
               From dynamic e-commerce systems to seamless user interfaces,
               I&nbsp;
               <span className="text-lightBlue font-bold">specialize</span> in
               developing fast, responsive, and scalable solutions that
               streamline your operations and deliver a flawless user experience.
             </p>
-            <p className="text-xs text-left font-light text-offWhite text-opacity-60">
+            <p className="text-xs text-left font-light text-blackRaisin text-opacity-60">
               Let's transform your ideas into reality and give your users an
               unforgettable digital experience!
             </p>

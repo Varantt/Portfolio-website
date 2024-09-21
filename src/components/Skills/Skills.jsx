@@ -1,21 +1,19 @@
 import React from "react";
-import { BsCheck2All } from "react-icons/bs";
-import useScroll from "../../hooks/useScroll";
 import { skills } from "../../data/skills-data";
 import { Skill } from "../Skill/Skill";
 import { ContentWrapper } from "../contentWrapper/ContentWrapper";
 
 export default function Skills() {
-  let isVisible = useScroll("#skills");
-
   return (
-    <section id="skills" className={` ${isVisible ? "in-view" : ""} mt-32 `}>
+    <section id="skills" className={` mt-32 `}>
       <ContentWrapper>
         <div id="skills-header" className="mb-7 ">
-          <p className="mb-2 text-offWhite text-opacity-60 text-sm md:text-md">
+          <p className="mb-2 text:blackRaisin dark:text-offWhite text-opacity-60 text-sm md:text-md">
             Expertise
           </p>
-          <h1 className="mb-10 text-white text-4xl md:text-5xl">Skills</h1>
+          <h1 className="mb-10 text-blackRaisin dark:text-white text-4xl md:text-5xl">
+            Skills
+          </h1>
         </div>
 
         <div

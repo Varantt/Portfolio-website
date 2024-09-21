@@ -27,7 +27,7 @@ export default function ProjectItem({
     <div
       id={`project-${id}`}
       ref={projectRef}
-      className={` project relative basis-full md:basis-[33.33vw] transition-colors rounded-lg cursor-pointer border border-liver border-solid `}
+      className={` project relative basis-full md:basis-[33.33vw] shadow-custom dark:shadow-custom-dark transition-colors rounded-lg cursor-pointer border border-liver border-solid `}
     >
         <div className="project-image">
           <img src={imgUrl} className="object-cover" alt="image url" />

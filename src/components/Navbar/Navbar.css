@@ -1,11 +1,8 @@
 /* nav hover effects */
 .link-nav {
-  /* position: inline-block; */
-  /* border-bottom: 2px solid transparent; */
   padding-bottom: 3px;
   box-sizing: border-box;
   position: relative;
-  @apply text-white;
   font-weight: 300;
 }
 
@@ -27,16 +24,13 @@
   width: 100%;
 }
 
-
-
 /* nav scroll rule */
-.show-navbar {
-  background-color: rgba(20, 20, 20, 0.95);
 
- 
+.show-navbar {
+  background-color: rgba(var(--light-blue-rgb), 0.95);
 }
 
-.show-navbar a{
+.show-navbar a, .show-navbar svg {
   color: white;
 }
 

@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import Message from "./components/Message";
 function App() {
   return (
-    <div className="app ">
+    <div className="app bg-offWhite dark:bg-darkerBlackRaisin">
       <Router>
         <Navbar />
         <Routes>

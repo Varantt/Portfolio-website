@@ -1,33 +1,16 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import "./skill.css";
-import useScroll from "../../hooks/useScroll";
 
 export const Skill = ({ title, logo, index }) => {
-  const skillRef = useRef(null);
-  const [animated, setAnimated] = useState(false);
-  const isVisible = useScroll(skillRef);
-
-  const animationDelay = index * 100;
-
-  useEffect(() => {
-    if (isVisible) {
-      setAnimated(true);
-    }
-  }, [isVisible]);
-
   const formattedTitle = title.split(" ").join("").toLowerCase();
-  const skillClass = `skill-${formattedTitle} ${
-    animated ? "active" : ""
-  } skill flex flex-col justify-between items-center flex-shrink rounded border border-blackRaisin border-solid p-8 rounded-lg`;
+  const skillClass = `skill-${formattedTitle} skill shadow-custom dark:shadow-custom-dark flex flex-col justify-between items-center  flex-shrink rounded border border-offWhite dark:border-blackRaisin bg-white dark:bg-transparent border-solid p-8 `;
 
   return (
-    <div
-      className={skillClass}
-      ref={skillRef}
-      style={{ animationDelay: `${animationDelay}ms` }}
-    >
+    <div className={skillClass}>
       <img src={logo} alt={`logo-${formattedTitle}`} width="48" height="48" />
-      <p className="text-offWhite font-light mt-4">{title}</p>
+      <p className="text-blackRaisin dark:text-offWhite font-light mt-4">
+        {title}
+      </p>
     </div>
   );
 };
