@@ -1,6 +1,5 @@
 .skill {
   flex-basis: calc(20% );
-  box-shadow: var(--card-shadow);
 }
 
 

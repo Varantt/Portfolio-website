@@ -32,10 +32,6 @@
   z-index: 5;
 }
 
-.bento-box {
-  box-shadow: var(--card-shadow);
-}
-
 /* social */
 
 @media (prefers-reduced-motion: no-preference) {
