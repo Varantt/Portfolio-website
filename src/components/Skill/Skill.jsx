@@ -8,7 +8,7 @@ export const Skill = ({ title, logo, index }) => {
   return (
     <div className={skillClass}>
       <img src={logo} alt={`logo-${formattedTitle}`} width="48" height="48" />
-      <p className="text-blackRaisin dark:text-offWhite font-light mt-4">
+      <p className="text-blackRaisin dark:text-offWhite font-medium  mt-4">
         {title}
       </p>
     </div>

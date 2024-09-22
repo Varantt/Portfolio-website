@@ -71,7 +71,7 @@ export default function Navbar() {
       <HashLink
         key={to}
         to={to}
-        className={isMobile ? "" : "link-nav transition-all"}
+        className={isMobile ? "" : "link-nav transition-all font-medium"}
       >
         {text}
       </HashLink>
