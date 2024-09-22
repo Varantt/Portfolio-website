@@ -93,9 +93,9 @@ export default function Navbar() {
           </div>
           <div className="dark-mode cursor-pointer" onClick={handleDarkMode}>
             {isDarkMode ? (
-              <MdOutlineDarkMode color="white" size={20} />
+              <MdOutlineLightMode color="white" size={20} />
             ) : (
-              <MdOutlineLightMode size={20} />
+              <MdOutlineDarkMode size={20} />
             )}
           </div>
           <div className="md:hidden">

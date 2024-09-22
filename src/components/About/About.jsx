@@ -200,7 +200,7 @@ export default function About() {
               developing fast, responsive, and scalable solutions that
               streamline your operations and deliver a flawless user experience.
             </p>
-            <p className="text-xs text-left font-normal text-blackRaisin text-opacity-60">
+            <p className="text-xs text-left font-normal text-blackRaisin dark:text-offWhite  text-opacity-60">
               Let's transform your ideas into reality and give your users an
               unforgettable digital experience!
             </p>
