@@ -3,7 +3,6 @@
   padding-bottom: 3px;
   box-sizing: border-box;
   position: relative;
-  font-weight: 300;
 }
 
 .link-nav::after {
@@ -30,7 +29,8 @@
   background-color: rgba(var(--light-blue-rgb), 0.95);
 }
 
-.show-navbar a, .show-navbar svg {
+.show-navbar a,
+.show-navbar svg {
   color: white;
 }
 
