@@ -1,15 +1,9 @@
-import React, { useRef , useEffect} from "react";
+import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./project-item.css";
 import useScroll from "../../hooks/useScroll";
 
-export default function ProjectItem({
-  title,
-  imgUrl,
-  id,
-  stack,
-  link
-}) {
+export default function ProjectItem({ title, imgUrl, id, stack, link }) {
   const projectRef = useRef(null);
   const isVisible = useScroll(projectRef);
   const animationDelay = id * 100;
@@ -21,14 +15,13 @@ export default function ProjectItem({
     }
   }, [isVisible, animationDelay]);
 
-
   return (
-    <Link to = {link} target = "_blank">
-    <div
-      id={`project-${id}`}
-      ref={projectRef}
-      className={` project relative shadow-custom dark:shadow-custom-dark   rounded-md cursor-pointer  dark:border dark:border-liver dark:border-solid `}
-    >
+    <Link to={link} target="_blank">
+      <div
+        id={`project-${id}`}
+        ref={projectRef}
+        className={` project relative shadow-custom dark:shadow-custom-dark   rounded-md cursor-pointer  dark:border dark:border-liver dark:border-solid `}
+      >
         <div className="project-image">
           <img src={imgUrl} className="object-cover" alt="image url" />
         </div>
@@ -52,7 +45,7 @@ export default function ProjectItem({
             </div>
           </div>{" "}
         </div>
-    </div>
-      </Link>
+      </div>
+    </Link>
   );
 }

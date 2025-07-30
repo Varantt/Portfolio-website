@@ -11,10 +11,10 @@
   height: 100%;
   position: absolute;
   background: 
-    linear-gradient(90deg, var(--light-blue) 50%, transparent 0) 0    0,
-    linear-gradient(0deg,  var(--light-blue) 50%, transparent 0) 100% 0,
-    linear-gradient(90deg, var(--light-blue) 50%, transparent 0) 100% 100%,
-    linear-gradient(0deg,  var(--light-blue) 50%, transparent 0) 0    100%;
+    linear-gradient(90deg, var(--off-white) 50%, transparent 0) 0    0,
+    linear-gradient(0deg,  var(--off-white) 50%, transparent 0) 100% 0,
+    linear-gradient(90deg, var(--off-white) 50%, transparent 0) 100% 100%,
+    linear-gradient(0deg,  var(--off-white) 50%, transparent 0) 0    100%;
   background-size: 4px 50%, 50% 4px, 4px 50%, 50% 4px;
   background-repeat: no-repeat;
   animation: loader 2s infinite;

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import nextIcon from "../../../public/assets/icons/icons8-next.png";
 import prevIcon from "../../../public/assets/icons/icons8-back.png";
 import "./slider.css";
@@ -16,8 +16,8 @@ export const Slider = ({ children, currentSlide, setCurrentSlide }) => {
     let newSlide = currentSlide - 1;
     if (newSlide < 0) {
       newSlide = totalSlides - 1;
-containerRef.current.scrollLeft =
-  containerRef.current.scrollWidth - containerRef.current.clientWidth;
+      containerRef.current.scrollLeft =
+        containerRef.current.scrollWidth - containerRef.current.clientWidth;
     } else {
       const projectWidth = singleProject
         ? singleProject.getBoundingClientRect().width

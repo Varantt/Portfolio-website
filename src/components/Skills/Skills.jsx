@@ -1,4 +1,3 @@
-import React from "react";
 import { skills } from "../../data/skills-data";
 import { Skill } from "../Skill/Skill";
 import { ContentWrapper } from "../contentWrapper/ContentWrapper";

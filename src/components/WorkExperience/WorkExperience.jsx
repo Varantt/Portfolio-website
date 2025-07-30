@@ -1,7 +1,6 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Experience from "../Experience/Experience";
 import { eData } from "../../data/jobs-data";
-import useScroll from "../../hooks/useScroll";
 import { ContentWrapper } from "../contentWrapper/ContentWrapper";
 import "./work-experience.css";
 

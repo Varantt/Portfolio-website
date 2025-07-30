@@ -38,7 +38,7 @@ export const eData = [
     description:
     'As a Software Engineer, I have gained experience building dynamic web applications using ReactJS, Typescript and WordPress. I\'ve worked on optimizing e-commerce sites with WooCommerce and improving SEO performance. My focus on creating responsive designs, by turning website designs into actual websites, has allowed me to explore and improve in the UI/UX department, which is one of the most important aspects of a website and its success. Additionally, I have contributed to optimizing the speed of a Magento website and solved practical challenges, such as inventory and customer information management, by integrating an external ERP system through APIs, following Postman best practices',
     startDate: "04/2023",
-    endDate: "Present",
+    endDate: "07/2025",
     logo: "../assets/itxi-logo-blue.svg",
     company: "ITXI",
     type: "Full Time"

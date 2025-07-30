@@ -7,7 +7,6 @@ import { faUserMd } from "@fortawesome/free-solid-svg-icons";
 import {
   AiOutlineGithub,
   AiOutlineLinkedin,
-  AiOutlineTwitter,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -67,7 +66,9 @@ export default function About() {
         <p className="mb-2 text-blackRaisin dark:text-offWhite text-opacity-60 text-sm  md:text-md">
           Introduction
         </p>
-        <h1 className="mb-10 text-blackRaisin dark:text-offWhite text-4xl md:text-5xl">Overview</h1>
+        <h1 className="mb-10 text-blackRaisin dark:text-offWhite text-4xl md:text-5xl">
+          Overview
+        </h1>
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-2  gap-4">
           {/* Grid item spanning two rows */}
           <div
@@ -89,13 +90,7 @@ export default function About() {
               >
                 <AiOutlineGithub size={24} />
               </Link>
-              <Link
-                to="https://twitter.com/Varant_K"
-                target="_blank"
-                className=" social-link cursor-pointer text-black dark:bg-opacity-20 dark:text-white   transition-all duration-300 md:basis-16 flex justify-center align-center  flex-shrink-0 lg:basis-auto"
-              >
-                <AiOutlineTwitter size={24} />
-              </Link>
+
               <Link
                 to="https://www.linkedin.com/in/varant-kalemkerian-b76b40200/"
                 target="_blank"
@@ -117,7 +112,7 @@ export default function About() {
           {/* Additional grid items */}
           <div
             ref={aboutMeRef}
-            className={`about-me flex flex-col flex-1 gap-3 items-start justify-center bento-box rounded-md lg:col-span-2 sm:col-span-1 lg:row-span-1 sm:row-span-2 shadow-custom dark:shadow-custom-dark dark:border bg-white dark:bg-black dark:bg-opacity-20 dark:border-solid dark:border-blackRaisin p-8 text-center text-blackRaisin dark:text-offWhite ${
+            className={`about-me flex flex-col flex-1 gap-3 items-start justify-center bento-box rounded-md lg:col-span-3 sm:col-span-1 lg:row-span-1 sm:row-span-2 shadow-custom dark:shadow-custom-dark dark:border bg-white dark:bg-black dark:bg-opacity-20 dark:border-solid dark:border-blackRaisin p-8 text-center text-blackRaisin dark:text-offWhite ${
               animatedAboutMe ? "active" : ""
             }`}
           >
@@ -128,17 +123,16 @@ export default function About() {
               About Me
             </span>
             <p className="font-normal text-left description text-sm">
-              I'm a 22&nbsp;year old developer with a commitment to expanding my
-              horizons daily. At present, I specialize in front-end web
-              development, with a particular focus on{" "}
-              <span className="font-bold  text-lightBlue ">React </span>.
-              Additionally, I have expertise in{" "}
-              <span className="font-bold text-lightBlue">WordPress</span>&nbsp;
-              development , further diversifying my skill set in the dynamic
-              field of web development.
+              I'm a full stack developer with a passion for building efficient,
+              user-focused web solutions. I enjoy working across the stack and
+              am always looking for new ways to grow and improve. I also have
+              strong experience with 
+              <span className="font-bold text-lightBlue"> WordPress </span>
+               development, which adds even more versatility to my toolkit in
+              the ever-evolving world of web development.
             </p>
           </div>
-          <div
+          {/* <div
             ref={companyRef}
             className={`company bento-box current-company min-h-[50svh] md:min-h-fit lg:h-auto sm:row-span-2 lg:row-span-1 rounded-md p-4 text-offWhite  ${
               animatedCompany ? "active" : ""
@@ -147,7 +141,7 @@ export default function About() {
             <span className="absolute top-0 left-0 px-5 py-4">
               Current Company
             </span>
-          </div>
+          </div> */}
 
           <div
             ref={universityRef}
@@ -188,7 +182,10 @@ export default function About() {
             } services flex flex-col flex-1 gap-3 items-start bg-white dark:bg-black dark:bg-opacity-20 justify-center bento-box rounded-md lg:col-span-2 sm:col-span-1 sm:row-span-3 lg:row-span-1 shadow-custom dark:shadow-custom-dark dark:border dark:border-solid dark:border-blackRaisin p-8 text-center `}
           >
             <div className="icon">
-              <FontAwesomeIcon icon={faUserMd} className="text-3xl text-blackRaisin dark:text-offWhite" />
+              <FontAwesomeIcon
+                icon={faUserMd}
+                className="text-3xl text-blackRaisin dark:text-offWhite"
+              />
             </div>
             <span className="font-bold text-2xl text-lightBlue text-left inline-block w-full">
               My Services
