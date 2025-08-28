@@ -29,7 +29,9 @@ function Experience({
   return (
     <section
       id="experience"
-      className={` ${animated ? "active" : ""} experience  rounded  p-4 bg-white dark:bg-transparent shadow-custom dark:shadow-custom-dark`}
+      className={` ${
+        animated ? "active" : ""
+      } experience  rounded  p-4 bg-white dark:bg-transparent shadow-custom dark:shadow-custom-dark`}
       ref={sectionRef}
       style={{ animationDelay: animationDelay }}
     >
@@ -54,12 +56,17 @@ function Experience({
 
             <div className="text-container flex flex-col">
               {" "}
-              <div className={`text-xl text-blackRaisin dark:text-offWhite `}>{name}</div>
+              <div className={`text-xl text-blackRaisin dark:text-offWhite `}>
+                {name}
+              </div>
               <div className="text-sm text-lightBlue font-bold ">{company}</div>
             </div>
           </div>
 
-          <div className={`desc text-[13px] text-blackRaisin dark:text-offWhite `}>
+          <div
+            className={`desc text-[13px] text-blackRaisin dark:text-offWhite `}
+            style={{ whiteSpace: "pre-line" }}
+          >
             {description}
           </div>
 

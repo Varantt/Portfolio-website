@@ -16,7 +16,7 @@ export default function Hero() {
               Varant Kalemkerian
             </h1>
             <div className="job-description text-center font-normal md:text-justify  text-2xl fade-left animation-delay-500 opacity-0 md:text-3xl md:mt-0 ">
-              Software Engineer
+              Full Stack Developer
             </div>
 
             <div className="flex flex-row justify-center md:block">

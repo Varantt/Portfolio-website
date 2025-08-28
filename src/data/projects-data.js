@@ -11,6 +11,15 @@ export default [
 
   {
     id: 1,
+    title: "E-commerce Product Cards",
+    stack: ["ReactJs", "MaterialUI", "CSS"],
+    description:
+      "Developed product cards for an e-commerce website using ReactJS and Material-UI. Each card displays product details such as image, name, price. Implemented responsive design to ensure optimal viewing on various devices. Integrated with a mock API to fetch product data dynamically.",
+    imgUrl: "/assets/ecommerce-cards.png",
+    link: "https://ecommerce-product-cards-hustlr-varant.netlify.app/",
+  },
+  {
+    id: 2,
     title: "Wordpress Newspaper Website",
     stack: ["Wordpress", "CSS"],
     description:
@@ -19,7 +28,7 @@ export default [
     link: "https://hairenikweekly.com",
   },
   {
-    id: 2,
+    id: 3,
     title: "Todo-list application",
     stack: ["ReactJs", "SCSS"],
     description:
@@ -28,7 +37,7 @@ export default [
     link: "https://vktodolist.netlify.app",
   },
   {
-    id: 3,
+    id: 4,
     title: "The Corner: Real Estate Website",
     stack: ["Wordpress", "WPBakery", "Custom Plugin", "CSS"],
     description:
@@ -37,7 +46,7 @@ export default [
     link: "https://thecornerae.com/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Custom payment gateway implementation",
     stack: ["Paystack API", "Woocommerce", "Terrawallet", "PHP", "JS"],
     description:
@@ -46,7 +55,7 @@ export default [
     link: "https://jartogo.io/index.php/my-account/woo-wallet/withdrawal",
   },
   {
-    id: 5,
+    id: 6,
     title: "Custom Corporate menu",
     stack: ["Woocommerce", "CSS", "JS", "PHP"],
     description:
@@ -55,12 +64,29 @@ export default [
     link: "https://jartogo.io/index.php/corporate-menu-custom",
   },
   {
-    id: 6,
+    id: 7,
     title: "Jannah Fresh",
     stack: ["Shopify", "Liquid", "CSS"],
     description:
       "This project provided a way for users to transfer their money from their own wallet, to an actual mobile number. It also uses a Webhook to listen for completed payments and send emails accordingly.",
     imgUrl: "/assets/jannah.png",
     link: "https://jannahfresh.com/",
+  },
+  {
+    id: 8,
+    title: "Real Estate Website ",
+    stack: [
+      "Elementor",
+      "Custom Elementor Widget",
+      "Custom Plugins",
+      "Custom Theme overrides",
+      "JS/Jquery",
+      "PHP",
+      "CSS",
+    ],
+    description:
+      "This project involved creating a real estate website with an advanced custom widget handling property issues. The plugin collected the data from the form and added on a setting page inside the dashboard. Overridden OceanWP theme to display the requests and progress on each form submission. Designed the website to match client needs ",
+    imgUrl: "/assets/peripat.png",
+    link: "https://peripat-immobilien.ch/",
   },
 ];

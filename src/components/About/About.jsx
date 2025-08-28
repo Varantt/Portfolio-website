@@ -66,9 +66,9 @@ export default function About() {
         <p className="mb-2 text-blackRaisin dark:text-offWhite text-opacity-60 text-sm  md:text-md">
           Introduction
         </p>
-        <h1 className="mb-10 text-blackRaisin dark:text-offWhite text-4xl md:text-5xl">
+        <h2 className="mb-10 text-blackRaisin dark:text-offWhite text-4xl md:text-5xl">
           Overview
-        </h1>
+        </h2>
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-2  gap-4">
           {/* Grid item spanning two rows */}
           <div
@@ -77,7 +77,7 @@ export default function About() {
               animatedSocial ? "active" : ""
             } `}
           >
-            <span className="text-lightBlue font-bold text-2xl">
+            <span className="text-lightBlue font-bold text-xl">
               {" "}
               Social Info{" "}
             </span>
@@ -119,9 +119,9 @@ export default function About() {
             <div className="icon">
               <FontAwesomeIcon icon={faAddressCard} className="text-3xl" />
             </div>
-            <span className="font-bold text-2xl text-lightBlue text-left inline-block w-full">
+            <h4 className="font-bold text-xl text-lightBlue text-left inline-block w-full">
               About Me
-            </span>
+            </h4>
             <p className="font-normal text-left description text-sm">
               I'm a full stack developer with a passion for building efficient,
               user-focused web solutions. I enjoy working across the stack and
@@ -161,7 +161,7 @@ export default function About() {
               animatedFreelance ? "active" : ""
             } freelance flex  flex-col flex-1 gap-2 items-center justify-center bento-box  sm:order-2 lg:-order-none lg:row-span-1 rounded-md col-span-1   p-4 text-white shadow-custom dark:shadow-custom-dark dark:border bg-white dark:bg-black dark:bg-opacity-20 dark:border-solid dark:border-blackRaisin`}
           >
-            <span className="font-bold text-3xl md:text-4xl text-lightBlue text-center inline-block w-full">
+            <span className="font-bold text-2xl md:text-4xl text-lightBlue text-center inline-block w-full">
               Freelancer
             </span>
             <p className="text-blackRaisin dark:text-offWhite">
@@ -187,7 +187,7 @@ export default function About() {
                 className="text-3xl text-blackRaisin dark:text-offWhite"
               />
             </div>
-            <span className="font-bold text-2xl text-lightBlue text-left inline-block w-full">
+            <span className="font-bold text-xl text-lightBlue text-left inline-block w-full">
               My Services
             </span>
             <p className="font-normal text-black dark:bg-opacity-20 dark:text-offWhite text-left text-sm">
