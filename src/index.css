@@ -111,7 +111,7 @@ input:focus, textarea:focus { outline: none; }
   border-radius: 50%;
   background: radial-gradient(
     circle at center,
-    oklch(0.58 0.09 225 / 0.08) 0%,
+    oklch(0.50 0.19 290 / 0.08) 0%,
     transparent 70%
   );
   will-change: transform;
@@ -121,7 +121,7 @@ input:focus, textarea:focus { outline: none; }
 .dark .cursor-glow {
   background: radial-gradient(
     circle at center,
-    oklch(0.72 0.10 225 / 0.10) 0%,
+    oklch(0.72 0.18 290 / 0.10) 0%,
     transparent 70%
   );
 }

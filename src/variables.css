@@ -4,8 +4,8 @@
   /* Density multiplier (airy 0.9 / default 1 / compact 1.1) */
   --density: 1;
 
-  /* Accent hue reference: 225 (blue). To change the accent, update every
-     oklch value below that uses hue 225 / 250 for dark. */
+  /* Accent hue reference: 290 (violet). To change the accent, update every
+     oklch value below that uses hue 290. */
 
   /* Spacing scale */
   --sp-1:  calc(4px  * var(--density));
@@ -37,10 +37,10 @@
   --card:  oklch(1 0 0);
   --card-ink: var(--ink);
 
-  /* Accent — blue h:225 */
-  --accent:      oklch(0.58 0.09 225);
-  --accent-soft: oklch(0.58 0.09 225 / 0.14);
-  --accent-ink:  oklch(0.32 0.07 225);
+  /* Accent — violet h:290 */
+  --accent:      oklch(0.50 0.19 290);
+  --accent-soft: oklch(0.50 0.19 290 / 0.12);
+  --accent-ink:  oklch(0.30 0.15 290);
   --warm:        oklch(0.78 0.12 60);
   --noise-opacity: 0.04;
 
@@ -61,9 +61,9 @@
   --card:  oklch(0.18 0.014 260);
   --card-ink: var(--ink);
 
-  /* Accent — slightly brighter in dark mode */
-  --accent:      oklch(0.72 0.10 225);
-  --accent-soft: oklch(0.72 0.10 225 / 0.16);
-  --accent-ink:  oklch(0.85 0.07 225);
+  /* Accent — brighter in dark mode */
+  --accent:      oklch(0.72 0.18 290);
+  --accent-soft: oklch(0.72 0.18 290 / 0.15);
+  --accent-ink:  oklch(0.88 0.10 290);
   --noise-opacity: 0.06;
 }
