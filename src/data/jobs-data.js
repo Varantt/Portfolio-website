@@ -54,14 +54,14 @@ export const eData = [
   {
     id: 5,
     era: "Sept 2025 — Now",
-    title: "King Tide Marketing",
-    titleAccent: "Marketing",
+    title: "Technical Operations Manager",
+    titleAccent: "Manager",
     company: "King Tide Marketing",
     type: "Full Time",
     role: "Technical Operations Manager · Remote · Langley, BC team",
     isCurrent: true,
     description:
       "I run the technical side of a working marketing agency — client builds, GoHighLevel setups, integrations, automations, performance work, migrations. If it touches code, a DNS record, or a webhook, it tends to land on my desk. Elementor & WordPress builds, n8n workflows to cut hours off repeat work, API integrations, and apps built quickly with Claude Code.",
-    tags: ["Elementor", "GoHighLevel", "n8n", "WordPress", "Claude Code", "APIs", "Plugins", "DNS"],
+    tags: ["Elementor", "GoHighLevel", "n8n", "WordPress", "Claude Code", "APIs", "Plugin Development", "AI Tools"],
   },
 ];
