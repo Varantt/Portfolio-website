@@ -1,54 +1,115 @@
-import { React } from "react";
+import { useEffect, useState } from "react";
+import { HashLink } from "react-router-hash-link";
 import cv from "/assets/CV-Varant-Kalemkerian-Software-Developer.pdf";
 import "./hero.css";
-import { ContentWrapper } from "../contentWrapper/ContentWrapper";
+
+// em wraps the primary accent part; rest is plain text in the same .num div
+const STATS = [
+  { em: "4",      rest: "+ yrs", label: "Building for the web" },
+  { em: "30",     rest: "+",     label: "Tools & stacks shipped" },
+  { em: "Remote", rest: "",      label: "Working from Lebanon" },
+  { em: null,     rest: "24",    label: "Years old, still curious" },
+];
+
+function useBeirutTime() {
+  const fmt = () =>
+    new Date().toLocaleTimeString("en-GB", {
+      timeZone: "Asia/Beirut",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  const [time, setTime] = useState(fmt);
+  useEffect(() => {
+    const id = setInterval(() => setTime(fmt()), 1000);
+    return () => clearInterval(id);
+  }, []);
+  return time;
+}
 
 export default function Hero() {
+  const time = useBeirutTime();
+
   return (
-    <section id="hero" className="flex align-center h-[100svh]">
-      {/* flex container */}
+    <section id="hero" className="hero-section">
+      <span className="hero-index" aria-hidden="true">
+        Varant K. / Portfolio · 2026 — No. 002
+      </span>
 
-      {/* <div className="   flex flex-col-reverse items-center justify-center   space-y-3 md:space-y-0 md:flex-row      "> */}
-        {/* item 1 */}
-        <ContentWrapper>
-          <div className="flex flex-col md:w-1/2 gap-4 md:gap-0   md:space-y-4  md:items-start">
-            <h1 className=" text-blackRaisin dark:text-offWhite text-5xl text-center md:text-left mt-9 opacity-0 skew-animation md:text-7xl md:mb-0 md:mt-0 ">
-              Varant Kalemkerian
-            </h1>
-            <div className="job-description text-center font-normal md:text-justify  text-2xl fade-left animation-delay-500 opacity-0 md:text-3xl md:mt-0 ">
-              Full Stack Developer
-            </div>
-
-            <div className="flex flex-row justify-center md:block">
-              <div className="btn text-center md:text-base m-2 md:m-0 px-0 bg-blackRaisin dark:bg-lightBlue cursor-pointer rotate-opacity opacity-0  font-bold   duration-150 text-offWhite py-2 md:px-4 bg-lightBlue rounded-md hover:bg-opacity-70 w-32 md:w-max ">
-                <a
-                  href={cv}
-                  download="CV-Varant-Kalemkerian-Software-Developer"
-                >
-                  Download CV
-                </a>
-              </div>
-            </div>
-
-            {/* <div className=" flex justify-center md:justify-start slide-down  opacity-0 items-center space-x-2 md:space-x-3 text-blackRaisin dark:text-offWhite md:pr-4  ">
-            <Link
-              to="https://github.com/Varantt"
-              target="_blank"
-              className=" cursor-pointer hover:text-offWhite  transition-all duration-200"
-            >
-              <AiOutlineGithub size={25} />
-            </Link>
-            <Link
-              to="https://twitter.com/Varant_K"
-              target="_blank"
-              className=" cursor-pointer hover:text-offWhite   transition-all duration-200"
-            >
-              <AiOutlineTwitter size={25} />
-            </Link>
-          </div> */}
+      <div className="wrap">
+        {/* 3 meta rows — matches design */}
+        <div className="hero-meta">
+          <div className="hero-meta__row">
+            <span className="hero-status__dot" aria-hidden="true" />
+            <span className="eyebrow">Available · Remote</span>
           </div>
-        </ContentWrapper>
-      {/* </div> */}
+          <div className="hero-meta__row eyebrow">
+            — Technical Operations · Est. 2021
+          </div>
+          <div className="hero-meta__row eyebrow" aria-label="Local time in Beirut">
+            — <span className="hero-clock">{time}</span> local (Beirut)
+          </div>
+        </div>
+
+        {/* Full-width headline */}
+        <h1 className="hero-headline display">
+          <span className="hero-line">
+            <span style={{ animationDelay: "0s" }}>I make the</span>
+          </span>
+          <span className="hero-line">
+            <span style={{ animationDelay: "0.12s" }}>
+              <em>technical</em> parts
+            </span>
+          </span>
+          <span className="hero-line">
+            <span style={{ animationDelay: "0.24s" }}>actually ship.</span>
+          </span>
+        </h1>
+
+        {/* Grid: intentionally empty left, description + CTAs right */}
+        <div className="hero-grid">
+          <div aria-hidden="true" />
+
+          <div className="hero-right">
+            <p className="hero-desc">
+              I'm <strong>Varant</strong> — a technical operations manager
+              working remotely from Lebanon with a Langley, BC–based team.
+              I build, integrate and automate the things that keep modern
+              web businesses running.
+            </p>
+            <div className="hero-actions">
+              <HashLink
+                to="/#portfolio"
+                className="btn btn-primary"
+                data-cursor="hover"
+                data-magnet
+              >
+                See the work <span className="btn-arrow">↓</span>
+              </HashLink>
+              <a
+                href={cv}
+                download="CV-Varant-Kalemkerian-Software-Developer"
+                className="btn btn-ghost"
+                data-cursor="hover"
+              >
+                Résumé (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats — full width, 4 columns */}
+        <div className="hero-stats" data-reveal>
+          {STATS.map(({ em, rest, label }) => (
+            <div key={label} className="hero-stat">
+              <div className="hero-stat__num">
+                {em ? <em>{em}</em> : null}
+                {rest}
+              </div>
+              <div className="hero-stat__lbl eyebrow">{label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
