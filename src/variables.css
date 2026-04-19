@@ -1,13 +1,69 @@
+/* ─── Design tokens ──────────────────────────────────────────────── */
+
 :root {
-  --transition-duration: 0.45s;
-  --premium-transition-duration: 0.45s;
-  --easing: cubic-bezier(0.25, 0.1, 0.25, 1.5);
+  /* Density multiplier (airy 0.9 / default 1 / compact 1.1) */
+  --density: 1;
+
+  /* Accent hue reference: 225 (blue). To change the accent, update every
+     oklch value below that uses hue 225 / 250 for dark. */
+
+  /* Spacing scale */
+  --sp-1:  calc(4px  * var(--density));
+  --sp-2:  calc(8px  * var(--density));
+  --sp-3:  calc(12px * var(--density));
+  --sp-4:  calc(16px * var(--density));
+  --sp-6:  calc(24px * var(--density));
+  --sp-8:  calc(32px * var(--density));
+  --sp-10: calc(40px * var(--density));
+  --sp-12: calc(48px * var(--density));
+  --sp-16: calc(64px * var(--density));
+  --sp-24: calc(96px * var(--density));
+  --sp-32: calc(128px * var(--density));
+
+  /* Typefaces */
+  --font-sans:  "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-mono:  "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ─── Light theme ─────────────────────────────────────────────── */
+  --bg:    oklch(0.985 0.004 80);
+  --bg-2:  oklch(0.965 0.006 80);
+  --bg-3:  oklch(0.945 0.008 80);
+  --ink:   oklch(0.19 0.01 260);
+  --ink-2: oklch(0.38 0.01 260);
+  --ink-3: oklch(0.58 0.01 260);
+  --rule:  oklch(0.88 0.006 260);
+  --rule-2:oklch(0.80 0.008 260);
+  --card:  oklch(1 0 0);
+  --card-ink: var(--ink);
+
+  /* Accent — blue h:225 */
+  --accent:      oklch(0.58 0.09 225);
+  --accent-soft: oklch(0.58 0.09 225 / 0.14);
+  --accent-ink:  oklch(0.32 0.07 225);
+  --warm:        oklch(0.78 0.12 60);
+  --noise-opacity: 0.04;
+
   --border-radius: 8px;
-  --light-blue: #427d9d;
-  --black-light: #171717;
-  --light-blue-rgb: 66, 125, 157;
-  --off-white: #fafafc;
-  --card-shadow: 0 4px 8px rgba(255, 255, 255, 0.01),
-    0 2px 4px rgba(255, 255, 255, 0.00625);
-  --c: no-repeat linear-gradient(#427d9d 0 0);
+  --transition-duration: 0.45s;
+}
+
+/* ─── Dark theme ─────────────────────────────────────────────────── */
+.dark {
+  --bg:    oklch(0.14 0.012 260);
+  --bg-2:  oklch(0.17 0.014 260);
+  --bg-3:  oklch(0.20 0.016 260);
+  --ink:   oklch(0.96 0.005 80);
+  --ink-2: oklch(0.78 0.008 80);
+  --ink-3: oklch(0.58 0.01 80);
+  --rule:  oklch(0.28 0.012 260);
+  --rule-2:oklch(0.36 0.014 260);
+  --card:  oklch(0.18 0.014 260);
+  --card-ink: var(--ink);
+
+  /* Accent — slightly brighter in dark mode */
+  --accent:      oklch(0.72 0.10 225);
+  --accent-soft: oklch(0.72 0.10 225 / 0.16);
+  --accent-ink:  oklch(0.85 0.07 225);
+  --noise-opacity: 0.06;
 }
