@@ -1,15 +1,20 @@
 import "./skill.css";
 
-export const Skill = ({ title, logo, index }) => {
-  const formattedTitle = title.split(" ").join("").toLowerCase();
-  const skillClass = `skill-${formattedTitle} skill shadow-custom dark:shadow-custom-dark flex flex-col justify-between items-center  flex-shrink rounded border border-offWhite dark:border-blackRaisin bg-white dark:bg-transparent border-solid p-8 `;
-
+export default function SkillCategory({ id, label, title, primary, additional }) {
   return (
-    <div className={skillClass}>
-      <img src={logo} alt={`logo-${formattedTitle}`} width="48" height="48" />
-      <p className="text-blackRaisin dark:text-offWhite font-medium  mt-4">
-        {title}
-      </p>
+    <div className="skill-cat" data-reveal>
+      <div className="skill-cat__header">
+        <span className="eyebrow">{id} — {label}</span>
+      </div>
+      <h3 className="skill-cat__title">{title}</h3>
+      <div className="skill-cat__pills">
+        {primary.map((s) => (
+          <span key={s} className="skill-pill primary">{s}</span>
+        ))}
+        {additional.map((s) => (
+          <span key={s} className="skill-pill">{s}</span>
+        ))}
+      </div>
     </div>
   );
-};
+}

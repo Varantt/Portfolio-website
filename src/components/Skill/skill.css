@@ -1,5 +1,44 @@
-.skill {
-  flex-basis: calc(20% );
+/* ─── Skill category card ─────────────────────────────────────────── */
+.skill-cat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-6);
+  background: var(--bg);
+  transition: background 0.2s;
+}
+.skill-cat:hover {
+  background: var(--bg-2);
 }
 
+.skill-cat__header {
+  margin-bottom: var(--sp-1);
+}
 
+.skill-cat__title {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.skill-cat__title em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+/* Skill pill hover — matches design .skill:hover */
+.skill-pill:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: translateY(-1px);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.skill-cat__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--sp-2);
+}
