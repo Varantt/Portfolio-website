@@ -1,209 +1,111 @@
-import React, { useRef, useState, useEffect } from "react";
-import useScroll from "../../hooks/useScroll";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAddressCard, faUser } from "@fortawesome/free-solid-svg-icons";
-import { faUserMd } from "@fortawesome/free-solid-svg-icons";
-import {
-  AiOutlineGithub,
-  AiOutlineLinkedin,
-  AiOutlineWhatsApp,
-} from "react-icons/ai";
-import { Link } from "react-router-dom";
-
 import "./about.css";
-import { ContentWrapper } from "../contentWrapper/ContentWrapper";
+
+const WHAT_I_DO = [
+  "Elementor & WordPress builds — the serious kind",
+  "GoHighLevel — forms, fields, integrations, email",
+  "API integrations & webhook-triggered automations",
+  "n8n workflows to cut hours off repeat work",
+  "Custom plugins for speed & custom behaviour",
+  "Site migrations, DNS, A-records, host transfers",
+  "Apps built quickly with Claude Code",
+];
 
 export default function About() {
-  const socialRef = useRef(null);
-  const aboutMeRef = useRef(null);
-  const companyRef = useRef(null);
-  const universityRef = useRef(null);
-  const freelanceRef = useRef(null);
-  const servicesRef = useRef(null);
-
-  const [animatedSocial, setAnimatedSocial] = useState(false);
-  const [animatedAboutMe, setAnimatedAboutMe] = useState(false);
-  const [animatedCompany, setAnimatedCompany] = useState(false);
-  const [animatedUniversity, setAnimatedUniversity] = useState(false);
-  const [animatedFreelance, setAnimatedFreelance] = useState(false);
-  const [animatedServices, setAnimatedServices] = useState(false);
-
-  let isVisibleSocialRef = useScroll(socialRef);
-  let isVisibleAboutMeRef = useScroll(aboutMeRef);
-  let isVisibleCompanyRef = useScroll(companyRef);
-  let isVisibleUniversityRef = useScroll(universityRef);
-  let isVisibleFreelanceRef = useScroll(freelanceRef);
-  let isVisibleServicesRef = useScroll(servicesRef);
-
-  useEffect(() => {
-    if (isVisibleSocialRef && !animatedSocial) setAnimatedSocial(true);
-  }, [isVisibleSocialRef, animatedSocial]);
-
-  useEffect(() => {
-    if (isVisibleAboutMeRef && !animatedAboutMe) setAnimatedAboutMe(true);
-  }, [isVisibleAboutMeRef, animatedAboutMe]);
-
-  useEffect(() => {
-    if (isVisibleCompanyRef && !animatedCompany) setAnimatedCompany(true);
-  }, [isVisibleCompanyRef, animatedCompany]);
-
-  useEffect(() => {
-    if (isVisibleUniversityRef && !animatedUniversity)
-      setAnimatedUniversity(true);
-  }, [isVisibleUniversityRef, animatedUniversity]);
-
-  useEffect(() => {
-    if (isVisibleFreelanceRef && !animatedFreelance) setAnimatedFreelance(true);
-  }, [isVisibleFreelanceRef, animatedFreelance]);
-
-  useEffect(() => {
-    if (isVisibleServicesRef && !animatedServices) setAnimatedServices(true);
-  }, [isVisibleServicesRef, animatedServices]);
   return (
-    <section id="about" className="mt-16 md:mt-32 relative">
-      <ContentWrapper>
-        <p className="mb-2 text-blackRaisin dark:text-offWhite text-opacity-60 text-sm  md:text-md">
-          Introduction
-        </p>
-        <h2 className="mb-10 text-blackRaisin dark:text-offWhite text-4xl md:text-5xl">
-          Overview
-        </h2>
-        <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-2  gap-4">
-          {/* Grid item spanning two rows */}
-          <div
-            ref={socialRef}
-            className={`social shadow-custom dark:shadow-custom-dark dark:border bg-white dark:bg-black dark:bg-opacity-20 dark:border-solid dark:border-blackRaisin flex flex-col flex-1 gap-2 items-center justify-center  bento-box rounded-md  row-span-1   p-8 text-blackRaisin dark:text-offWhite ${
-              animatedSocial ? "active" : ""
-            } `}
-          >
-            <span className="text-lightBlue font-bold text-xl">
-              {" "}
-              Social Info{" "}
-            </span>
+    <section id="about" className="about-section">
+      <div className="wrap">
+        <div className="divider" style={{ marginBottom: "var(--sp-24)" }} />
 
-            <div className="flex flex-row flex-wrap md:w-40 lg:w-unset  md:align-center justify-center gap-2 ">
-              <Link
-                to="https://github.com/Varantt"
-                target="_blank"
-                className=" social-link cursor-pointer  text-black dark:bg-opacity-20 dark:text-white  transition-all duration-300 md:basis-16 flex justify-center flex-shrink-0 lg:basis-auto"
-              >
-                <AiOutlineGithub size={24} />
-              </Link>
+        <div className="about-header" data-reveal>
+          <p className="eyebrow" style={{ marginBottom: "var(--sp-3)" }}>
+            § 01 — About
+          </p>
+          <h2 className="h2">
+            A builder who speaks{" "}
+            <em>operations</em>,{" "}
+            <em>code</em>, and{" "}
+            <em>client.</em>
+          </h2>
+        </div>
 
-              <Link
-                to="https://www.linkedin.com/in/varant-kalemkerian-b76b40200/"
-                target="_blank"
-                className=" social-link cursor-pointer text-black dark:bg-opacity-20 dark:text-white  transition-all duration-300 md:basis-16 flex justify-center flex-shrink-0 lg:basis-auto"
-              >
-                <AiOutlineLinkedin size={24} />
-              </Link>
+        <div className="about-grid">
+          {/* Left: text */}
+          <div className="about-text" data-reveal>
+            <p className="lede" style={{ marginBottom: "var(--sp-6)" }}>
+              I'm a full-stack developer and technical operations manager with
+              4+ years of building for the web. I enjoy working across the
+              stack — from React front-ends and custom WordPress plugins to API
+              integrations and automation workflows.
+            </p>
+            <p style={{ color: "var(--ink-2)", lineHeight: 1.65, marginBottom: "var(--sp-4)" }}>
+              Right now I run the technical side of a marketing agency working
+              remotely with a Langley, BC team. If it touches code, a DNS
+              record, or a webhook it tends to land on my desk.
+            </p>
+            <p style={{ color: "var(--ink-2)", lineHeight: 1.65, marginBottom: "var(--sp-8)" }}>
+              Outside of web work, I have a growing interest in{" "}
+              <strong style={{ color: "var(--ink)" }}>Data Science and Machine Learning</strong>{" "}
+              — exploring how data can drive smarter decisions and automation beyond what traditional code alone can do.
+            </p>
 
-              <Link
-                to="https://wa.me/96178947084"
-                target="_blank"
-                className=" social-link cursor-pointer  text-black dark:bg-opacity-20 dark:text-white transition-all duration-300 md:basis-16 flex justify-center flex-shrink-0 lg:basis-auto"
-              >
-                <AiOutlineWhatsApp size={24} />
-              </Link>
+            <p className="eyebrow" style={{ marginBottom: "var(--sp-4)" }}>
+              What I actually do
+            </p>
+            <ul className="about-list">
+              {WHAT_I_DO.map((item) => (
+                <li key={item} className="about-list__item">
+                  <span className="about-list__bullet" aria-hidden="true">—</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <p className="eyebrow" style={{ marginTop: "var(--sp-8)", color: "var(--ink-3)" }}>
+              Remote · Based in Lebanon &nbsp;|&nbsp; Available for contract &amp; full-time
+            </p>
+          </div>
+
+          {/* Right: Quick Facts card */}
+          <div data-reveal>
+            <div className="side-card about-facts-card">
+              <p className="eyebrow" style={{ marginBottom: "var(--sp-6)" }}>
+                Quick facts
+              </p>
+
+              <div className="facts-grid">
+                <div className="fact">
+                  <span className="fact__key">Role</span>
+                  <span className="fact__value">
+                    Technical Operations <em>Manager</em>
+                  </span>
+                </div>
+                <div className="fact">
+                  <span className="fact__key">Company</span>
+                  <span className="fact__value">King Tide <em>Marketing</em></span>
+                </div>
+                <div className="fact">
+                  <span className="fact__key">Since</span>
+                  <span className="fact__value">Sept <em>2025</em></span>
+                </div>
+                <div className="fact">
+                  <span className="fact__key">Based</span>
+                  <span className="fact__value">Lebanon · <em>Remote</em></span>
+                </div>
+                <div className="fact">
+                  <span className="fact__key">Age</span>
+                  <span className="fact__value"><em>24</em></span>
+                </div>
+                <div className="fact">
+                  <span className="fact__key">Status</span>
+                  <span className="fact__value" style={{ color: "#3bcf7e" }}>
+                    Open to chat
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
-
-          {/* Additional grid items */}
-          <div
-            ref={aboutMeRef}
-            className={`about-me flex flex-col flex-1 gap-3 items-start justify-center bento-box rounded-md lg:col-span-3 sm:col-span-1 lg:row-span-1 sm:row-span-2 shadow-custom dark:shadow-custom-dark dark:border bg-white dark:bg-black dark:bg-opacity-20 dark:border-solid dark:border-blackRaisin p-8 text-center text-blackRaisin dark:text-offWhite ${
-              animatedAboutMe ? "active" : ""
-            }`}
-          >
-            <div className="icon">
-              <FontAwesomeIcon icon={faAddressCard} className="text-3xl" />
-            </div>
-            <h4 className="font-bold text-xl text-lightBlue text-left inline-block w-full">
-              About Me
-            </h4>
-            <p className="font-normal text-left description text-sm">
-              I'm a full stack developer with a passion for building efficient,
-              user-focused web solutions. I enjoy working across the stack and
-              am always looking for new ways to grow and improve. I also have
-              strong experience with 
-              <span className="font-bold text-lightBlue"> WordPress </span>
-               development, which adds even more versatility to my toolkit in
-              the ever-evolving world of web development.
-            </p>
-          </div>
-          {/* <div
-            ref={companyRef}
-            className={`company bento-box current-company min-h-[50svh] md:min-h-fit lg:h-auto sm:row-span-2 lg:row-span-1 rounded-md p-4 text-offWhite  ${
-              animatedCompany ? "active" : ""
-            }`}
-          >
-            <span className="absolute top-0 left-0 px-5 py-4">
-              Current Company
-            </span>
-          </div> */}
-
-          <div
-            ref={universityRef}
-            className={`${
-              animatedUniversity ? "active" : ""
-            } bento-box university shadow-custom dark:shadow-custom-dark dark:border bg-white dark:bg-black dark:bg-opacity-20 dark:border-solid dark:border-blackRaisin rounded-md p-8 text-white sm:row-span-3 lg:row-span-1 min-h-[50svh] md:min-h-fit `}
-          >
-            <span className="absolute bottom-0 left-0 px-5 py-4">
-              University
-            </span>
-          </div>
-
-          {/* Freelance */}
-          <div
-            ref={freelanceRef}
-            className={`${
-              animatedFreelance ? "active" : ""
-            } freelance flex  flex-col flex-1 gap-2 items-center justify-center bento-box  sm:order-2 lg:-order-none lg:row-span-1 rounded-md col-span-1   p-4 text-white shadow-custom dark:shadow-custom-dark dark:border bg-white dark:bg-black dark:bg-opacity-20 dark:border-solid dark:border-blackRaisin`}
-          >
-            <span className="font-bold text-2xl md:text-4xl text-lightBlue text-center inline-block w-full">
-              Freelancer
-            </span>
-            <p className="text-blackRaisin dark:text-offWhite">
-              {" "}
-              <span className="text-lightBlue font-bold">4</span> years of
-              experience
-            </p>
-            <p className="text-xs font-normal text-blackRaisin dark:text-offWhite text-opacity-60">
-              Web / Mobile apps
-            </p>
-          </div>
-
-          {/* Services */}
-          <div
-            ref={servicesRef}
-            className={`${
-              animatedServices ? "active" : ""
-            } services flex flex-col flex-1 gap-3 items-start bg-white dark:bg-black dark:bg-opacity-20 justify-center bento-box rounded-md lg:col-span-2 sm:col-span-1 sm:row-span-3 lg:row-span-1 shadow-custom dark:shadow-custom-dark dark:border dark:border-solid dark:border-blackRaisin p-8 text-center `}
-          >
-            <div className="icon">
-              <FontAwesomeIcon
-                icon={faUserMd}
-                className="text-3xl text-blackRaisin dark:text-offWhite"
-              />
-            </div>
-            <span className="font-bold text-xl text-lightBlue text-left inline-block w-full">
-              My Services
-            </span>
-            <p className="font-normal text-black dark:bg-opacity-20 dark:text-offWhite text-left text-sm">
-              From dynamic e-commerce systems to seamless user interfaces,
-              I&nbsp;
-              <span className="text-lightBlue font-bold">specialize</span> in
-              developing fast, responsive, and scalable solutions that
-              streamline your operations and deliver a flawless user experience.
-            </p>
-            <p className="text-xs text-left font-normal text-blackRaisin dark:text-offWhite  text-opacity-60">
-              Let's transform your ideas into reality and give your users an
-              unforgettable digital experience!
-            </p>
           </div>
         </div>
-      </ContentWrapper>
+      </div>
     </section>
   );
 }
