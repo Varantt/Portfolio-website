@@ -1,0 +1,14 @@
+/* ─── Experience section ──────────────────────────────────────────── */
+.experience-section {
+  padding: var(--sp-24) 0;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+/* last item bottom border */
+.timeline > .job:last-child {
+  border-bottom: 1px solid var(--rule);
+}

@@ -1,82 +1,54 @@
-import React from "react";
-import { useRef, useEffect, useState } from "react";
 import "./experience.css";
-import useScroll from "../../hooks/useScroll";
-function Experience({
-  name,
-  description,
-  type,
-  startDate,
-  endDate,
-  logo,
-  company,
-  id,
-}) {
-  const sectionRef = useRef(null);
 
-  const isVisible = useScroll(sectionRef);
-
-  const animationDelay = `${100 * id}ms`;
-
-  let [animated, setAnimated] = useState(false);
-
-  useEffect(() => {
-    if (isVisible) {
-      setAnimated(true);
-    }
-  }, [isVisible]);
+export default function Experience({ era, title, titleAccent, company, type, role, isCurrent, description, tags }) {
+  const renderTitle = () => {
+    if (!titleAccent) return title;
+    const parts = title.split(titleAccent);
+    return (
+      <>
+        {parts[0]}
+        <em>{titleAccent}</em>
+        {parts[1]}
+      </>
+    );
+  };
 
   return (
-    <section
-      id="experience"
-      className={` ${
-        animated ? "active" : ""
-      } experience  rounded  p-4 bg-white dark:bg-transparent shadow-custom dark:shadow-custom-dark`}
-      ref={sectionRef}
-      style={{ animationDelay: animationDelay }}
-    >
-      <div className=" flex flex-col md:grid container justify-center items-start gap-8">
-        <div className="mb-2 experience-header ">
-          <div className="text-sm md:text-md text-lightBlue font-bold">
-            {startDate} - {endDate}
-          </div>
-        </div>
-
-        <div className="experience-footer flex flex-col gap-3 justify-center ">
-          <div className="experience-footer-header flex gap-4 items-center">
-            <div className="logo bg-cover bg-no-repeat bg-center shadow-custom dark:shadow-custom-dark rounded p-1">
-              <img
-                src={logo}
-                alt="logo"
-                width="48"
-                height="48"
-                className="rounded"
-              />
-            </div>
-
-            <div className="text-container flex flex-col">
-              {" "}
-              <div className={`text-xl text-blackRaisin dark:text-offWhite `}>
-                {name}
-              </div>
-              <div className="text-sm text-lightBlue font-bold ">{company}</div>
-            </div>
-          </div>
-
-          <div
-            className={`desc text-[13px] text-blackRaisin dark:text-offWhite `}
-            style={{ whiteSpace: "pre-line" }}
-          >
-            {description}
-          </div>
-
-          <div className="text-xs md:text-sm text-lightBlue  font-medium rounded bg-offWhite dark:bg-blackRaisin p-2 inline-block max-w-fit shadow-custom dark:shadow-custom-dark ">
-            <span>{type}</span>
-          </div>
+    <article className="job" data-reveal>
+      {/* Date / meta column */}
+      <div className="job__date">
+        <span className="eyebrow">{era}</span>
+        <div className="job__badges">
+          {isCurrent && <span className="job__badge job__badge--current">Current</span>}
+          {type && (
+            <span className={`job__badge job__badge--type${type === "Full Time" ? " job__badge--fulltime" : ""}`}>
+              {type}
+            </span>
+          )}
         </div>
       </div>
-    </section>
+
+      {/* Body */}
+      <div className="job__body">
+        <h3 className="job__title">{renderTitle()}</h3>
+        {company && (
+          <p className="job__company eyebrow" style={{ color: "var(--accent-ink)", marginTop: "var(--sp-1)" }}>
+            {company}
+          </p>
+        )}
+        <p className="job__role eyebrow" style={{ color: "var(--ink-3)", marginTop: "var(--sp-1)" }}>
+          {role}
+        </p>
+        <p className="job__desc">{description}</p>
+        <div className="job__tags">
+          {tags.map((t) => (
+            <span key={t} className="tag">{t}</span>
+          ))}
+        </div>
+      </div>
+
+      {/* Arrow */}
+      <div className="job__arrow" aria-hidden="true">↗</div>
+    </article>
   );
 }
-
-export default Experience;
