@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Portfolio design mockups & uploaded reference files
+Portfolio.html
+Varant Kalemkerian - Portfolio.html
+uploads/
