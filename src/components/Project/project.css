@@ -1,33 +1,31 @@
-/* projects hover effects */
-.projects {
-  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: all 0.4s ease-in-out;
-  opacity: 0;
+/* ─── Project detail page ─────────────────────────────────────────── */
+.project-detail {
+  padding: calc(52px + var(--sp-16)) 0 var(--sp-24);
 }
 
-.projects:hover {
-  background: rgb(255, 255, 255, 1);
-  transition: all 0.4s;
+.project-detail__header {
+  margin-bottom: var(--sp-12);
+  padding-bottom: var(--sp-12);
+  border-bottom: 1px solid var(--rule);
 }
 
-.projects:hover .title {
-  color: #9a32a2;
-  transition: color 0.4s;
-  box-sizing: border-box;
+.project-detail__body {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: var(--sp-12);
+  align-items: start;
 }
 
-.projects:hover .link {
-  color: rgb(68, 8, 68);
-  font-weight: 600;
+.project-detail-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
 }
 
-.projects:hover .stack {
-  background: rgba(255, 255, 255, 0.048);
-  color: black;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-}
-
-.stack {
-  width: fit-content;
+@media (max-width: 768px) {
+  .project-detail__body {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
 }

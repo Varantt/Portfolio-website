@@ -1,144 +1,82 @@
-@import url("../../variables.css");
-
-.project {
-  position: relative;
-  flex-shrink: 0;
-  height: 260px;
+/* ─── Project card ────────────────────────────────────────────────── */
+.project-card {
+  border: 1px solid var(--rule);
+  border-radius: 18px;
   overflow: hidden;
-
-  transform: translateY(30px) scale(0.95);
+  background: var(--card);
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s cubic-bezier(.22,1,.36,1);
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .project {
-    filter: blur(5px);
-    transition: opacity 0.6s var(--easing), transform 0.6s var(--easing),
-      filter 0.6s var(--easing);
-    opacity: 0;
-  }
-  .project.animate {
-    animation: premium-fade-in 0.6s var(--easing) forwards;
-  }
+.project-card:hover {
+  border-color: var(--ink);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.18);
 }
 
-.project {
-  transform: scale(0.8);
-  position: relative;
+.project-card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
-.project::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
+/* Image */
+.project-card__img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.project-card__img img {
   width: 100%;
   height: 100%;
-  background: transparent linear-gradient(0, #161616, rgba(31, 33, 43, 0.6)) 0 0
-    no-repeat padding-box;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(.22,1,.36,1);
+}
+.project-card:hover .project-card__img img {
+  transform: scale(1.04);
 }
 
-/* image  */
-.project .project-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+/* Body */
+.project-card__body {
+  padding: var(--sp-4) var(--sp-6) var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  flex: 1;
 }
 
-.project-image img {
-  width: 100%;
-  background-size: cover;
-  transition: transform var(--transition-duration) ease-in;
-  background-repeat: no-repeat;
-  height: 100%;
+.project-card__meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-2);
 }
 
-/* content */
-.project-content {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 100;
-  width: 100%;
-  color: white;
+.project-card__title {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  color: var(--ink);
 }
 
-/* overlay */
-
-.project-overlay {
-  position: relative;
+.project-card__arrow {
+  font-size: 18px;
+  color: var(--ink-3);
+  flex-shrink: 0;
+  transition: color 0.2s, transform 0.25s cubic-bezier(.22,1,.36,1);
+  margin-top: 2px;
+}
+.project-card:hover .project-card__arrow {
+  color: var(--accent);
+  transform: translate(3px, -3px);
 }
 
-.project-image::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  z-index: 11;
-  width: 100%;
-  background: linear-gradient(
-    150deg,
-    rgba(20, 20, 20, 0.8) 10%,
-    rgba(31, 33, 43, 0) 90%
-  );
-  background-color: transparent;
-  transition: background-color var(--transition-duration) var(--easing);
-}
-
-.project:hover .project-image::after {
-  background-color: rgba(16, 16, 16, 0.2);
-}
-
-/* Scale the image on hover */
-.project:hover .project-image img {
-  transform: scale(1.1);
-}
-
-.project-content {
-  padding: 0.75rem 1.25rem;
-}
-
-.project-content h1 {
-  /* color: white; */
-  font-size: 1.3rem;
-}
-
-.project-sub-content {
-  max-height: 0;
-  opacity: 0;
-  transform: translateY(30px) skew(0deg, -5deg);
-  transition: all var(--transition-duration) var(--easing);
-}
-
-.project:hover .project-sub-content {
-  opacity: 1;
-  transform: translateY(0) skew(0deg, 0deg);
-  max-height: 200px;
-}
-.stack {
-  padding: 0.25rem 0.75rem;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 767px) {
-  .project-sub-content {
-    opacity: 1;
-    transform: translateY(0) skew(0deg, 0deg);
-    max-height: 200px;
-  }
-}
-
-@keyframes premium-fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.95);
-    filter: blur(5px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-  }
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }

@@ -1,53 +1,55 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import data from "../../data/projects-data";
 import "./project.css";
 
 export default function Project() {
-  const [value, setValue] = useState({
-    name: "",
-    desc: "",
-    link: "",
-    stack: [],
-  });
-  const [projects, setProjects] = useState(data);
   const { name } = useParams();
+  const [project, setProject] = useState(null);
 
   useEffect(() => {
-    const newProject = projects.find((project) => project.title === name);
-    setValue({
-      ...value,
-      name: newProject.title,
-      desc: newProject.description,
-      link: newProject.link,
-      stack: newProject.stack,
-    });
-  }, []);
+    const found = data.find((p) => p.title === name);
+    setProject(found || null);
+  }, [name]);
+
+  if (!project) {
+    return (
+      <div className="project-detail-empty">
+        <p className="eyebrow">Project not found</p>
+      </div>
+    );
+  }
 
   return (
-    <React.Fragment>
-      <div className="text-2xl md:text-4xl text-white text-center mt-10  ">
-        {value.name}
-      </div>
-      <div
-        id="project-info"
-        className="flex flex-col md:flex-row  mt-10  p-10 px-0 "
-      >
-        <div className="md:w-1/3 text-center">
-          Stack used :
-          {value.stack.map((each) => {
-            return ` ${each}`;
-          })}
+    <div className="project-detail">
+      <div className="wrap">
+        <div className="project-detail__header">
+          <p className="eyebrow" style={{ marginBottom: "var(--sp-3)" }}>Project</p>
+          <h1 className="h2">{project.title}</h1>
         </div>
-        <div className="md:w-2/3 border-l-2 p-8 pt-0 border-offWhite flex flex-col  ">
-          {value.desc}
-          <Link to={value.link} target="_blank">
-            <button className="p-2 rounded mt-3 border-2  hover:bg-offWhite hover:text-white transition-colors duration-300">
-              Visit website
-            </button>
-          </Link>
+
+        <div className="project-detail__body">
+          <div className="project-detail__stack">
+            <p className="eyebrow" style={{ marginBottom: "var(--sp-4)" }}>Stack used</p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+              {project.stack.map((s) => (
+                <span key={s} className="skill-pill primary">{s}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="project-detail__desc">
+            <p style={{ color: "var(--ink-2)", lineHeight: 1.7, marginBottom: "var(--sp-6)" }}>
+              {project.description}
+            </p>
+            <Link to={project.link} target="_blank" rel="noopener noreferrer">
+              <button className="btn btn-primary" data-cursor="hover">
+                Visit website <span className="btn-arrow">↗</span>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 }
