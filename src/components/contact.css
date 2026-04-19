@@ -1,0 +1,86 @@
+/* ─── Contact section ─────────────────────────────────────────────── */
+.contact-section {
+  padding: var(--sp-24) 0;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-12);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: var(--sp-16);
+  background: var(--card);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle gradient accent */
+.contact-card::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  pointer-events: none;
+}
+
+/* Contact heading em — matches design .contact-card h2 em */
+.contact-section .h2 em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+/* Left */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+
+.contact-info__row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.contact-info__val {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  transition: color 0.2s;
+}
+a.contact-info__val:hover { color: var(--accent); }
+
+.contact-social {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Right: form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+/* ─── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 820px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+    padding: var(--sp-8);
+  }
+}

@@ -1,18 +1,14 @@
 import { useRef, useState } from "react";
-import { MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
+import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
-import useScroll from "../hooks/useScroll";
+import "./contact.css";
 
 export default function Contact() {
-  const isVisible = useScroll("#contact");
-  const [values, setValues] = useState({
-    name: "",
-    email: "",
-  });
-
-  const ref = useRef(null);
-
   const form = useRef(null);
+  const [values, setValues] = useState({ name: "", email: "", message: "" });
+
+  const handleChange = (e) =>
+    setValues({ ...values, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,90 +21,134 @@ export default function Contact() {
     window.location.replace("/message");
   };
 
-  const handleChange = (e) => {
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   return (
-    <section
-      id="contact"
-      className={`${
-        isVisible ? "contact-animation " : ""
-      } mt-8 mb-8 md:mb-0 md:mt-32`}
-    >
-      <div className="flex flex-col px-16 md:p-[25px] md:w-full  contact md:flex-row justify-center items-center text-white rounded-tl-full  ">
-        {/* item 1 */}
+    <section id="contact" className="contact-section">
+      <div className="wrap">
+        <div className="divider" style={{ marginBottom: "var(--sp-24)" }} />
 
-        <div className="flex-col space-y-4 md:w-1/3 md:-ml-4">
-          <div className="text-2xl md:text-4xl text-center md:text-justify">
-            Get in touch
-          </div>
+        <div data-reveal>
+          <p className="eyebrow" style={{ marginBottom: "var(--sp-3)" }}>§ 05 — Contact</p>
+          <h2 className="h2" style={{ marginBottom: "var(--sp-12)" }}>
+            Let's build <em>something.</em>
+          </h2>
+        </div>
 
-          <div className="text-md contact-section  font-bold bg-transparent md:w-auto p-8 md:p-6 rounded-xl border-2 shadow-2xl hover:bg-white hover:text-black transition-colors duration-200 cursor-pointer justify-center ">
-            <MdOutlineEmail />
-            <p className="md:text-md">
-              Email : <br />
-              varantkalemkerian@gmail.com <br />
+        <div className="contact-card" data-reveal>
+          {/* Left */}
+          <div className="contact-left">
+            <p className="eyebrow" style={{ marginBottom: "var(--sp-3)" }}>
+              Start a <em style={{ fontFamily: "var(--font-serif)", fontStyle: "italic" }}>conversation.</em>
+            </p>
+            <p className="lede" style={{ marginBottom: "var(--sp-8)" }}>
+              Client work, freelance, collaborations, the occasional weird idea
+              — I read everything.
+            </p>
+
+            <div className="contact-info">
+              <div className="contact-info__row">
+                <span className="eyebrow">Email</span>
+                <a
+                  href="mailto:varantkalemkerian@gmail.com"
+                  className="contact-info__val"
+                  data-cursor="hover"
+                >
+                  varantkalemkerian@gmail.com
+                </a>
+              </div>
+              <div className="contact-info__row">
+                <span className="eyebrow">Based</span>
+                <span className="contact-info__val">Lebanon · Working remotely</span>
+              </div>
+              <div className="contact-info__row">
+                <span className="eyebrow">Elsewhere</span>
+                <div className="contact-social">
+                  <Link
+                    to="https://github.com/Varantt"
+                    target="_blank"
+                    className="social-link"
+                    data-cursor="hover"
+                  >
+                    GitHub
+                  </Link>
+                  <span aria-hidden="true" style={{ color: "var(--rule-2)" }}>·</span>
+                  <Link
+                    to="https://www.linkedin.com/in/varant-kalemkerian-b76b40200/"
+                    target="_blank"
+                    className="social-link"
+                    data-cursor="hover"
+                  >
+                    LinkedIn
+                  </Link>
+                  <span aria-hidden="true" style={{ color: "var(--rule-2)" }}>·</span>
+                  <Link
+                    to="https://wa.me/96178947084"
+                    target="_blank"
+                    className="social-link"
+                    data-cursor="hover"
+                  >
+                    WhatsApp
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <p className="eyebrow" style={{ marginTop: "var(--sp-8)", color: "var(--ink-3)" }}>
+              Replies usually within a day
             </p>
           </div>
 
-          <div className="text-sm font-semibold bg-transparent p-6  rounded-xl border-2 shadow-2xl hover:bg-white hover:text-black transition-colors duration-200 cursor-pointer justify-center ">
-            <MdOutlinePhone />
-            Phone Number: <br /> +961 78 947 084
-          </div>
-        </div>
+          {/* Right: Form */}
+          <form ref={form} onSubmit={handleSubmit} className="contact-form">
+            <div className="field">
+              <label htmlFor="name">Your name</label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                value={values.name}
+                onChange={handleChange}
+                placeholder="Varant Kalemkerian"
+                required
+              />
+            </div>
 
-        {/* item-2 */}
-        <form
-          action=""
-          className="w-full md:w-auto "
-          ref={form}
-          onSubmit={handleSubmit}
-        >
-          <div className="flex  flex-col w-full md:w-auto space-y-3 md:p-12 mt-8 md:mt-0 rounded bg-opacity-75 text-black  ">
-            <input
-              type="text"
-              value={values.name}
-              placeholder="Name"
-              name="name"
-              className="p-3 rounded box-shadow"
-              ref={ref}
-              required
-              onChange={handleChange}
-            />
+            <div className="field">
+              <label htmlFor="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                value={values.email}
+                onChange={handleChange}
+                placeholder="you@example.com"
+                required
+              />
+            </div>
 
-            <input
-              type="email"
-              value={values.email}
-              placeholder="Email"
-              name="email"
-              required
-              className="p-3 rounded "
-              onChange={handleChange}
-            />
-
-            <label htmlFor="msg" className="m-0 text-white">
-              Message:{" "}
-            </label>
-            <textarea
-              className="rounded p-2 box-shadow outline-none "
-              id="msg"
-              cols="20"
-              rows="3"
-              placeholder="Leave your message here"
-            ></textarea>
+            <div className="field" style={{ flex: 1 }}>
+              <label htmlFor="message">What are you building?</label>
+              <textarea
+                id="message"
+                name="message"
+                value={values.message}
+                onChange={handleChange}
+                placeholder="Tell me about your project, idea, or question..."
+                rows={5}
+              />
+            </div>
 
             <button
               type="submit"
-              className="p-2 rounded bg-white text-black hover:text-white hover:bg-black border-2 border-white"
+              className="btn btn-primary"
+              data-cursor="hover"
+              data-magnet
+              style={{ alignSelf: "flex-start", marginTop: "var(--sp-2)" }}
             >
-              Submit
+              Send message
+              <span className="btn-arrow">↗</span>
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </section>
   );
