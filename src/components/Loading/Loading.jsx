@@ -2,8 +2,17 @@ import "./loading.css";
 
 export const Loading = () => {
   return (
-    <div className="loader-wrapper flex items-center justify-center w-full h-[100svh] bg-lightBlue">
-      <div className="loader"></div>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        height: "100svh",
+        background: "var(--bg)",
+      }}
+    >
+      <div className="loader" />
     </div>
   );
 };

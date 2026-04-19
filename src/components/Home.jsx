@@ -1,17 +1,19 @@
 import Hero from "./Hero/Hero";
 import About from "./About/About";
-import Portfolio from "./Portfolio/Portfolio";
-import Skills from "../components/Skills/Skills";
 import WorkExperience from "./WorkExperience/WorkExperience";
+import Skills from "./Skills/Skills";
+import Portfolio from "./Portfolio/Portfolio";
+import Contact from "./Contact";
 
 export default function Home() {
   return (
-    <div id="home" className=" app overflow-clip m-auto w-full ">
+    <main id="home">
       <Hero />
       <About />
-      <Portfolio />
       <WorkExperience />
       <Skills />
-    </div>
+      <Portfolio />
+      <Contact />
+    </main>
   );
 }
