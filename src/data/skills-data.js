@@ -68,7 +68,7 @@ export const skillCategories = [
     slug: "learning",
     label: "currently sharpening",
     title: "I'm picking up",
-    primary: ["Claude Design", "Agent workflows"],
+    primary: ["Agent workflows"],
     additional: ["Data Science & ML", "AI Best Practices"],
   },
 ];
