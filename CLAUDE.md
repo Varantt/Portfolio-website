@@ -24,28 +24,24 @@ No linter or test suite is configured.
 - `/message` → post-contact-form confirmation
 - `*` → Error 404
 
-`App.jsx` also mounts two global behaviour components on every route:
-- `ScrollReveal` — IntersectionObserver that adds `.revealed` to any `[data-reveal]` element when it enters the viewport. All section content uses this attribute.
-- `MagneticButtons` — subtle mouse-follow effect on `[data-magnet]` elements.
-- `Cursor` — ambient radial-gradient glow that follows the mouse (does NOT override the system cursor).
-- `NoiseTexture` — fixed SVG fractal-noise overlay for background texture.
+`App.jsx` renders a persistent `Navbar` above the routes and a `Footer` below them. There are no global cursor/noise/magnetic overlay components — section entrance animations are driven per-component by the `useScroll` IntersectionObserver hook (`src/hooks/useScroll.js`), which toggles an `active`/in-view class.
 
 **Design system (read these before touching styles):**
-- `src/variables.css` — single source of truth for all design tokens: oklch colour variables (`--bg`, `--ink`, `--accent`, `--rule`, etc.), spacing scale (`--sp-N`), and font stacks. Dark theme is the `.dark` selector overriding the same vars. **Important:** `oklch()` values must use literal numbers — do not use `var()` inside `oklch()` for individual parameters (e.g. `oklch(0.58 0.09 var(--hue))`) as browsers do not reliably support substituting a CSS variable for a single function argument inside a colour function. Write the full value: `oklch(0.58 0.09 225)`.
-- `src/index.css` — global resets, typography helper classes (`.display`, `.h2`, `.eyebrow`, `.lede`), shared utility classes (`.btn`, `.btn-primary`, `.btn-ghost`, `.tag`, `.skill-pill`, `.side-card`, `.field`, `.sec-head`), keyframe animations, and the cursor/noise overlay styles.
-- `tailwind.config.cjs` — bridges Tailwind utilities to CSS vars (e.g. `bg-accent` → `var(--accent)`). Dark mode uses `selector` strategy. Legacy colour names (`lightBlue`, `offWhite`, etc.) are kept as aliases but new code should use CSS vars directly.
-- **Do not hardcode hex colours.** Always use CSS custom properties from `variables.css`.
+- `src/variables.css` — CSS custom properties for the palette and misc tokens. Colours are plain hex/rgb: `--light-blue: #427d9d` (the single accent), `--off-white: #fafafc`, `--black-light: #171717`, plus transition/easing/radius tokens. This is a calm, restrained blue-accent theme (NOT the previous oklch/violet system, which was reverted).
+- `src/index.css` — imports the Lato font, `variables.css`, and Tailwind; holds the `#hero`/`#footer` radial-gradient backgrounds, all keyframe animations (`fade-left`, `slide-up`, `skew-animation`, `rotate-opacity`, etc.), and small shared classes (`.contact`, `.social-link`, `.box-shadow`, `.glass`). There is no `.h2`/`.display`/`.btn` helper layer — components style themselves with Tailwind utilities.
+- `tailwind.config.cjs` — defines the named colours directly: `blackRaisin #171717`, `darkerBlackRaisin #090909`, `offWhite #fafafc`, `lightBlue #427D9D`, `liver #323232`; plus `boxShadow.custom` / `boxShadow.custom-dark`. Font family is Inter (sans). Dark mode uses the `selector` strategy.
+- Use the Tailwind colour names above (`text-lightBlue`, `bg-offWhite`, `dark:bg-blackRaisin`, `shadow-custom`) rather than raw hex in components.
 
 **Dark mode:** The `.dark` class lives on `<html>`. It is toggled by `Navbar.jsx` and persisted to `localStorage`. An inline script in `index.html` applies it before first paint to prevent flash.
 
 **Data layer — three files under `src/data/`:**
-- `jobs-data.js` — exports `eData` array. Each entry has: `id`, `era` (display date range), `title`, `titleAccent` (word to italicise in the serif font), `company`, `type` ("Freelance" | "Full Time"), `role`, `isCurrent` (boolean — drives the "Current" badge), `description`, `tags[]`. Displayed **reversed** (most recent first) by `WorkExperience.jsx`.
-- `skills-data.js` — exports `skillCategories` array. Each entry has `id`, `label`, `title`, `primary[]` (dark pill), `additional[]` (light pill). Rendered as a CSS Grid in `Skills.jsx`.
+- `jobs-data.js` — exports `eData` array. Each entry has: `id`, `era` (display date range, hyphen ranges like `"08/2021 - Present"` — no em-dashes), `title`, `titleAccent` (legacy, currently unused), `company`, `type` ("Freelance" | "Full Time"), `role`, `isCurrent` (boolean — drives the "Current" badge), `description`, `tags[]`. Rendered **reversed** (most recent first) by `WorkExperience.jsx` → `Experience.jsx`, which shows era, title, company, description, tag pills, and the type badge.
+- `skills-data.js` — exports `skillCategories` array. Each entry has `id`, `slug`, `label` (currently NOT rendered — the cutesy taglines were intentionally dropped), `title`, `primary[]` (filled blue pill), `additional[]` (subtle pill). Rendered as a card grid in `Skills.jsx` → `Skill.jsx`.
 - `projects-data.js` — default export array. Each entry has `id`, `title`, `stack[]`, `description`, `imgUrl`, `link`. The `/project/:name` route matches on `title`, so titles must stay unique.
 
-**Section order in `Home.jsx`:** Hero → About → WorkExperience → Skills → Portfolio → Contact. Each section is a self-contained component with its own CSS file.
+**Section order in `Home.jsx`:** Hero → About → Portfolio → WorkExperience → Skills → Contact. `App.jsx` adds Navbar (top) and Footer (bottom). Sections are self-contained components, most with their own CSS file.
 
-**Typography pattern:** Section headings use the `.h2` class. The serif italic accent is applied by wrapping the accent word in `<em>` — the CSS for `.h2 em` (and `.display em`) switches to `Instrument Serif` italic automatically. Keep this pattern consistent.
+**Voice / content rules:** This is a real person's portfolio in a plain, human voice. Do NOT reintroduce "AI slop" — no em-dashes (use hyphens or rewrite), no editorial-magazine affectations (`§ 01` numbered markers, live clocks, `No. 002`, "Est." lines, cutesy category taglines), and avoid buzzwords ("ship", "leverage", "seamless", "robust"). Keep copy accurate to the real jobs/projects — never invent.
 
 **Contact form:** `Contact.jsx` uses EmailJS (`service_wr38wju` / `template_39rbfk9` / public key `bXQK0o-7V-kRbDiXx`). On submit it calls `window.location.replace("/message")`.
 

@@ -1,7 +1,7 @@
 export const eData = [
   {
     id: 1,
-    era: "08/2021 — Present",
+    era: "08/2021 - Present",
     title: "Freelancer",
     titleAccent: null,
     company: null,
@@ -14,7 +14,7 @@ export const eData = [
   },
   {
     id: 2,
-    era: "08/2021 — Present",
+    era: "08/2021 - Present",
     title: "WordPress Developer",
     titleAccent: null,
     company: "Hairenik Weekly",
@@ -27,7 +27,7 @@ export const eData = [
   },
   {
     id: 3,
-    era: "06/2022 — Present",
+    era: "06/2022 - Present",
     title: "WordPress Developer",
     titleAccent: null,
     company: "ANCA",
@@ -40,7 +40,7 @@ export const eData = [
   },
   {
     id: 4,
-    era: "04/2023 — 07/2025",
+    era: "04/2023 - 07/2025",
     title: "Software Engineer",
     titleAccent: null,
     company: "ITXI",
@@ -53,7 +53,7 @@ export const eData = [
   },
   {
     id: 5,
-    era: "Sept 2025 — Now",
+    era: "Sept 2025 - Now",
     title: "Technical Operations Manager",
     titleAccent: "Manager",
     company: "King Tide Marketing",
@@ -61,7 +61,7 @@ export const eData = [
     role: "Technical Operations Manager · Remote · Langley, BC team",
     isCurrent: true,
     description:
-      "I run the technical side of a working marketing agency — client builds, GoHighLevel setups, integrations, automations, performance work, migrations. If it touches code, a DNS record, or a webhook, it tends to land on my desk. Elementor & WordPress builds, n8n workflows to cut hours off repeat work, API integrations, and apps built quickly with Claude Code.",
+      "I run the technical side of a working marketing agency: client builds, GoHighLevel setups, integrations, automations, performance work, and migrations. If it touches code, a DNS record, or a webhook, it tends to land on my desk. Elementor & WordPress builds, n8n workflows to cut hours off repeat work, API integrations, and apps built quickly with Claude Code.",
     tags: ["Elementor", "GoHighLevel", "n8n", "WordPress", "Claude Code", "APIs", "Plugin Development", "AI Tools"],
   },
 ];
